@@ -1,0 +1,89 @@
+/*
+|---------------------------------------------------------
+| Clear Fix
+|---------------------------------------------------------
+*/
+	@mixin clearfix {
+		&:after,
+		&:before {
+			content: ' ';
+			display: table;
+		}
+
+		&:before {
+			clear: both;
+		}
+	}
+
+/*
+|---------------------------------------------------------
+| Transition
+|---------------------------------------------------------
+*/
+	@mixin transition($speed: .2s) {
+		transition: all $speed;
+	}
+
+	@mixin rotate($angle: 360) {
+		transform: rotate($angle+deg);
+	}
+
+/*
+|---------------------------------------------------------
+| Font Style
+|---------------------------------------------------------
+*/
+	@mixin font-custom($fontName, $fontFile) {
+		@font-face {
+			font-family: "#{$fontName}";
+			src:
+				url("../fonts/#{$fontFile}/#{$fontName}.eot") format("embedded-opentype"),
+				url("../fonts/#{$fontFile}/#{$fontName}.woff") format("woff"),
+				url("../fonts/#{$fontFile}/#{$fontName}.ttf") format("truetype"),
+				url("../fonts/#{$fontFile}/#{$fontName}.svg##{$fontFile}") format("svg");
+			font-stretch: normal;
+			font-style:   normal;
+			font-weight:  normal;
+		}
+	}
+
+	@mixin font-normal($fontName, $fontFile) {
+		@font-face {
+			font-family: "#{$fontName}";
+			src:
+				url("../fonts/#{$fontFile}/#{$fontName}-Light.ttf");
+			font-weight: 400;
+		}
+	}
+
+	@mixin font-thin($fontName, $fontFile) {
+		@font-face {
+			font-family: "#{$fontName}";
+			src:
+				url(../fonts/#{$fontFile}/#{$fontName}-Thin.ttf);
+			font-weight: 300;
+		}
+	}
+
+/*
+|---------------------------------------------------------
+| Other
+|---------------------------------------------------------
+*/
+
+	@mixin main-block {
+		max-width: $content-width;
+		margin: 0 auto;
+	}
+
+	@mixin responsive-image {
+		max-width: 100%;
+	}
+
+	@mixin box-sizing {
+		box-sizing: border-box;
+	}
+
+	@mixin box-shadow($range: 20px, $color: rgba(255,255,255,.7)) {
+		box-shadow: 0 0 $range $color;
+	}

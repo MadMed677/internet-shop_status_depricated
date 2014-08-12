@@ -1,0 +1,750 @@
+/* line 17, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/*
+|---------------------------------------------------------
+| Color
+|---------------------------------------------------------
+*/
+/*
+|---------------------------------------------------------
+| Width
+|---------------------------------------------------------
+*/
+/*
+|---------------------------------------------------------
+| Margin
+|---------------------------------------------------------
+*/
+/*
+|---------------------------------------------------------
+| Clear Fix
+|---------------------------------------------------------
+*/
+/*
+|---------------------------------------------------------
+| Transition
+|---------------------------------------------------------
+*/
+/*
+|---------------------------------------------------------
+| Font Style
+|---------------------------------------------------------
+*/
+/*
+|---------------------------------------------------------
+| Other
+|---------------------------------------------------------
+*/
+@font-face {
+  font-family: "Didact Gothic";
+  src: url("../fonts/Didact Gothic/Didact Gothic.eot") format("embedded-opentype"), url("../fonts/Didact Gothic/Didact Gothic.woff") format("woff"), url("../fonts/Didact Gothic/Didact Gothic.ttf") format("truetype"), url("../fonts/Didact Gothic/Didact Gothic.svg#Didact Gothic") format("svg");
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto/Roboto-Thin.ttf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto/Roboto-Light.ttf");
+  font-weight: 400;
+}
+
+/*
+|---------------------------------------------------------
+| The Main Style
+|---------------------------------------------------------
+*/
+/* line 15, ../sass/style.scss */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 5px;
+  font-weight: 300;
+}
+
+/* line 20, ../sass/style.scss */
+h1 {
+  font-size: 3em;
+}
+
+/* line 24, ../sass/style.scss */
+h2 {
+  font-size: 2.2em;
+}
+/* line 27, ../sass/style.scss */
+h2 a {
+  color: #fff;
+}
+/* line 30, ../sass/style.scss */
+h2 a:hover {
+  color: inherit;
+}
+
+/* line 36, ../sass/style.scss */
+h3 {
+  font-size: 1.8em;
+}
+
+/* line 40, ../sass/style.scss */
+h4 {
+  font-size: 1.5em;
+}
+
+/* line 44, ../sass/style.scss */
+body {
+  background: #eee;
+  color: white;
+  font: 400 1em 'Roboto', 'Didact Gothic';
+}
+
+/* line 50, ../sass/style.scss */
+ul {
+  list-style: none;
+}
+
+/* line 54, ../sass/style.scss */
+a {
+  color: #aaaaaa;
+  transition: all .3s;
+  text-decoration: none;
+}
+/* line 59, ../sass/style.scss */
+a:hover {
+  color: #23aba7;
+}
+
+/*
+|---------------------------------------------------------
+| Header
+|---------------------------------------------------------
+*/
+/* line 69, ../sass/style.scss */
+#main-header {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 20px white;
+  transition: all 0.2s;
+}
+
+/* line 78, ../sass/style.scss */
+.header {
+  max-width: 960px;
+  margin: 0 auto;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+/* line 8, ../sass/_mixin.scss */
+.header:after, .header:before {
+  content: ' ';
+  display: table;
+}
+/* line 13, ../sass/_mixin.scss */
+.header:before {
+  clear: both;
+}
+/* line 86, ../sass/style.scss */
+.header .logo {
+  float: left;
+}
+/* line 8, ../sass/_mixin.scss */
+.header .logo:after, .header .logo:before {
+  content: ' ';
+  display: table;
+}
+/* line 13, ../sass/_mixin.scss */
+.header .logo:before {
+  clear: both;
+}
+/* line 91, ../sass/style.scss */
+.header .logo > div {
+  width: 157px;
+  float: left;
+}
+/* line 96, ../sass/style.scss */
+.header .logo img {
+  float: left;
+  max-width: 100%;
+  transition: all 0.4s;
+}
+/* line 102, ../sass/style.scss */
+.header .logo h1 {
+  margin-left: 20px;
+  line-height: 109px;
+  float: left;
+  transition: all 0.2s;
+}
+/* line 112, ../sass/style.scss */
+.header .menu ul {
+  float: right;
+  font-weight: 300;
+}
+/* line 117, ../sass/style.scss */
+.header .menu li {
+  float: left;
+}
+/* line 121, ../sass/style.scss */
+.header .menu a {
+  color: #aaaaaa;
+  display: inline-block;
+  padding: 3em 1em;
+  position: relative;
+}
+/* line 128, ../sass/style.scss */
+.header .menu a:hover {
+  color: #23aba7;
+}
+/* line 131, ../sass/style.scss */
+.header .menu a:hover:after {
+  top: 0;
+}
+/* line 136, ../sass/style.scss */
+.header .menu a:after {
+  transition: all 0.2s;
+  position: absolute;
+  top: -5px;
+  left: 0;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 5px;
+  background: #23aba7;
+}
+/* line 150, ../sass/style.scss */
+.header .menu .menu-active {
+  color: #23aba7;
+  opacity: .5;
+}
+/* line 153, ../sass/style.scss */
+.header .menu .menu-active:after {
+  top: 0;
+}
+
+/*
+|---------------------------------------------------------
+| Slider
+|---------------------------------------------------------
+*/
+/* line 165, ../sass/style.scss */
+#main-section {
+  padding-top: 7.2em;
+  transition: all 0.2s;
+}
+
+/* line 171, ../sass/style.scss */
+.main-slider {
+  height: 565px;
+  background: url(../images/background.jpg) repeat-x;
+  padding: 100px 0;
+  position: relative;
+  box-shadow: 0 0 20px #23aba7;
+  box-sizing: border-box;
+}
+
+/* line 181, ../sass/style.scss */
+.slider {
+  overflow: hidden;
+  max-width: 960px;
+  margin: 0 auto;
+}
+/* line 8, ../sass/_mixin.scss */
+.slider:after, .slider:before {
+  content: ' ';
+  display: table;
+}
+/* line 13, ../sass/_mixin.scss */
+.slider:before {
+  clear: both;
+}
+
+/* line 188, ../sass/style.scss */
+.slider-image {
+  float: left;
+  width: 37%;
+  margin-right: 3%;
+}
+/* line 193, ../sass/style.scss */
+.slider-image img {
+  max-width: 100%;
+}
+
+/* line 198, ../sass/style.scss */
+.slider-text {
+  margin-top: 2em;
+  float: left;
+  width: 60%;
+}
+/* line 203, ../sass/style.scss */
+.slider-text h2 {
+  font-weight: 300;
+  font-size: 2.8em;
+  margin-bottom: .2em;
+}
+/* line 209, ../sass/style.scss */
+.slider-text h3 {
+  margin-bottom: .5em;
+}
+
+/*
+|---------------------------------------------------------
+| 3 MOST REASON
+|---------------------------------------------------------
+*/
+/* line 220, ../sass/style.scss */
+.main-reason {
+  width: 100%;
+  background: #fff;
+  color: #aaaaaa;
+}
+
+/* line 226, ../sass/style.scss */
+.reason {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 3em 0;
+  border-bottom: 1px solid #dddddd;
+  position: relative;
+}
+/* line 234, ../sass/style.scss */
+.reason h2 {
+  color: #555;
+}
+/* line 238, ../sass/style.scss */
+.reason p {
+  color: #999;
+  margin-bottom: 3em;
+}
+/* line 243, ../sass/style.scss */
+.reason:before {
+  content: '=';
+  display: inline-block;
+  position: absolute;
+  bottom: -10px;
+  left: 49.5%;
+}
+
+/* line 252, ../sass/style.scss */
+.reasons-block {
+  overflow: hidden;
+  text-align: center;
+}
+/* line 8, ../sass/_mixin.scss */
+.reasons-block:after, .reasons-block:before {
+  content: ' ';
+  display: table;
+}
+/* line 13, ../sass/_mixin.scss */
+.reasons-block:before {
+  clear: both;
+}
+
+/* line 259, ../sass/style.scss */
+.reason-block {
+  width: 32%;
+  float: left;
+  text-align: left;
+  text-align: center;
+  padding: 0 2em;
+  box-sizing: border-box;
+}
+/* line 266, ../sass/style.scss */
+.reason-block:first-child {
+  margin-left: 2%;
+}
+/* line 272, ../sass/style.scss */
+.reason-block span {
+  font-size: 3.5em;
+  display: inline-block;
+  height: 2em;
+  width: 2em;
+  line-height: 2em;
+  color: #23aba7;
+  margin-bottom: 20px;
+}
+/* line 281, ../sass/style.scss */
+.reason-block span:before {
+  border: 1px solid #23aba7;
+  border-radius: 50%;
+  display: block;
+}
+
+/* line 290, ../sass/style.scss */
+.reason-active {
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+}
+
+/* line 294, ../sass/style.scss */
+.reason-icon {
+  text-align: center;
+}
+
+/* line 299, ../sass/style.scss */
+.reason-text h4 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+/* line 304, ../sass/style.scss */
+.reason-text p {
+  font-size: .9em;
+}
+
+/*
+|---------------------------------------------------------
+| Why Me?
+|---------------------------------------------------------
+*/
+/* line 315, ../sass/style.scss */
+.main-why-me {
+  width: 100%;
+  background: #fff;
+  padding: 3em 0;
+}
+
+/* line 321, ../sass/style.scss */
+.why-me {
+  max-width: 960px;
+  color: #aaaaaa;
+  text-align: center;
+  margin: 0 auto;
+  text-align: left;
+  overflow: hidden;
+}
+/* line 8, ../sass/_mixin.scss */
+.why-me:after, .why-me:before {
+  content: ' ';
+  display: table;
+}
+/* line 13, ../sass/_mixin.scss */
+.why-me:before {
+  clear: both;
+}
+/* line 331, ../sass/style.scss */
+.why-me h2 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+/* line 337, ../sass/style.scss */
+.why-me-nav {
+  width: 22%;
+  float: left;
+  margin-right: 3%;
+  box-sizing: border-box;
+}
+/* line 344, ../sass/style.scss */
+.why-me-nav a {
+  display: block;
+  color: #23aba7;
+  background: transparent;
+  border-radius: 3px;
+  padding: 10px 10px;
+  margin-bottom: .5em;
+}
+/* line 352, ../sass/style.scss */
+.why-me-nav a .fa {
+  margin-right: 5px;
+}
+/* line 356, ../sass/style.scss */
+.why-me-nav a:hover {
+  padding-left: 15px;
+  background: #23aba7;
+  color: #fff;
+}
+
+/* line 364, ../sass/style.scss */
+a.why-me-active {
+  background: #23aba7;
+  color: #fff;
+  padding-left: 15px;
+}
+
+/* line 370, ../sass/style.scss */
+.why-me-loc {
+  width: 35%;
+  float: left;
+}
+/* line 374, ../sass/style.scss */
+.why-me-loc p {
+  font-size: .9em;
+}
+
+/* line 379, ../sass/style.scss */
+.why-me-desc {
+  width: 30%;
+  float: left;
+  font-size: .9em;
+}
+/* line 384, ../sass/style.scss */
+.why-me-desc h3 {
+  font-size: 1.5em;
+  text-align: left;
+  margin-bottom: .4em;
+  padding-bottom: .4em;
+  border-bottom: 1px solid;
+}
+/* line 392, ../sass/style.scss */
+.why-me-desc p {
+  margin-bottom: .5em;
+}
+
+/*
+|---------------------------------------------------------
+| Sexy Block
+|---------------------------------------------------------
+*/
+/* line 403, ../sass/style.scss */
+.main-sexy-block {
+  width: 100%;
+  background: #898989;
+  box-shadow: 0 0 20px #898989;
+  padding: 4.5em 0;
+  position: relative;
+}
+
+/* line 411, ../sass/style.scss */
+.sexy-block {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* line 416, ../sass/style.scss */
+.sexy-block-inner {
+  text-align: center;
+  margin: auto;
+  font-weight: 300;
+  background: #959595;
+  padding: 2em 0;
+  border-radius: 20px;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+  box-sizing: border-box;
+}
+/* line 428, ../sass/style.scss */
+.sexy-block-inner .fa {
+  font-size: 3em;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  margin-bottom: .5em;
+}
+
+/*
+|---------------------------------------------------------
+| Our Team
+|---------------------------------------------------------
+*/
+/* line 444, ../sass/style.scss */
+.main-our-team {
+  width: 100%;
+  background: #fff;
+}
+
+/* line 449, ../sass/style.scss */
+.our-team {
+  color: #aaaaaa;
+  padding: 3em 0;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* line 456, ../sass/style.scss */
+.our-team-header {
+  text-align: center;
+  margin-bottom: 2em;
+}
+/* line 460, ../sass/style.scss */
+.our-team-header h2 {
+  font-weight: 300;
+  margin-bottom: .5em;
+}
+/* line 465, ../sass/style.scss */
+.our-team-header p {
+  font-size: .9em;
+}
+
+/* line 470, ../sass/style.scss */
+.our-team-blocks {
+  overflow: hidden;
+}
+/* line 8, ../sass/_mixin.scss */
+.our-team-blocks:after, .our-team-blocks:before {
+  content: ' ';
+  display: table;
+}
+/* line 13, ../sass/_mixin.scss */
+.our-team-blocks:before {
+  clear: both;
+}
+
+/* line 475, ../sass/style.scss */
+.our-team-block {
+  width: 24%;
+  float: left;
+  text-align: center;
+  margin: 0 .5%;
+  box-sizing: border-box;
+}
+/* line 483, ../sass/style.scss */
+.our-team-block img {
+  margin-bottom: -5px;
+  max-width: 100%;
+}
+/* line 488, ../sass/style.scss */
+.our-team-block h4 {
+  margin-top: 5px;
+  color: #22aba6;
+}
+/* line 493, ../sass/style.scss */
+.our-team-block p {
+  color: #777;
+  margin-bottom: 5px;
+  font-size: .9em;
+}
+/* line 499, ../sass/style.scss */
+.our-team-block > div {
+  border-bottom: 1px dashed rgba(100, 100, 100, 0.5);
+  border-left: 1px dashed rgba(100, 100, 100, 0.5);
+  border-right: 1px dashed rgba(100, 100, 100, 0.5);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+
+/*
+|---------------------------------------------------------
+| Footer
+|---------------------------------------------------------
+*/
+/* line 519, ../sass/style.scss */
+#main-footer {
+  width: 100%;
+  background: #eee;
+  padding: 3em 0;
+  position: relative;
+  box-shadow: 0 0 40px 20px #eee;
+}
+
+/* line 528, ../sass/style.scss */
+.footer {
+  text-align: center;
+  max-width: 960px;
+  margin: 0 auto;
+}
+/* line 532, ../sass/style.scss */
+.footer .footer-icons {
+  margin-bottom: 1em;
+}
+/* line 536, ../sass/style.scss */
+.footer img {
+  max-width: 30%;
+  margin-bottom: 1em;
+}
+/* line 541, ../sass/style.scss */
+.footer span {
+  color: #23aba7;
+  font-size: 1.3em;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  text-align: center;
+  border: 1px solid #23aba7;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+/* line 552, ../sass/style.scss */
+.footer span:hover {
+  color: #fff;
+  border-color: #fff;
+  background: #23aba7;
+}
+/* line 559, ../sass/style.scss */
+.footer p {
+  color: #999;
+  font-weight: 400;
+  font-weight: bold;
+}
+/* line 564, ../sass/style.scss */
+.footer p a {
+  color: #22aba6;
+}
+
+/* line 571, ../sass/style.scss */
+#loading {
+  position: fixed;
+  top: 49%;
+  left: 43%;
+  background: red;
+  padding: 50px 70px;
+  display: none;
+}

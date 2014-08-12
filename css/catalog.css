@@ -1,0 +1,123 @@
+/*
+|---------------------------------------------------------
+| Color
+|---------------------------------------------------------
+*/
+/*
+|---------------------------------------------------------
+| Width
+|---------------------------------------------------------
+*/
+/*
+|---------------------------------------------------------
+| Margin
+|---------------------------------------------------------
+*/
+/*
+|---------------------------------------------------------
+| Clear Fix
+|---------------------------------------------------------
+*/
+/*
+|---------------------------------------------------------
+| Transition
+|---------------------------------------------------------
+*/
+/*
+|---------------------------------------------------------
+| Font Style
+|---------------------------------------------------------
+*/
+/*
+|---------------------------------------------------------
+| Other
+|---------------------------------------------------------
+*/
+/* line 4, ../sass/catalog.scss */
+body {
+  background: #fff;
+}
+
+/* line 8, ../sass/catalog.scss */
+#catalog {
+  width: 100%;
+  background: #fff;
+}
+/* line 12, ../sass/catalog.scss */
+#catalog .main-catalog {
+  padding: 1em 0;
+  max-width: 960px;
+  margin: 0 auto;
+}
+/* line 19, ../sass/catalog.scss */
+#catalog h2 {
+  text-align: center;
+  color: #23aba7;
+  margin: 1em 0 1.5em 0;
+  padding-bottom: 1.3em;
+  border-bottom: 1px solid #23aba7;
+}
+/* line 27, ../sass/catalog.scss */
+#catalog .catalog-items {
+  overflow: hidden;
+}
+/* line 8, ../sass/_mixin.scss */
+#catalog .catalog-items:after, #catalog .catalog-items:before {
+  content: ' ';
+  display: table;
+}
+/* line 13, ../sass/_mixin.scss */
+#catalog .catalog-items:before {
+  clear: both;
+}
+/* line 32, ../sass/catalog.scss */
+#catalog .catalog-item {
+  float: left;
+  width: 32%;
+  margin-left: 1%;
+  margin-bottom: 2%;
+  color: #909090;
+  position: relative;
+  overflow: hidden;
+}
+/* line 41, ../sass/catalog.scss */
+#catalog .catalog-item:nth-child(3n+1) {
+  clear: both;
+}
+/* line 45, ../sass/catalog.scss */
+#catalog .catalog-item h4 {
+  font-size: 1.2em;
+}
+/* line 49, ../sass/catalog.scss */
+#catalog .catalog-item img {
+  max-width: 100%;
+  transition: all 0.2s;
+  border-radius: 5px;
+}
+/* line 55, ../sass/catalog.scss */
+#catalog .catalog-item p {
+  font-size: .9em;
+  color: #fff;
+}
+/* line 60, ../sass/catalog.scss */
+#catalog .catalog-item .inner-catalog-item {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  margin-top: -300px;
+  opacity: 0;
+}
+/* line 68, ../sass/catalog.scss */
+#catalog .catalog-item .inner-catalog-item > div {
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 98%;
+  width: 100%;
+  background: rgba(100, 100, 100, 0.7);
+}
+/* line 77, ../sass/catalog.scss */
+#catalog .catalog-item .inner-catalog-item > div > p {
+  padding: 15px;
+}

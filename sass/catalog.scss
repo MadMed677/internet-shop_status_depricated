@@ -1,0 +1,84 @@
+@import "variables";
+@import "mixin";
+
+body {
+	background: #fff;
+}
+
+#catalog {
+	width: 100%;
+	background: #fff;
+
+	.main-catalog {
+		padding: 1em 0;
+		
+		@include main-block;
+	}
+
+
+	h2 {
+		text-align: center;
+		color: $color-green;
+		margin: 1em 0 1.5em 0;
+		padding-bottom: 1.3em;
+		border-bottom: 1px solid $color-green;
+	}
+
+	.catalog-items {
+		overflow: hidden;
+		@include clearfix;
+	}
+
+	.catalog-item {
+		float: left;
+		width: 32%;
+		margin-left: 1%;
+		margin-bottom: 2%;
+		color: darken($color-gray, 10%);
+		position: relative;
+		overflow: hidden;
+
+		&:nth-child(3n+1) {
+			clear: both;
+		}
+
+		h4 {
+			font-size: 1.2em;
+		}
+
+		img {
+			@include responsive-image;
+			@include transition;
+			border-radius: 5px;
+		}
+
+		p {
+			font-size: .9em;
+			color: #fff;	
+		}
+
+		.inner-catalog-item {
+			position: absolute;
+			width: 100%;
+			top: 0;
+
+			margin-top: -300px;
+			opacity: 0;
+
+			> div {
+				border-radius: 5px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 98%;
+				width: 100%;
+				background: rgba(100,100,100,.7);
+
+				> p {
+					padding: 15px;
+				}
+			}
+		}
+	}
+	
+}
