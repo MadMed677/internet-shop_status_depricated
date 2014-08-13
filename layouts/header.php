@@ -5,6 +5,7 @@
 	<title></title>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/catalog.css">
+	<link rel="stylesheet" href="css/aboutme.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
 <body>
@@ -25,7 +26,7 @@
 				<ul>
 					<li><a href="#index" class="menu-active">Главная</a></li>
 					<li><a href="#catalog">Каталог</a></li>
-					<li><a href="#">Обо мне</a></li>
+					<li><a href="#aboutme">Обо мне</a></li>
 				</ul>
 			</nav>
 		</div>
