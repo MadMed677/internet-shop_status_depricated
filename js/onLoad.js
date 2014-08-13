@@ -17,21 +17,8 @@ header.on('click', 'a', function(event) {
 	links.removeClass('menu-active');
 	thisLink.addClass('menu-active');
 
-	href = 'ajax/' + href;
-	href += '.php';
+	href = 'ajax/' + href + '.php';
 
-	$.ajax({
-		url: href,
-
-		dataType: 'html',
-
-		success: function(data) {
-
-			container.ajaxFadeOut(2000, function() {
-				container.html(data).delay(500).ajaxFadeIn(2000);
-				
-				mmInternetShop.initialize();
-			});
-		}
-	});
+	mmLoadPage(href);
+	
 });

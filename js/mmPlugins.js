@@ -31,7 +31,7 @@
 		this
 			.css({
 				'marginLeft': '0',
-				'marginRight': '1000px'
+				'marginRight': '-1000px'
 			})
 			.animate({
 				'marginRight': '0',
