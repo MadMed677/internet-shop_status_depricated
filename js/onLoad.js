@@ -17,42 +17,21 @@ header.on('click', 'a', function(event) {
 	links.removeClass('menu-active');
 	thisLink.addClass('menu-active');
 
+	href = 'ajax/' + href;
 	href += '.php';
-	
-	/*
-	|---------------------------------------------------------
-	| УТЕЧКА ПАМЯТИ
-	|---------------------------------------------------------
-	*/
-	container.load( href + ' #main-section', function() {
-		catalogImages.initialize();
-		mmInternetShop.initialize();
+
+	$.ajax({
+		url: href,
+
+		dataType: 'html',
+
+		success: function(data) {
+
+			container.ajaxFadeOut(2000, function() {
+				container.html(data).delay(500).ajaxFadeIn(2000);
+				
+				mmInternetShop.initialize();
+			});
+		}
 	});
-
-	// $(document)
-	// 	.bind('ajaxSend', function() {
-	// 		console.log('sending');
-	// 		$('#loading').fadeIn(1000);
-	// 	})
-	// 	.bind('ajaxComplete', function() {
-	// 		$('#loading').fadeOut(1000);
-	// 	});
-
-	// $.ajax({
-	// 	url: href,
-
-	// 	dataType: 'html',
-
-	// 	beforeSend: function() {
-	// 		$('#loading').fadeIn();
-	// 		links.removeClass('menu-active');
-	// 	},
-
-	// 	success: function(data) {
-	// 		console.log(thisLink, links);
-	// 		$('#loading').delay(1000).fadeOut();
-	// 		$(document.body).html(data);
-	// 		// thisLink.addClass('menu-active');
-	// 	}
-	// });
 });

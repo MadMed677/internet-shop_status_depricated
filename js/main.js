@@ -1,5 +1,7 @@
 var mmInternetShop = (function( $ ) {
 	
+	var container = $('.container');
+
 	function changeWhyMe( event ) {
 		event.preventDefault();
 
@@ -48,7 +50,7 @@ var mmInternetShop = (function( $ ) {
 			blocks.eq(0).show();
 			descs.eq(0).show();
 
-			$('.why-me-nav').find('a').on('click', changeWhyMe);
+			container.on('click', '.why-me-nav a', changeWhyMe);
 		}
 	};
 
@@ -56,6 +58,22 @@ var mmInternetShop = (function( $ ) {
 
 mmInternetShop.initialize();
 
+
+$(document.body).ready( function() {
+	
+	$('.slider-image')
+		.ClassyWiggle('start')
+		.on('mouseenter', function() {
+			$(this).ClassyWiggle('stop');
+		});
+
+	setInterval( function() {
+		$('.main-slider').css({
+			'background-position-x': '-=2px'
+		});
+	},	10);
+		
+});
 
 
 

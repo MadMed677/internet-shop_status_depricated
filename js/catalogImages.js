@@ -1,27 +1,26 @@
 var catalogImages = (function() {
 	
 	var catalog = $('#catalog'),
-		speedAnimate = 300;
+		speedAnimate = 400,
+		container = $('.container');
 
 	initialize = function() {
-		$('#catalog').find('inner-catalog-img, img').on({
-			mouseenter: function() {
-				var $this = $(this),
-					imgHeight = $this.height(),
-					imgWidth = $this.width(),
-					block = $this.parent().next();
+		container.on( 'mouseenter', '.inner-catalog-img img', function() {
+			var $this = $(this),
+				imgHeight = $this.height(),
+				imgWidth = $this.width(),
+				block = $this.parent().next();
 
-				block
-					.css('height', imgHeight+4)
-					.stop()
-					.animate({
-						'marginTop': 0,
-						'opacity': 1
-					}, speedAnimate);
-			}
+			block
+				.css('height', imgHeight+4)
+				.stop()
+				.animate({
+					'marginTop': 0,
+					'opacity': 1
+				}, speedAnimate, 'easeOutQuart');
 		});
 
-		$('.catalog-item').on( 'mouseleave', function() {
+		container.on( 'mouseleave', '.catalog-item', function() {
 			$(this).find('.inner-catalog-item').stop().animate({
 				'marginTop': '-300px',
 				'opacity': 0
@@ -34,3 +33,5 @@ var catalogImages = (function() {
 	};
 
 })();
+
+catalogImages.initialize();

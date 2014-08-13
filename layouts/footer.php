@@ -22,6 +22,10 @@
 
 	<!-- JavaScript -->
 	<script src="js/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+	<script src="js/jquery.classywiggle.min.js"></script>
+	<script src="js/mmPlugins.js"></script>
+	<script src="js/routie.min.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/headerScroller.js"></script>
 	<script src="js/onLoad.js"></script>
