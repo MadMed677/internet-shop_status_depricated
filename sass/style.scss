@@ -66,6 +66,10 @@
 		background-attachment: fixed;
 	}
 
+	.container {
+		min-height: 800px;
+	}
+
 /*
 |---------------------------------------------------------
 | Header
@@ -573,14 +577,20 @@
 	}
 
 
-#loading {
-	position: fixed;
-	top: 49%;
-	left: 43%;
-	background: red;
-	padding: 50px 70px;
-	
-	display: none;
+.bg-success {
+
+}
+
+.bg-error {
+	@extend %blocks;
+	@include box-shadow($color: rgba(192, 57, 43, .8));
+	background: rgba(192, 57, 43, .8);
+}
+
+.bg-success {
+	@extend %blocks;
+	@include box-shadow($color: rgba(34, 171, 166, .8));
+	background: rgba(34, 171, 166, .8);
 }
 
 

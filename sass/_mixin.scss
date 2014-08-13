@@ -87,3 +87,22 @@
 	@mixin box-shadow($range: 20px, $color: rgba(255,255,255,.7)) {
 		box-shadow: 0 0 $range $color;
 	}
+
+%blocks {
+	position: fixed;
+	width: 500px;
+	height: 150px;
+	line-height: 30px;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	color: #fff;
+	font: 300 1.5em;
+	padding: 3em;
+	border-radius: 10px;
+	text-align: center;
+	@include box-sizing;
+}
+
