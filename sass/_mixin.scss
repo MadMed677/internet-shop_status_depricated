@@ -104,5 +104,6 @@
 	border-radius: 10px;
 	text-align: center;
 	@include box-sizing;
+	@include transition;
 }
 

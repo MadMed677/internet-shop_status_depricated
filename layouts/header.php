@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+/<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -16,15 +16,15 @@
 		<div class="header">
 			<div class="logo">
 				<div>
-					<img src="images/logotype1.png" alt="">
+					<a href="#index"><img src="images/logotype1.png" alt=""></a>
 				</div>
 				<h1>
-					<a href="#">vPunke</a>
+					<a href="#index">vPunke</a>
 				</h1>
 			</div>
 			<nav class="menu">
 				<ul>
-					<li><a href="#index" class="menu-active">Главная</a></li>
+					<li><a href="#index">Главная</a></li>
 					<li><a href="#catalog">Каталог</a></li>
 					<li><a href="#aboutme">Обо мне</a></li>
 				</ul>

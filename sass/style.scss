@@ -61,9 +61,19 @@
 		}
 	}
 
+	input {
+		outline: none;
+
+		&:focus,
+		&:hover {
+			outline: none;
+		}
+	}
+
 	.wrapper {
 		background: url(../images/loading/loader1.gif) center no-repeat;
 		background-attachment: fixed;
+		margin-top: -19px;
 	}
 
 	.container {
@@ -576,19 +586,96 @@
 		}
 	}
 
+/*
+|---------------------------------------------------------
+| Shopping Cart
+|---------------------------------------------------------
+*/
+	#shopping-cart {
+		position: fixed;
+		width: 100%;
+		z-index: 999;
+		background: rgba(240, 240, 240, .9);
+		color: $color-gray;
+		top: 115px;
 
-.bg-success {
+		display: none;
 
-}
+		@include transition(1s);
+	}
+
+	.shopping-cart-inner {
+		@include main-block;
+		@include clearfix;
+		@include transition(.5s);
+
+		overflow: hidden;
+		text-align: center;
+		position: relative;
+		padding: $margin-default/4 0;
+		cursor: pointer;
+
+
+		&:hover {			
+			color: $color-green;
+
+			a {
+				color: $color-green;
+			}
+			.fa {
+				@include transition;
+				color: $color-green;
+			}
+		}
+	}
+
+	.shopping-cart-blocks,
+	.shopping-cart-icon {
+		display: inline-block;
+		float: right;
+		margin-right: 1%;
+	}
+
+	.shopping-cart-icon {
+		font-size: 3.5em;
+	}
+
+
+/*
+|---------------------------------------------------------
+| Basket
+|---------------------------------------------------------
+*/
+	#main-basket {
+		display: none;
+		position: fixed;
+		z-index: 9999;
+		top: 0;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		width: 700px;
+		outline: 1px solid red;
+	}
+
+	#basket-inner {
+		color: $color-gray;
+	}
+
+
+
+
 
 .bg-error {
 	@extend %blocks;
-	@include box-shadow($color: rgba(192, 57, 43, .8));
+	@include transition(.5s);
+	@include box-shadow($range: 30px, $color: rgba(192, 57, 43, .8));
 	background: rgba(192, 57, 43, .8);
 }
 
 .bg-success {
 	@extend %blocks;
+	@include transition(.5s);
 	@include box-shadow($color: rgba(34, 171, 166, .8));
 	background: rgba(34, 171, 166, .8);
 }

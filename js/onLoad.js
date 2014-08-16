@@ -1,24 +1,35 @@
 var header = $('#main-header'),
 	container = $('.container'),
 	links = header.find('a'),
-	allLinks = $('a');
+	allLinks = $('.wrapper');
 
-header.on('click', 'a', function(event) {
+
+allLinks.on('click', 'a', function() {
 	var $this = $(this),
 		thisLink = $this;
 
 	href = $this.attr('href').slice(1);
-	
-	if ( href === '' || $this.hasClass('menu-active') ) {
+
+	if ( href === '' || thisLink.hasClass('menu-active') ) {
 		event.preventDefault();
 		return;
 	}
 
-	links.removeClass('menu-active');
-	thisLink.addClass('menu-active');
-
 	href = 'ajax/' + href + '.php';
 
-	mmLoadPage(href);
+	links.removeClass('menu-active');
+
+	if ( thisLink.closest('.menu').length ) {
+		thisLink.addClass('menu-active');
+	} else {
+			$.each( links, function() {
+
+				if ( href.indexOf($(this).attr('href').slice(1)) !== -1 ) {
+					$(this).addClass('menu-active');
+				}
+
+			});
+	}
 	
+	mmLoadPage(href);
 });

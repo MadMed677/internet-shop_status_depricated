@@ -23,7 +23,7 @@
 				<div class="reasons-block">
 					<div class="reason-block">
 						<div class="reason-icon">
-							<span class="fa fa-twitter"></span>
+							<span class="fa fa-home"></span>
 						</div>
 						<div class="reason-text">
 							<h4>Clean desing</h4>
@@ -32,7 +32,7 @@
 					</div>
 					<div class="reason-block reason-active">
 						<div class="reason-icon">
-							<span class="fa fa-facebook"></span>
+							<span class="fa fa-spinner"></span>
 						</div>
 						<div class="reason-text">
 							<h4>Clean desing</h4>
@@ -98,7 +98,7 @@
 		<div class="main-sexy-block">
 			<div class="sexy-block">
 				<div class="sexy-block-inner">
-					<span class="fa fa-rocket"></span>
+					<span class="fa fa-shopping-cart"></span>
 					<h2><a href="#catalog">Каталог Товаров</a></h2>
 				</div>
 			</div>

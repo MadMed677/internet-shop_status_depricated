@@ -8,13 +8,7 @@ body {
 #catalog {
 	width: 100%;
 	background: #fff;
-
-	.main-catalog {
-		padding: 1em 0;
-		
-		@include main-block;
-	}
-
+	padding-top: 4em;
 
 	h2 {
 		text-align: center;
@@ -23,6 +17,13 @@ body {
 		padding-bottom: 1.3em;
 		border-bottom: 1px solid $color-green;
 	}
+}
+
+	.main-catalog {
+		padding: 1em 0;
+		@include main-block;
+	}
+
 
 	.catalog-items {
 		overflow: hidden;
@@ -31,54 +32,104 @@ body {
 
 	.catalog-item {
 		float: left;
-		width: 32%;
-		margin-left: 1%;
+		width: 99%;
+		margin-right: 1%;
 		margin-bottom: 2%;
 		color: darken($color-gray, 10%);
 		position: relative;
 		overflow: hidden;
 
-		&:nth-child(3n+1) {
+		@include box-sizing;
+
+		h4 {
+			position: absolute;
+			bottom: 100px;
+			right: 0;
+			color: $color-green-lighten;
+		}
+
+		&:nth-child(2n+1) {
 			clear: both;
 		}
 
-		h4 {
-			font-size: 1.2em;
+		.inner-catalog-img {
+			
+			width: 49%;
+			margin-right: 1%;
+			float: left;
+
+			img {
+				@include responsive-image;
+				@include transition;
+				border-radius: 5px;
+			}
+
 		}
 
-		img {
-			@include responsive-image;
-			@include transition;
-			border-radius: 5px;
-		}
+		.inner-catalog-fishki,
+		.inner-catalog-specifications {
+			width: 4%;
+			min-height: 10px;
+			float: right;
+			text-align: center;
+			margin-right: 1%;
 
-		p {
-			font-size: .9em;
-			color: #fff;	
+			img {
+				@include responsive-image;
+				background-size: contain;
+				background-color: darken( rgba(35, 171, 167, .5), 10% );
+				border-radius: 50%;
+			}
 		}
 
 		.inner-catalog-item {
-			position: absolute;
-			width: 100%;
-			top: 0;
+			
+			width: 39%;
+			margin-right: 1%;
+			float: left;
+			position: relative;
 
-			margin-top: -300px;
-			opacity: 0;
+			.change-goods {
+				margin-top: 1em;
+			}
 
-			> div {
-				border-radius: 5px;
-				position: absolute;
-				top: 0;
-				left: 0;
-				height: 98%;
-				width: 100%;
-				background: rgba(100,100,100,.7);
+			h3 {
+				color: $color-green;
+				font-size: 2em;
+			}
 
-				> p {
-					padding: 15px;
+			p {
+				font-size: .9em;
+				margin-bottom: 1em;
+			}
+
+			i {
+				height: 2em;
+				width: 2em;
+				line-height: 2.1em;
+				text-align: center;
+				border-radius: 50%;
+				border: 1px solid $color-gray;
+
+				&:hover {
+					border-color: $color-green;
+					color: $color-green;
 				}
 			}
+
+			input {
+				height: 3.2em;
+				width: 3.2em;
+				border: 1px solid $color-gray;
+				border-radius: 50%;
+				text-align: center;
+				font-size: 1em;
+				font-family: 'Roboto';
+				font-weight: 400;
+
+				@include transition(.5s);
+				@include box-sizing;
+			}
 		}
+
 	}
-	
-}

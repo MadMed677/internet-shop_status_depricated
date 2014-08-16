@@ -34,4 +34,4 @@ var catalogImages = (function() {
 
 })();
 
-catalogImages.initialize();
+// catalogImages.initialize();

@@ -13,6 +13,9 @@
 		header1 = $('.logo').find('h1'),
 		imgWrapper = logo.closest('div'),
 
+		//Shopping Cart
+		shoppingCart = $('#shopping-cart'),
+
 		// Href
 		menuHref = $('.menu').find('a'),
 
@@ -40,6 +43,14 @@ $(window).on( 'scroll', function() {
 				'transition-delay': '.2s'
 			});
 
+			// Shopping Cart
+			shoppingCart
+				.css({
+					'top': '80px'
+				})
+				.children()
+				.css('padding', '0.25em 0');
+
 		littleMenu = true;
 
 	} else if ( headerOffset < marginOffset && littleMenu === true ) {
@@ -55,6 +66,14 @@ $(window).on( 'scroll', function() {
 				'transition-delay': '0s',
 				'maxWidth': '100%'
 			});
+
+			// Shopping Cart
+			shoppingCart
+				.css({
+					'top': '115px'
+				})
+				.children()
+				.css('padding', '0.75em 0');
 
 		littleMenu = false;
 
