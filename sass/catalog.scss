@@ -77,7 +77,7 @@ body {
 			img {
 				@include responsive-image;
 				background-size: contain;
-				background-color: darken( rgba(35, 171, 167, .5), 10% );
+				background-color: rgba(35, 171, 167, .5);
 				border-radius: 50%;
 			}
 		}
@@ -133,3 +133,34 @@ body {
 		}
 
 	}
+
+
+/*
+|---------------------------------------------------------
+| Dark Block
+|---------------------------------------------------------
+*/
+	#dark-block {
+		position: fixed;
+		z-index: 1000;
+		top: 0;
+		left: 0;
+		background: rgba(0,0,0,.5);
+		opacity: 0;
+		display: none;
+
+		@include transition(.5s);
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+

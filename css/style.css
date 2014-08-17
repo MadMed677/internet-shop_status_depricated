@@ -859,22 +859,23 @@ a.why-me-active {
   right: 0;
   margin: 0 auto;
   width: 700px;
+  background: rgba(255, 255, 255, 0.9);
   outline: 1px solid red;
 }
 
-/* line 661, ../sass/style.scss */
+/* line 662, ../sass/style.scss */
 #basket-inner {
   color: #aaaaaa;
 }
 
-/* line 669, ../sass/style.scss */
+/* line 667, ../sass/style.scss */
 .bg-error {
   transition: all 0.5s;
   box-shadow: 0 0 30px rgba(192, 57, 43, 0.8);
   background: rgba(192, 57, 43, 0.8);
 }
 
-/* line 676, ../sass/style.scss */
+/* line 674, ../sass/style.scss */
 .bg-success {
   transition: all 0.5s;
   box-shadow: 0 0 20px rgba(34, 171, 166, 0.8);

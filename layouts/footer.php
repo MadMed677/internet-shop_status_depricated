@@ -17,10 +17,7 @@
 	<div id="main-basket">
 		<div id="basket-inner">
 			<h3>Ваши товары</h3>
-			<div class="basket-goods catalog-item">
-				<div class="basket-good inner-catalog-img">
-					<img src="images/catalogImg/1.jpg" alt="">
-				</div>
+			<div class="basket-goods">
 				<div class="inner-catalog-item">
 					<h3>Заголовок 1</h3>
 					<div>
@@ -42,6 +39,9 @@
 			</div>
 		</div>
 	</div>
+
+	<!-- Dark Block -->
+	<div id="dark-block"></div>
 
 	<!-- FOOTER -->
 	<footer id="main-footer">
@@ -105,5 +105,6 @@
 	<script src="js/modelCollection.js"></script>
 	<script src="js/view.js"></script>
 	<script src="js/init.js"></script>
+	<script src="js/basketCart.js"></script>
 </body>
 </html>

@@ -88,7 +88,11 @@ mmInternetShop.initialize();
 				'background-position-x': '-=1px'
 			});
 		},	20);
-			
+
+	});
+
+	$(window).resize( function() {
+		darkBlock.initialize();
 	});
 
 /*

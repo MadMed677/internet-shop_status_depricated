@@ -41,21 +41,17 @@
 				var count = $(event.target).val();
 
 				if ( count > 100 ) {
-					
 					$(event.target).val(this.model.get('count'));
-
 				} else {
-				
 					this.model.set({
 						'count': +count
 					});
-
 				}
 
+				this.colorizeCircle.call(this);
 			},
 
 			validateInteger: function() {
-				
 				var key = event.keyCode;
 				if ( (key < 48 || key > 57) && key !== 8 && key !== 13 && key !== 37 && key !== 39 ) {
 					return false;
@@ -65,14 +61,10 @@
 			colorizeCircle: function() {
 				var input = this.$('.change-goods input');
 
-				if ( input.val() !== 0 ) {
-
-					input.css('borderColor', '#23aba7');
-
-				} else {
-
+				if ( +input.val() === 0 ) {
 					input.css('borderColor', '#aaa');
-
+				} else {
+					input.css('borderColor', '#23aba7');
 				}
 			},
 
