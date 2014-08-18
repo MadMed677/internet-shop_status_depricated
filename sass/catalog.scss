@@ -91,6 +91,27 @@ body {
 
 			.change-goods {
 				margin-top: 1em;
+				display: inline-block;
+			}
+
+			.catalog-item-price {
+				display: inline-block;
+				margin: 1em 0 0 2em;
+				line-height: 51px;
+				float: right;
+
+				p {
+					font-size: 1em;
+				}
+
+				span {
+					color: $color-green;
+					font-size: 1.1em;
+				}
+
+				i {
+					font-size: .6em;
+				}
 			}
 
 			h3 {
@@ -134,6 +155,242 @@ body {
 
 	}
 
+
+/*
+|---------------------------------------------------------
+| Shopping Cart
+|---------------------------------------------------------
+*/
+	#shopping-cart {
+		position: fixed;
+		width: 100%;
+		z-index: 999;
+		background: rgba(240, 240, 240, .9);
+		color: $color-gray;
+		top: 115px;
+
+		display: none;
+
+		@include transition(1s);
+	}
+
+	.shopping-cart-inner {
+		@include main-block;
+		@include clearfix;
+		@include transition(.5s);
+
+		overflow: hidden;
+		text-align: center;
+		position: relative;
+		padding: $margin-default/4 0;
+		cursor: pointer;
+
+
+		&:hover {			
+			color: $color-green;
+
+			a {
+				color: $color-green;
+			}
+			.fa {
+				@include transition;
+				color: $color-green;
+			}
+		}
+	}
+
+	.shopping-cart-blocks,
+	.shopping-cart-icon {
+		display: inline-block;
+		float: right;
+		margin-right: 1%;
+		text-align: left;
+		@include transition(.5s);
+	}
+
+	.shopping-cart-icon {
+		font-size: 3.5em;
+	}
+
+
+/*
+|---------------------------------------------------------
+| Basket
+|---------------------------------------------------------
+*/
+	#main-basket {
+		display: none;
+		position: fixed;
+		z-index: 9999;
+		top: -700px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		width: 700px;
+		background: rgba(255,255,255,.9);
+		border-radius: 20px;
+		padding: 2em;
+		font-weight: 300;
+
+		@include box-sizing;
+		@include box-shadow($color: $color-green);
+	}
+
+	#basket-inner {
+		color: $color-gray;
+
+		> h3 {
+			text-align: center;
+			padding-bottom: .5em;
+			margin-bottom: .5em;
+			color: $color-green;
+			border-bottom: 1px solid $color-green;
+		}
+	}
+
+	.basket-good {
+		margin-bottom: .5em;
+		padding-bottom: .5em;
+		border-bottom: 1px dotted white;
+		overflow: hidden;
+		
+		&:last-child {
+			border: none;
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+
+		@include clearfix;
+	}
+
+	.inner-catalog-title {
+		float: left;
+		width: 29%;
+		margin-right: 1%;
+		line-height: 48px;
+		color: $color-green;
+	}
+
+	.inner-catalog-goods {
+		float: left;
+		width: 44%;
+		margin-right: 1%;
+		line-height: 48px;
+
+		i {
+			height: 2em;
+			width: 2em;
+			line-height: 2.1em;
+			font-size: .7em;
+			text-align: center;
+			border-radius: 50%;
+			border: 1px solid $color-gray;
+
+			&:hover {
+				border-color: $color-green;
+				color: $color-green;
+			}
+		}
+
+		input {
+			height: 3.2em;
+			width: 3.2em;
+			border: 1px solid $color-gray;
+			border-radius: 50%;
+			text-align: center;
+			font-size: .8em;
+			font-family: 'Roboto';
+			font-weight: 400;
+			border-color: $color-green;
+
+			@include transition(.5s);
+			@include box-sizing;
+		}
+
+		span {
+			font-weight: 400;
+
+			&[data-price="price"],
+			&[data-total="total"] {
+				color: $color-green;
+			}
+		}
+
+	}
+
+	.inner-cat-images {
+		float: left;
+		width: 9%;
+		margin-right: 1%;
+
+		img {
+			margin-top: 8px;
+			@include responsive-image;
+		}
+	}
+
+		.inner-cat-specifications {
+			float: left;
+			width: 50%;
+		}
+
+		.inner-cat-fishki {
+			float: left;
+			width: 50%;	
+		}
+
+	.inner-catalog-firm {
+		float: left;
+		width: 15%;
+		line-height: 48px;
+	}
+
+	.basket-total {
+		padding: .5em 0;
+		margin: .5em 0;	
+		overflow: hidden;
+
+		@include clearfix;
+
+		.basket-itog {
+			float: left;
+			width: 29%;
+			margin-right: 1%;
+		}
+
+		.basket-total-price {
+			float: left;
+			margin-right: 2%;
+		}
+
+		span,
+		i {
+			color: $color-green;
+		}
+
+		i {
+			font-size: .6em;
+		}
+	}
+
+
+.fa-nope {
+	border: none!important;
+	width: 1em!important;
+
+	&:hover {
+		color: inherit!important;
+	}
+}
+
+.no-shopping-items {
+	text-align: center;
+	background: rgba(239, 38, 23, .5);
+	padding: 10px 0;
+	color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 0 5px rgba(239, 38, 23, .5);
+}
 
 /*
 |---------------------------------------------------------

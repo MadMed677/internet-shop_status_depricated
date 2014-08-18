@@ -586,83 +586,15 @@
 		}
 	}
 
-/*
-|---------------------------------------------------------
-| Shopping Cart
-|---------------------------------------------------------
-*/
-	#shopping-cart {
-		position: fixed;
-		width: 100%;
-		z-index: 999;
-		background: rgba(240, 240, 240, .9);
-		color: $color-gray;
-		top: 115px;
-
-		display: none;
-
-		@include transition(1s);
-	}
-
-	.shopping-cart-inner {
-		@include main-block;
-		@include clearfix;
-		@include transition(.5s);
-
-		overflow: hidden;
-		text-align: center;
-		position: relative;
-		padding: $margin-default/4 0;
-		cursor: pointer;
-
-
-		&:hover {			
-			color: $color-green;
-
-			a {
-				color: $color-green;
-			}
-			.fa {
-				@include transition;
-				color: $color-green;
-			}
-		}
-	}
-
-	.shopping-cart-blocks,
-	.shopping-cart-icon {
-		display: inline-block;
-		float: right;
-		margin-right: 1%;
-	}
-
-	.shopping-cart-icon {
-		font-size: 3.5em;
-	}
-
+.fa-little {
+	font-size: .6em;
+}
 
 /*
 |---------------------------------------------------------
-| Basket
+| Error and Success blocks
 |---------------------------------------------------------
 */
-	#main-basket {
-		display: none;
-		position: fixed;
-		z-index: 9999;
-		top: 0;
-		left: 0;
-		right: 0;
-		margin: 0 auto;
-		width: 700px;
-		background: rgba(255,255,255,.9);
-		outline: 1px solid red;
-	}
-
-	#basket-inner {
-		color: $color-gray;
-	}
-
 
 .bg-error {
 	@extend %blocks;
