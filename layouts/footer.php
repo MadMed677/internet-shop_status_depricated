@@ -5,7 +5,7 @@
 		<div class="shopping-cart-inner">
 			<div class="shopping-cart-blocks">
 				<a href="#" class="basket"><h3>Shopping Cart</h3></a>
-				<a href="#" class="basket"><p>Количество товаров: <span data="totalSize">0</span></p></a>
+				<a href="#" class="basket"><p>Товаров: <span data="totalSize">0</span></p></a>
 			</div>
 			<div class="shopping-cart-icon">
 				<a href="#" class="basket"><i class="fa fa-shopping-cart"></i></a>
@@ -18,25 +18,22 @@
 		<div id="basket-inner">
 			<h3>Ваши товары</h3>
 			<div class="basket-goods">
-				<div class="inner-catalog-item">
-					<h3>Заголовок 1</h3>
-					<div>
-						<p>Описание</p>
-					</div>
-					<div class="change-goods">
-						<a class="changeCount" data-diff="-1" href="#"><i class="fa fa-minus"></i></a>
-						<input type="text" value="1">
-						<a class="changeCount" data-diff="1" href="#"><i class="fa fa-plus"></i></a>
-					</div>
-				</div>
-				<div class="inner-catalog-specifications">
-					<img src="images/icons/fishki/banana.png" alt="">
-				</div>
-				<div class="inner-catalog-fishki">
-					<img src="images/icons/fishki/banana.png" alt="">
-				</div>
-				<h4>Нет фирмы</h4>
+				<!-- Каталог товаров -->
 			</div>
+			<div class="basket-total">
+				<div class="basket-itog">
+					<p>Итого:</p>
+				</div>
+				<div class="basket-total-price">
+					Количество: <span class="totalCount">0</span>
+				</div>
+				<div class="basket-total-price">
+					Цена: <span class="totalPrice">0</span><i class="fa fa-rub"></i>
+				</div>
+			</div>
+			<form id="sendData" method="post">
+				<h4>Форма</h4>
+			</form>
 		</div>
 	</div>
 
@@ -77,6 +74,9 @@
 				<input type="text" value="<%= count %>">
 				<a class="changeCount" data-diff="1" href="#"><i class="fa fa-plus"></i></a>
 			</div>
+			<div class="catalog-item-price">			
+				<p>Цена: <span><%= price %><i class="fa fa-rub fa-nope"></i></span></p>
+			</div>
 		</div>
 		<div class="inner-catalog-specifications">
 			<% _.each( specifications, function( srcImg ) { %>
@@ -89,6 +89,42 @@
 			<% }); %>
 		</div>
 		<h4><%= firm %></h4>
+	</script>
+
+	<!-- Template с товаром (в корзине) -->
+	<script type="text/template" id="mmShopCart">
+		<div class="inner-catalog-item">
+			<div class="inner-catalog-title">
+				<h5><%= title %></h5>
+			</div>
+			<div class="inner-catalog-goods">
+				<a class="changeCount" data-diff="-1" href="#"><i class="fa fa-minus"></i></a>
+				<input type="text" value="<%= count %>">
+				<a class="changeCount" data-diff="1" href="#"><i class="fa fa-plus"></i></a>
+				<span>x</span>
+				<span data-price="price"><%= price %><i class="fa fa-rub fa-nope"></i></span>
+				<span>=</span>
+				<span data-total="total"><%= totalPrice %><i class="fa fa-rub fa-nope"></i></span>
+			</div>
+		</div>
+		<div class="inner-cat-images">
+			<div class="inner-cat-specifications">
+				<% _.each( specifications, function( srcImg ) { %>
+					<img src="images/icons/specifications/<%= srcImg %>.png" alt="">
+				<% }); %>
+				<% if (specifications.length === 0) { %>
+					<img src="" alt="">
+				<% }%>
+			</div>
+			<div class="inner-cat-fishki">
+				<% _.each( icons, function( srcImg ) { %>
+					<img src="images/icons/fishki/<%= srcImg %>.png" alt="">
+				<% }); %>
+			</div>
+		</div>
+		<div class="inner-catalog-firm">
+			<p><%= firm %></p>
+		</div>
 	</script>
 
 	<!-- JavaScript -->
