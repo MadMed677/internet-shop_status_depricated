@@ -780,102 +780,24 @@ a.why-me-active {
   color: #22aba6;
 }
 
-/*
-|---------------------------------------------------------
-| Shopping Cart
-|---------------------------------------------------------
-*/
-/* line 594, ../sass/style.scss */
-#shopping-cart {
-  position: fixed;
-  width: 100%;
-  z-index: 999;
-  background: rgba(240, 240, 240, 0.9);
-  color: #aaaaaa;
-  top: 115px;
-  display: none;
-  transition: all 1s;
-}
-
-/* line 607, ../sass/style.scss */
-.shopping-cart-inner {
-  max-width: 960px;
-  margin: 0 auto;
-  transition: all 0.5s;
-  overflow: hidden;
-  text-align: center;
-  position: relative;
-  padding: 0.75em 0;
-  cursor: pointer;
-}
-/* line 8, ../sass/_mixin.scss */
-.shopping-cart-inner:after, .shopping-cart-inner:before {
-  content: ' ';
-  display: table;
-}
-/* line 13, ../sass/_mixin.scss */
-.shopping-cart-inner:before {
-  clear: both;
-}
-/* line 619, ../sass/style.scss */
-.shopping-cart-inner:hover {
-  color: #23aba7;
-}
-/* line 622, ../sass/style.scss */
-.shopping-cart-inner:hover a {
-  color: #23aba7;
-}
-/* line 625, ../sass/style.scss */
-.shopping-cart-inner:hover .fa {
-  transition: all 0.2s;
-  color: #23aba7;
-}
-
-/* line 633, ../sass/style.scss */
-.shopping-cart-blocks,
-.shopping-cart-icon {
-  display: inline-block;
-  float: right;
-  margin-right: 1%;
-}
-
-/* line 639, ../sass/style.scss */
-.shopping-cart-icon {
-  font-size: 3.5em;
+/* line 589, ../sass/style.scss */
+.fa-little {
+  font-size: .6em;
 }
 
 /*
 |---------------------------------------------------------
-| Basket
+| Error and Success blocks
 |---------------------------------------------------------
 */
-/* line 649, ../sass/style.scss */
-#main-basket {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  width: 700px;
-  background: rgba(255, 255, 255, 0.9);
-  outline: 1px solid red;
-}
-
-/* line 662, ../sass/style.scss */
-#basket-inner {
-  color: #aaaaaa;
-}
-
-/* line 667, ../sass/style.scss */
+/* line 599, ../sass/style.scss */
 .bg-error {
   transition: all 0.5s;
   box-shadow: 0 0 30px rgba(192, 57, 43, 0.8);
   background: rgba(192, 57, 43, 0.8);
 }
 
-/* line 674, ../sass/style.scss */
+/* line 606, ../sass/style.scss */
 .bg-success {
   transition: all 0.5s;
   box-shadow: 0 0 20px rgba(34, 171, 166, 0.8);
