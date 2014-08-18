@@ -34,6 +34,116 @@
 
 				this.colorizeCircle();
 
+				if ( this.model.get('count') > 0 )
+					this.model.set('inCart', 'true');
+				else
+					this.model.set('inCart', 'false');
+
+				var priceT = this.model.get('count') * this.model.get('price');
+
+				this.model.set({
+					'totalPrice': priceT
+				});
+
+				event.preventDefault();
+			},
+
+			changeCountInput: function() {
+				var count = $(event.target).val();
+
+				if ( count > 100 ) {
+					$(event.target).val(this.model.get('count'));
+				} else {
+					this.model.set({
+						'count': +count
+					});
+				}
+
+				this.colorizeCircle.call(this);
+				if ( this.model.get('count') > 0 )
+
+					this.model.set('inCart', 'true');
+				else
+					this.model.set('inCart', 'false');
+			},
+
+			validateInteger: function() {
+				var key = event.keyCode;
+				if ( (key < 48 || key > 57) && key !== 8 && key !== 13 && key !== 37 && key !== 39 ) {
+					return false;
+				}
+			},
+
+			colorizeCircle: function() {
+				var input = this.$('.change-goods input');
+
+				if ( +input.val() === 0 ) {
+					input.css('borderColor', '#aaa');
+				} else {
+					input.css('borderColor', '#23aba7');
+				}
+			},
+
+		/*
+		|---------------------------------------------------------
+		| Listeners
+		|---------------------------------------------------------
+		*/
+
+			initialize: function() {
+				this.model.on('change', this.render, this);
+			},
+
+			render: function() {
+				this.$el.html( this.template( this.model.toJSON() ) );
+
+				return this;
+			}
+
+	});
+
+/*
+|---------------------------------------------------------
+| Single View Good in Shopping Cart
+|---------------------------------------------------------
+*/
+
+	var mmGoodViewCart = Backbone.View.extend({
+
+		tagName: 'div',
+
+		className: 'basket-good',
+
+		template: _.template( $('#mmShopCart').html() ),
+
+		events: {
+			'click .changeCount': 'changeCount',
+			'keydown input': 'validateInteger',
+			'keyup input': 'changeCountInput'
+		},
+
+		/*
+		|---------------------------------------------------------
+		| Events
+		|---------------------------------------------------------
+		*/
+
+			changeCount: function( event ) {
+				var diff = $(event.target).closest('a').data('diff');
+				var count = this.model.get('count');
+
+				this.model.set({
+					'count': count + diff
+				}, { validate: true });
+
+				this.colorizeCircle();
+
+				var priceT = this.model.get('count') * this.model.get('price');
+
+				this.model.set({
+					'totalPrice': priceT
+				});
+
 				event.preventDefault();
 			},
 
@@ -119,10 +229,12 @@
 
 		changeTotalCount: function() {
 			var size = this.size.text();
-			var total = 0;
+			var total = 0,
+				price = 0;
 
 			this.collection.each( function( model ) {
 				total += model.get('count');
+				price += model.get('price') * model.get('count');
 			});
 
 			if ( total === 0 ) {
@@ -130,9 +242,78 @@
 				this.paragraf.text('Нет товаров в корзине');
 			} else {
 				this.paragraf.closest('.shopping-cart-inner').css('opacity', '1');
-				this.paragraf.html('<p>Количество товаров: <span data="totalSize">'+total+'</span></p>');
+				this.paragraf.html('<p>Товаров: <span data="totalSize">'+total+'</span> Итого: <span data="totalPrice">'+price+'</span><i class="fa fa-rub fa-little"></i></p>');
 			}
 
 		}
 
 	});
+
+/*
+|---------------------------------------------------------
+| All Goods Views in Shopping Cart
+|---------------------------------------------------------
+*/
+	var mmGoodsViewCart = Backbone.View.extend({
+
+		tagName: 'div',
+
+		className: 'basket-goods',
+
+		initialize: function() {
+			this.collection.on('change', this.addAll, this);
+			this.total = $('.basket-total');
+		},
+
+		render: function() {
+			this.collection.each( this.addOne, this );
+
+			return this;
+		},
+
+		addOne: function( good ) {
+			if ( this.$el.text() === '' ) {
+				$('#sendData').hide();
+				this.$el.html('<p class="no-shopping-items">В корзине нет товаров</p>');
+			}
+		},
+
+		addAll: function( good ) {
+			var self = this,
+				totalPrice = 0,
+				totalCount = 0;
+
+			this.$el.html('');
+
+			this.collection.each( function( item ) {
+				if ( item.get('count') > 0 ) {
+					var goodViewCart = new mmGoodViewCart({ model: item });
+					self.$el.prepend( goodViewCart.render().el );
+
+					totalPrice += item.get('count') * item.get('price');
+					totalCount += item.get('count');
+				}
+			});
+
+			this.total.find('.totalPrice').text(totalPrice);
+			this.total.find('.totalCount').text(totalCount);
+
+			if ( this.$el.text() === '' ) {
+				$('#sendData').hide();
+				this.$el.html('<p class="no-shopping-items">В корзине нет товаров</p>');
+			} else {
+				$('#sendData').show();
+			}
+		}
+
+	});
+
+
+
+
+
+
+
+
+
+

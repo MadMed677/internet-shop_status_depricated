@@ -1,54 +1,15 @@
 /*
 |---------------------------------------------------------
-| Tabs
-|---------------------------------------------------------
-*/
-// var catalogImages = (function() {
-	
-// 	var catalog = $('#catalog'),
-// 		speedAnimate = 400,
-// 		container = $('.container');
-
-// 	initialize = function() {
-// 		container.on( 'mouseenter', '.inner-catalog-img img', function() {
-// 			var $this = $(this),
-// 				imgHeight = $this.height(),
-// 				imgWidth = $this.width(),
-// 				block = $this.parent().next();
-
-// 			block
-// 				.css('height', imgHeight+4)
-// 				.stop()
-// 				.animate({
-// 					'marginTop': 0,
-// 					'opacity': 1
-// 				}, speedAnimate, 'easeOutQuart');
-// 		});
-
-// 		container.on( 'mouseleave', '.catalog-item', function() {
-// 			$(this).find('.inner-catalog-item').stop().animate({
-// 				'marginTop': '-300px',
-// 				'opacity': 0
-// 			}, speedAnimate);
-// 		});
-// 	};
-
-// 	return {
-// 		initialize: initialize
-// 	};
-
-// })();
-
-
-/*
-|---------------------------------------------------------
 | Basket Cart Initialization
 |---------------------------------------------------------
 */
 	var basketCart = (function() {
 		
+		var mainBasket = $('#main-basket'),
+			speed = 1000;
+
 		var initialize = function() {
-			$('#main-basket').fadeIn(1000);
+			mainBasket.fadeIn(speed).animate({'top': '100px'}, speed/2);
 			darkBlock.initialize();
 		};
 
@@ -57,7 +18,7 @@
 		};
 
 		var uninitialize = function() {
-			$('#main-basket').fadeOut(1000);
+			mainBasket.animate({'top': '-700px'}, {delay: speed*2, queue: false}).fadeOut(speed);
 			darkBlock.uninitialize();
 		};
 

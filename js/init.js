@@ -17,13 +17,18 @@ var mmGoods = (function() {
 				{
 					title: 'Заголовок 2',
 					count: 0,
-					icons: ['strawberry']
+					icons: ['strawberry'],
+					price: 170
 				},
-				{}
+				{
+					price: 340
+				}
 			]);
 
+			var goodViewCollectionCart = new mmGoodsViewCart({ collection: goodsCollection });
 			var goodViewCollection = new mmGoodsView({ collection: goodsCollection });
 
+			$('.basket-goods').append( goodViewCollectionCart.render().el );
 			$('.catalog-items').append( goodViewCollection.render().el );
 		}
 	};

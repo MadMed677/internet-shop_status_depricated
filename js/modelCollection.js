@@ -7,7 +7,10 @@ var mmGoodModel = Backbone.Model.extend({
 		firm: 'Нет фирмы',
 		icons: [],
 		specifications: [],
-		count: 0
+		count: 0,
+		price: 150,
+		inCart: false,
+		totalPrice: 0
 	},
 
 	validate: function( attributes ) {
@@ -19,6 +22,10 @@ var mmGoodModel = Backbone.Model.extend({
 			return 'Количество товара должно быть больше нуля';
 		if ( attributes.count > 100 )
 			return 'Ну зачем вы издеваетесь?!';
+	},
+
+	toggleCart: function() {
+		this.set({'inCart': !this.get('inCart')});
 	}
 
 });
