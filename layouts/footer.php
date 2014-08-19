@@ -18,7 +18,9 @@
 		<div id="basket-inner">
 			<h3>Ваши товары</h3>
 			<div class="basket-goods">
+
 				<!-- Каталог товаров -->
+				
 			</div>
 			<div class="basket-total">
 				<div class="basket-itog">
@@ -32,7 +34,35 @@
 				</div>
 			</div>
 			<form id="sendData" method="post">
-				<h4>Форма</h4>
+				<h3>Ваши данные</h3>
+				<div class="form-col form-name">
+					<div class="form-offset-2 form-col-3">
+						<label for="name">Ваше имя*</label>
+					</div>
+					<div class="form-col-4">
+						<input type="text" placeholder="Иван Иванов" name="name" id="name">
+					</div>
+				</div>
+				<div class="form-col form-telephone">
+					<div class="form-offset-2 form-col-3">
+						<label for="phone">Телефон*</label>
+					</div>
+					<div class="form-col-4">
+						<input type="phone" placeholder="89210001122" name="phone" id="phone">
+					</div>
+				</div>
+				<div class="form-col">
+					<div class="form-offset-2 form-col-3">
+						<label for="email">Email</label>
+					</div>
+					<div class="form-col-4 form-email">
+						<input type="email" placeholder="Email" name="email" id="email">
+					</div>
+				</div>
+				<div class="form-offset-4 form-submit">
+					<button id="buttonSending" class="continue-buy" type="submit" disabled="disabled"><i class="fa fa-envelope-o"></i>Заказать</button>
+					<button class="back-buy"><i class="fa fa-shopping-cart" type="button"></i>Продолжить покупки</button>
+				</div>
 			</form>
 		</div>
 	</div>
@@ -101,9 +131,9 @@
 				<a class="changeCount" data-diff="-1" href="#"><i class="fa fa-minus"></i></a>
 				<input type="text" value="<%= count %>">
 				<a class="changeCount" data-diff="1" href="#"><i class="fa fa-plus"></i></a>
-				<span>x</span>
+				<span class="fa fa-times decorative"></span>
 				<span data-price="price"><%= price %><i class="fa fa-rub fa-nope"></i></span>
-				<span>=</span>
+				<span class="decorative fa-equal">=</span>
 				<span data-total="total"><%= totalPrice %><i class="fa fa-rub fa-nope"></i></span>
 			</div>
 		</div>
@@ -128,8 +158,8 @@
 	</script>
 
 	<!-- JavaScript -->
-	<script src="js/jquery.min.js"></script>
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.easing.js"></script>
 	<script src="js/jquery.classywiggle.min.js"></script>
 	<script src="js/mmPlugins.js"></script>
 	<script src="js/main.js"></script>
@@ -142,5 +172,6 @@
 	<script src="js/view.js"></script>
 	<script src="js/init.js"></script>
 	<script src="js/basketCart.js"></script>
+	<script src="js/changeForm.js"></script>
 </body>
 </html>
