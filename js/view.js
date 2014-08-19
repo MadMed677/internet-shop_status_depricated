@@ -78,9 +78,9 @@
 				var input = this.$('.change-goods input');
 
 				if ( +input.val() === 0 ) {
-					input.css('borderColor', '#aaa');
+					input.css('border', '1px solid #aaa');
 				} else {
-					input.css('borderColor', '#23aba7');
+					input.css('border', '1px solid #23aba7');
 				}
 			},
 
@@ -272,16 +272,18 @@
 		},
 
 		addOne: function( good ) {
-			if ( this.$el.text() === '' ) {
-				$('#sendData').hide();
-				this.$el.html('<p class="no-shopping-items">В корзине нет товаров</p>');
-			}
+			$('#sendData').hide();
+			$('.basket-total').hide();
+			this.$el.html('<p class="no-shopping-items">В корзине нет товаров</p>');
 		},
 
 		addAll: function( good ) {
 			var self = this,
 				totalPrice = 0,
 				totalCount = 0;
+
+			var sendData = $('#sendData'),
+				basketTotal = $('.basket-total');
 
 			this.$el.html('');
 
@@ -299,10 +301,12 @@
 			this.total.find('.totalCount').text(totalCount);
 
 			if ( this.$el.text() === '' ) {
-				$('#sendData').hide();
+				sendData.hide();
+				basketTotal.hide();
 				this.$el.html('<p class="no-shopping-items">В корзине нет товаров</p>');
 			} else {
-				$('#sendData').show();
+				sendData.show();
+				basketTotal.show();
 			}
 		}
 

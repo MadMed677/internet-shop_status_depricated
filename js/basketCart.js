@@ -3,6 +3,7 @@ $('.wrapper').on('click', '.basket', function() {
 	basketCart.setDarkBlock();
 });
 
-$('.wrapper').on('click', '#dark-block', function() {
+$('.wrapper').on('click', '#dark-block, .back-buy', function( event ) {
+	event.preventDefault();
 	basketCart.uninitialize();
 });

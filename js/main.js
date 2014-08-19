@@ -165,6 +165,8 @@ mmInternetShop.initialize();
 								'right': '0',
 								'opacity': 1
 							}, 400 );
+
+						// validateTheForm.initialize();
 					}
 				});
 

@@ -1,11 +1,13 @@
+var app = app || {};
+
 var mmGoods = (function() {
 	
 	return {
 
 		initialize: function() {
 			var goodModel = new mmGoodModel();
-			var goodsCollection = new mmGoodsCollection();
-			goodsCollection.add([
+			app.goodsCollection = new mmGoodsCollection();
+			app.goodsCollection.add([
 				{
 					title: 'Название товара 1',
 					img: 'slider1.png',
@@ -25,8 +27,8 @@ var mmGoods = (function() {
 				}
 			]);
 
-			var goodViewCollectionCart = new mmGoodsViewCart({ collection: goodsCollection });
-			var goodViewCollection = new mmGoodsView({ collection: goodsCollection });
+			var goodViewCollectionCart = new mmGoodsViewCart({ collection: app.goodsCollection });
+			var goodViewCollection = new mmGoodsView({ collection: app.goodsCollection });
 
 			$('.basket-goods').append( goodViewCollectionCart.render().el );
 			$('.catalog-items').append( goodViewCollection.render().el );
