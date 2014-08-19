@@ -117,6 +117,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   box-sizing: border-box;
   transition: all 0.2s;
 }
+/* line 107, ../sass/_mixin.scss */
+.bg-error a, .bg-success a {
+  color: #fff;
+  text-decoration: underline;
+}
+/* line 111, ../sass/_mixin.scss */
+.bg-error a:hover, .bg-success a:hover {
+  color: inherit;
+}
 
 @font-face {
   font-family: "Didact Gothic";

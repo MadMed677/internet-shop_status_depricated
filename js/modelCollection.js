@@ -9,7 +9,6 @@ var mmGoodModel = Backbone.Model.extend({
 		specifications: [],
 		count: 0,
 		price: 150,
-		inCart: false,
 		totalPrice: 0
 	},
 
@@ -24,14 +23,17 @@ var mmGoodModel = Backbone.Model.extend({
 			return 'Ну зачем вы издеваетесь?!';
 	},
 
-	toggleCart: function() {
-		this.set({'inCart': !this.get('inCart')});
+	clear: function() {
+		this.destroy();
+		this.view.remove();
 	}
 
 });
 
 var mmGoodsCollection = Backbone.Collection.extend({
 
-	model: mmGoodModel
+	model: mmGoodModel,
+
+	localStorage: new Backbone.LocalStorage('goods')
 
 });

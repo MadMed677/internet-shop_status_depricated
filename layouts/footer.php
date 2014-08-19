@@ -17,10 +17,12 @@
 	<div id="main-basket">
 		<div id="basket-inner">
 			<h3>Ваши товары</h3>
-			<div class="basket-goods">
+			<div id="main-basket-goods">
+				<!-- <div class="basket-goods">
 
-				<!-- Каталог товаров -->
-				
+					Каталог товаров
+					
+				</div> -->
 			</div>
 			<div class="basket-total">
 				<div class="basket-itog">
@@ -133,7 +135,7 @@
 				<a class="changeCount" data-diff="1" href="#"><i class="fa fa-plus"></i></a>
 				<span class="fa fa-times decorative"></span>
 				<span data-price="price"><%= price %><i class="fa fa-rub fa-nope"></i></span>
-				<span class="decorative fa-equal">=</span>
+				<span class="decorative faequal">=</span>
 				<span data-total="total"><%= totalPrice %><i class="fa fa-rub fa-nope"></i></span>
 			</div>
 		</div>
@@ -168,6 +170,7 @@
 	<script src="js/catalogImages.js"></script>
 	<script src="js/underscore.js"></script>
 	<script src="js/backbone.js"></script>
+	<script src="js/backbone.localStorage-min.js"></script>
 	<script src="js/modelCollection.js"></script>
 	<script src="js/view.js"></script>
 	<script src="js/init.js"></script>

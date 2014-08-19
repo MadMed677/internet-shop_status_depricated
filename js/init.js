@@ -30,7 +30,7 @@ var mmGoods = (function() {
 			var goodViewCollectionCart = new mmGoodsViewCart({ collection: app.goodsCollection });
 			var goodViewCollection = new mmGoodsView({ collection: app.goodsCollection });
 
-			$('.basket-goods').append( goodViewCollectionCart.render().el );
+			$('#main-basket-goods').append( goodViewCollectionCart.render().el );
 			$('.catalog-items').append( goodViewCollection.render().el );
 		}
 	};

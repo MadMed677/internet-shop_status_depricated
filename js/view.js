@@ -214,6 +214,8 @@
 			this.size = $('#shopping-cart').find('span[data=totalSize]');
 			this.paragraf = $('#shopping-cart').find('a > p');
 			this.changeTotalCount();
+
+			// this.collection.fetch();
 		},
 
 		render: function() {
@@ -263,6 +265,7 @@
 		initialize: function() {
 			this.collection.on('change', this.addAll, this);
 			this.total = $('.basket-total');
+			this.toRender = $('#main-basket-goods');
 		},
 
 		render: function() {
@@ -272,12 +275,15 @@
 		},
 
 		addOne: function( good ) {
+			console.log('addOne');
 			$('#sendData').hide();
 			$('.basket-total').hide();
-			this.$el.html('<p class="no-shopping-items">В корзине нет товаров</p>');
+			// this.$el.html('<p class="no-shopping-items">В корзине нет товаров</p>');
+			this.toRender.html('<p class="no-shopping-items">В корзине нет товаров</p>');
 		},
 
 		addAll: function( good ) {
+			console.log('addAll');
 			var self = this,
 				totalPrice = 0,
 				totalCount = 0;
@@ -285,12 +291,14 @@
 			var sendData = $('#sendData'),
 				basketTotal = $('.basket-total');
 
-			this.$el.html('');
+			// this.$el.html('');
+			this.toRender.html('');
 
 			this.collection.each( function( item ) {
 				if ( item.get('count') > 0 ) {
 					var goodViewCart = new mmGoodViewCart({ model: item });
-					self.$el.prepend( goodViewCart.render().el );
+					// self.$el.prepend( goodViewCart.render().el );
+					self.toRender.prepend( goodViewCart.render().el );
 
 					totalPrice += item.get('count') * item.get('price');
 					totalCount += item.get('count');
@@ -300,10 +308,12 @@
 			this.total.find('.totalPrice').text(totalPrice);
 			this.total.find('.totalCount').text(totalCount);
 
-			if ( this.$el.text() === '' ) {
+			// if ( this.$el.text() === '' ) {
+			if ( this.toRender.text() === '' ) {
 				sendData.hide();
 				basketTotal.hide();
-				this.$el.html('<p class="no-shopping-items">В корзине нет товаров</p>');
+				// this.$el.html('<p class="no-shopping-items">В корзине нет товаров</p>');
+				this.toRender.html('<p class="no-shopping-items">В корзине нет товаров</p>');
 			} else {
 				sendData.show();
 				basketTotal.show();

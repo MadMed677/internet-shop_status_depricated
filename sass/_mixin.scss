@@ -103,6 +103,16 @@
 	padding: 3em;
 	border-radius: 10px;
 	text-align: center;
+
+	a {
+		color: #fff;
+		text-decoration: underline;
+
+		&:hover {
+			color: inherit;
+		}
+	}
+
 	@include box-sizing;
 	@include transition;
 }

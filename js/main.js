@@ -3,7 +3,7 @@ var mmInternetShop = (function( $ ) {
 	var container = $('.container');
 
 	function changeWhyMe( event ) {
-		if ( $(event.target).attr('href') === '#' ) {		
+		if ( $(event.target).attr('href') === '#' ) {
 			event.preventDefault();
 			return;
 		}
@@ -165,8 +165,6 @@ mmInternetShop.initialize();
 								'right': '0',
 								'opacity': 1
 							}, 400 );
-
-						// validateTheForm.initialize();
 					}
 				});
 
@@ -185,8 +183,8 @@ mmInternetShop.initialize();
 			error: function() {
 
 				var data = ['<div class="bg-error">',
-							'Произошла ошибка, перезагрузите страницу',
-							' или попробуйте зайти на сайт позже</div>'].join('');
+							'<p>Произошла ошибка, перезагрузите страницу',
+							' или <a href="#index">перейдите</a> на главную страницу</p></div>'].join('');
 
 				container.ajaxFadeOut(2000, function() {
 					container.html(data).delay(500).ajaxFadeIn(2000);
