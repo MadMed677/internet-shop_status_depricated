@@ -63,11 +63,29 @@
 
 	input {
 		outline: none;
+		border: none;
 
 		&:focus,
 		&:hover {
 			outline: none;
 		}
+	}
+
+	button {
+		background: none;
+		border: none;
+		border-radius: 0;
+		outline: none;
+		cursor: pointer;
+
+		&:hover,
+		&:focus {
+			outline: none;
+		}
+	}
+
+	button[disabled="disabled"] {
+		opacity: .6;
 	}
 
 	.wrapper {
@@ -610,8 +628,32 @@
 	background: rgba(34, 171, 166, .8);
 }
 
+.form-error {
+	color: rgba(192, 57, 43, .8);
 
+	input {
+		box-shadow: 0 0 4px rgba(192, 57, 43, .8)!important;	
+		color: rgba(192, 57, 43, .8);
+	}
+}
 
+.form-success {
+	color: rgba(34, 171, 166, .8);
+
+	input {
+		box-shadow: 0 0 4px rgba(34, 171, 166, .8)!important;
+		color: rgba(34, 171, 166, .8);
+	}
+}
+
+.form-warning {
+	color: rgba(230, 126, 34, .8);
+
+	input {
+		box-shadow: 0 0 4px rgba(230, 126, 34, .8)!important;
+		color: rgba(230, 126, 34, .8)
+	}
+}
 
 
 
