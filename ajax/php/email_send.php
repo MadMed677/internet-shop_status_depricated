@@ -10,21 +10,19 @@ function ValidateEmail( $value ) {
 }
 
 $post = ( !empty( $_POST ) ) ? true : false;
-
+$authorName = 'Артем Анашев';
+$authorEmail = 'vpunke@gmail.com';
+$authorVk = 'http://vk.com/madmed677';
 
 if ( $post ) {
 
-	$name = 'MadMed677';
 	$email = htmlspecialchars( stripslashes( $_POST['email'] ) );
+	$name = htmlspecialchars( stripslashes( $_POST['name'] ) );
+	$total_price = 0;
+
 	$json = json_decode( $_POST['json'] );
 	$total_price = 0;
 	$total_count = 0;
-
-	foreach ( $json as $object ) {
-		foreach ( $object as $key => $value ) {
-			$col1 = '<div class="first-column">'.$key.'</div><div class="second-column">'.$value.'</div>';
-		}
-	}
 
 	$subject = 'Ваш заказ на сайте vPunke';
 	$error = '';
@@ -34,28 +32,84 @@ if ( $post ) {
 				<title>$subject</title>
 				<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
 				<style>
+					body {						
+						background: url(http://subtlepatterns.com/patterns/sativa.png) top left repeat;
+					}
+
 					.wrapper {
 						max-width: 700px;
 						margin: 0 auto;
-						outline: 1px solid red;
 						overflow: hidden;
 						font: 300 1em 'Lato', 'PT Sans', sans-serif;
 					}
 
-					.title,
-					.value {
+					.good {
+						border-bottom: 1px solid #22aba6;
+					}
+
+					.first-column,
+					.second-column {
 						float: left;
-						width: 50%;
+						width: 48%;
+					}
+
+					.itog {
+						color: #22aba6;
+						text-align: center;
+						font-size: 1.5em;
 					}
 				</style>
 			</head>
 			<body>
-				<div class='wrapper'>
-					$col1
-				</div>
-			</body>
-		</html>
-	";
+				<div class='wrapper'>";
+
+					$message .= 'Привет <span style="color: #22aba6">' . $name . "</span>.<br>";
+					$message .= 'Информация о твоем заказе представлена ниже. Если ты обнаружил ошибку, то сообщи о ней мне в ближайшее время одним из способов:<br>';
+					$message .= '<ul>
+						<li> Email: '. $authorEmail .'</li>
+						<li> Vk: '. $authorVk .'</li>
+					</ul>';
+
+					foreach ( $json as $object ) {
+						$message .= '<div class="good">';
+						foreach ( $object as $key => $value ) {
+							$message .= '<div class="good-row">';
+							if ( $key === 'title' ) {
+
+								$first_title = 'Название: ';
+
+							} elseif ( $key === 'img' ) {
+								
+								continue;
+
+							} elseif ( $key === 'firm' ) {
+								
+								$first_title = 'Производитель: ';
+
+							} elseif ( $key === 'count' ) {
+								
+								$first_title = 'Количество: ';
+							
+							} elseif ( $key === 'price' ) {
+							
+								$first_title = 'Цена: ';
+							
+							} elseif ( $key === 'totalPrice' ) {
+							
+								$total_price += $value;
+								continue;
+							
+							}
+							
+							$message .= '<div class="first-column">'.$first_title .'</div><div class="second-column">'.$value.'</div>';
+							$message .= '</div>';
+						}
+						$message .= '</div>';
+					}
+
+					$message .= '<div class="itog">Итоговая цена: '. $total_price .' рублей</div>';
+
+$message .= "</div></body></html>";
 
 	if ( !ValidateEmail( $email ) ) {
 		$error = 'Your email is wrong!';

@@ -5,33 +5,44 @@ var mmGoods = (function() {
 	return {
 
 		initialize: function() {
-			var goodModel = new mmGoodModel();
+			// var goodModel = new mmGoodModel();
 			app.goodsCollection = new mmGoodsCollection();
 			app.goodsCollection.add([
 				{
 					title: 'Название товара 1',
 					img: 'slider1.png',
 					description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima quis neque recusandae, quia laborum exercitationem. Illum quod modi vel amet et quidem ducimus, eligendi iusto vero eaque repudiandae esse odio dolorum sint reprehenderit recusandae sed, rerum fuga id facere voluptatibus, doloremque qui? Ipsum possimus, ullam, impedit assumenda laborum temporibus. Obcaecati.',
-					firm: 'Нет фирмы',
-					icons: ['banana'],
-					count: 0
+					firm: 'Hello',
+					icons: ['banana']
 				},
 				{
-					title: 'Заголовок 2',
-					count: 0,
+					title: 'Название товара 2',
 					icons: ['strawberry'],
 					price: 170
 				},
 				{
+					title: 'Название товара 3',
+					firm: 'Bye bye',
 					price: 340
 				}
 			]);
 
-			var goodViewCollectionCart = new mmGoodsViewCart({ collection: app.goodsCollection });
-			var goodViewCollection = new mmGoodsView({ collection: app.goodsCollection });
+			if ( !localStorage.getItem('goods') ) {
+				app.goodsCollection.each( function( model, index ) {
+					model.save({
+						'count': model.get('count')
+					});
+					console.log(model.get('count'));
+				});
+			}
 
-			$('#main-basket-goods').append( goodViewCollectionCart.render().el );
-			$('.catalog-items').append( goodViewCollection.render().el );
+			app.goodsCollection.fetch();
+
+			app.goodViewCollectionCart = new app.mmGoodsViewCart({ collection: app.goodsCollection });
+			app.goodViewCollection = new app.mmGoodsView({ collection: app.goodsCollection });
+
+			$('#main-basket-goods').append( app.goodViewCollectionCart.render().el );
+			$('.catalog-items').append( app.goodViewCollection.render().el );
 		}
 	};
 

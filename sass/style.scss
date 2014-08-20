@@ -626,6 +626,8 @@
 	@include transition(.5s);
 	@include box-shadow($color: rgba(34, 171, 166, .8));
 	background: rgba(34, 171, 166, .8);
+
+	display: none;
 }
 
 .form-error {

@@ -1,3 +1,5 @@
+var app = app || {};
+
 /*
 |---------------------------------------------------------
 | Single View Good
@@ -28,20 +30,20 @@
 				var diff = $(event.target).closest('a').data('diff');
 				var count = this.model.get('count');
 
-				this.model.set({
+				this.model.save({
 					'count': count + diff
 				}, { validate: true });
 
 				this.colorizeCircle();
 
 				if ( this.model.get('count') > 0 )
-					this.model.set('inCart', 'true');
+					this.model.save('inCart', 'true');
 				else
-					this.model.set('inCart', 'false');
+					this.model.save('inCart', 'false');
 
 				var priceT = this.model.get('count') * this.model.get('price');
 
-				this.model.set({
+				this.model.save({
 					'totalPrice': priceT
 				});
 
@@ -54,7 +56,7 @@
 				if ( count > 100 ) {
 					$(event.target).val(this.model.get('count'));
 				} else {
-					this.model.set({
+					this.model.save({
 						'count': +count
 					});
 				}
@@ -62,9 +64,9 @@
 				this.colorizeCircle.call(this);
 				if ( this.model.get('count') > 0 )
 
-					this.model.set('inCart', 'true');
+					this.model.save('inCart', 'true');
 				else
-					this.model.set('inCart', 'false');
+					this.model.save('inCart', 'false');
 			},
 
 			validateInteger: function() {
@@ -132,7 +134,7 @@
 				var diff = $(event.target).closest('a').data('diff');
 				var count = this.model.get('count');
 
-				this.model.set({
+				this.model.save({
 					'count': count + diff
 				}, { validate: true });
 
@@ -140,7 +142,7 @@
 
 				var priceT = this.model.get('count') * this.model.get('price');
 
-				this.model.set({
+				this.model.save({
 					'totalPrice': priceT
 				});
 
@@ -153,7 +155,7 @@
 				if ( count > 100 ) {
 					$(event.target).val(this.model.get('count'));
 				} else {
-					this.model.set({
+					this.model.save({
 						'count': +count
 					});
 				}
@@ -201,7 +203,7 @@
 | All Goods Views
 |---------------------------------------------------------
 */
-	var mmGoodsView = Backbone.View.extend({
+	app.mmGoodsView = Backbone.View.extend({
 
 		tagName: 'div',
 
@@ -214,8 +216,6 @@
 			this.size = $('#shopping-cart').find('span[data=totalSize]');
 			this.paragraf = $('#shopping-cart').find('a > p');
 			this.changeTotalCount();
-
-			// this.collection.fetch();
 		},
 
 		render: function() {
@@ -227,6 +227,8 @@
 		addOne: function( good ) {
 			var goodView = new mmGoodView({ model: good });
 			this.$el.append( goodView.render().el );
+
+			console.log('add one!');
 		},
 
 		changeTotalCount: function() {
@@ -256,7 +258,7 @@
 | All Goods Views in Shopping Cart
 |---------------------------------------------------------
 */
-	var mmGoodsViewCart = Backbone.View.extend({
+	app.mmGoodsViewCart = Backbone.View.extend({
 
 		tagName: 'div',
 

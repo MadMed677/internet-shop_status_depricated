@@ -8,8 +8,6 @@ var mmInternetShop = (function( $ ) {
 			return;
 		}
 
-		console.log( $(event.target).attr('href') );
-
 		var links = $('.why-me-nav').find('a'),
 			$this = $(this),
 			index = $this.data('index'),
@@ -155,6 +153,9 @@ mmInternetShop.initialize();
 
 					if ( onCatalog ) {
 						mmGoods.initialize();
+						app.goodViewCollection.changeTotalCount();
+						app.goodViewCollectionCart.addAll();
+						
 						$('#shopping-cart')
 							.css({
 								'display': 'block',
@@ -208,8 +209,7 @@ mmInternetShop.initialize();
 
 
 	mmFindHash();
-
-
+	mmLoadPage.count = 0;
 
 
 

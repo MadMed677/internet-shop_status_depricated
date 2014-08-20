@@ -160,10 +160,28 @@ var validateTheForm = (function() {
 
 				success: function( msg ) {
 					if ( msg == 'ok' ) {
+
 						console.log('ok');
+						basketCart.uninitialize();
+						$('<div class="bg-success">Спасибо за заявку! Я позвоню как только увижу твое письмо :)</div>')
+							.appendTo(document.body)
+							.delay(500)
+							.fadeIn(1000, function() {
+								$(this).delay(2000).fadeOut(1000);
+							});
+
 					} else {
+
 						console.log('another msg');
 						console.log(msg);
+
+						$('<div class="bg-error">Что-то пошло не так, попробуй вбить данные снова и переотправить заявку.</div>')
+							.appendTo(document.body)
+							.delay(500)
+							.fadeIn(1000, function() {
+								$(this).delay(2000).fadeOut(1000);
+							});
+
 					}
 				},
 
@@ -171,7 +189,11 @@ var validateTheForm = (function() {
 					console.log('error');
 				}
 			});
-			
+
+			// nameField.val('');
+			// emailField.val('');
+			// phoneField.val('');
+
 			event.preventDefault();
 		});
 
