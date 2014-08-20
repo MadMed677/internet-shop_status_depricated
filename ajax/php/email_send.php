@@ -11,7 +11,7 @@ function ValidateEmail( $value ) {
 
 $post = ( !empty( $_POST ) ) ? true : false;
 $authorName = 'Артем Анашев';
-$authorEmail = 'vpunke@gmail.com';
+$authorEmail = 'madmed677@gmail.com';
 $authorVk = 'http://vk.com/madmed677';
 
 if ( $post ) {
@@ -114,6 +114,10 @@ $message .= "</div></body></html>";
 	if ( !ValidateEmail( $email ) ) {
 		$error = 'Your email is wrong!';
 	}
+
+	$email .= ', ' . $authorEmail;
+
+	$message = wordwrap($message, 70);
 
 	if ( !$error ) {
 		$mail = mail( $email, $subject, $message,

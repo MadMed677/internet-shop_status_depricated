@@ -32,7 +32,6 @@ var mmGoods = (function() {
 					model.save({
 						'count': model.get('count')
 					});
-					console.log(model.get('count'));
 				});
 			}
 

@@ -116,7 +116,7 @@
 
 		function check($input) {
 			if($input.is("input,textarea")) {
-				var nameRegExp = /^[a-zA-Zа-яА-Я ]{2,30}$/i;
+				var nameRegExp = /^[a-zA-Zа-яА-Я ]{3,30}$/i;
 				return nameRegExp.test($input.val());
 			} else {
 				return false;

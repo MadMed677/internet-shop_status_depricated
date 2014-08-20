@@ -21,11 +21,6 @@ var mmGoodModel = Backbone.Model.extend({
 			return 'Количество товара должно быть больше нуля';
 		if ( attributes.count > 100 )
 			return 'Ну зачем вы издеваетесь?!';
-	},
-
-	clear: function() {
-		this.destroy();
-		this.view.remove();
 	}
 
 });

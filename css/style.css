@@ -100,6 +100,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 */
 /* line 91, ../sass/_mixin.scss */
 .bg-error, .bg-success {
+  z-index: 99999;
   position: fixed;
   width: 500px;
   height: 150px;
@@ -117,12 +118,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   box-sizing: border-box;
   transition: all 0.2s;
 }
-/* line 107, ../sass/_mixin.scss */
+/* line 108, ../sass/_mixin.scss */
 .bg-error a, .bg-success a {
   color: #fff;
   text-decoration: underline;
 }
-/* line 111, ../sass/_mixin.scss */
+/* line 112, ../sass/_mixin.scss */
 .bg-error a:hover, .bg-success a:hover {
   color: inherit;
 }
@@ -830,33 +831,34 @@ a.why-me-active {
   transition: all 0.5s;
   box-shadow: 0 0 20px rgba(34, 171, 166, 0.8);
   background: rgba(34, 171, 166, 0.8);
+  display: none;
 }
 
-/* line 631, ../sass/style.scss */
+/* line 633, ../sass/style.scss */
 .form-error {
   color: rgba(192, 57, 43, 0.8);
 }
-/* line 634, ../sass/style.scss */
+/* line 636, ../sass/style.scss */
 .form-error input {
   box-shadow: 0 0 4px rgba(192, 57, 43, 0.8) !important;
   color: rgba(192, 57, 43, 0.8);
 }
 
-/* line 640, ../sass/style.scss */
+/* line 642, ../sass/style.scss */
 .form-success {
   color: rgba(34, 171, 166, 0.8);
 }
-/* line 643, ../sass/style.scss */
+/* line 645, ../sass/style.scss */
 .form-success input {
   box-shadow: 0 0 4px rgba(34, 171, 166, 0.8) !important;
   color: rgba(34, 171, 166, 0.8);
 }
 
-/* line 649, ../sass/style.scss */
+/* line 651, ../sass/style.scss */
 .form-warning {
   color: rgba(230, 126, 34, 0.8);
 }
-/* line 652, ../sass/style.scss */
+/* line 654, ../sass/style.scss */
 .form-warning input {
   box-shadow: 0 0 4px rgba(230, 126, 34, 0.8) !important;
   color: rgba(230, 126, 34, 0.8);

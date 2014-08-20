@@ -161,8 +161,9 @@ var validateTheForm = (function() {
 				success: function( msg ) {
 					if ( msg == 'ok' ) {
 
-						console.log('ok');
 						basketCart.uninitialize();
+						$('html, body').css('overflow', 'auto');
+
 						$('<div class="bg-success">Спасибо за заявку! Я позвоню как только увижу твое письмо :)</div>')
 							.appendTo(document.body)
 							.delay(500)
@@ -170,10 +171,14 @@ var validateTheForm = (function() {
 								$(this).delay(2000).fadeOut(1000);
 							});
 
-					} else {
+						localStorage.clear();
+						app.goodsCollection.each( function( item ) {
+							item.save({
+								count: 0
+							});
+						});
 
-						console.log('another msg');
-						console.log(msg);
+					} else {
 
 						$('<div class="bg-error">Что-то пошло не так, попробуй вбить данные снова и переотправить заявку.</div>')
 							.appendTo(document.body)
@@ -181,6 +186,8 @@ var validateTheForm = (function() {
 							.fadeIn(1000, function() {
 								$(this).delay(2000).fadeOut(1000);
 							});
+
+						console.log( msg );
 
 					}
 				},
