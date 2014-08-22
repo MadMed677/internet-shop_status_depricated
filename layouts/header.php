@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/catalog.css">
 	<link rel="stylesheet" href="css/aboutme.css">
+	<link rel="stylesheet" href="css/media.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
 <body>
@@ -24,9 +25,9 @@
 			</div>
 			<nav class="menu">
 				<ul>
-					<li><a href="#index">Главная</a></li>
-					<li><a href="#catalog">Каталог</a></li>
-					<li><a href="#aboutme">Обо мне</a></li>
+					<li><a href="#index"><i class="fa fa-home"></i>Главная</a></li>
+					<li><a href="#catalog"><i class="fa fa-shopping-cart"></i>Каталог</a></li>
+					<li><a href="#aboutme"><i class="fa fa-list-alt"></i>Обо мне</a></li>
 				</ul>
 			</nav>
 		</div>

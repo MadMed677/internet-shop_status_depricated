@@ -114,11 +114,17 @@
 			<% _.each( specifications, function( srcImg ) { %>
 				<img src="images/icons/specifications/<%= srcImg %>.png" alt="">
 			<% }); %>
+			<% if (specifications.length === 0) { %>
+				<img src="" alt="">
+			<% }%>
 		</div>
 		<div class="inner-catalog-fishki">
 			<% _.each( icons, function( srcImg ) { %>
 				<img src="images/icons/fishki/<%= srcImg %>.png" alt="">
 			<% }); %>
+			<% if (icons.length === 0) { %>
+				<img src="" alt="">
+			<% }%>
 		</div>
 		<h4><%= firm %></h4>
 	</script>
@@ -163,6 +169,8 @@
 	<script src="js/jquery.js"></script>
 	<script src="js/jquery.easing.js"></script>
 	<script src="js/jquery.classywiggle.min.js"></script>
+	<script src="http://maps.api.2gis.ru/2.0/loader.js?pkg=full" data-id="dgLoader"></script>
+	<script src="js/2gismap.js"></script>
 	<script src="js/mmPlugins.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/headerScroller.js"></script>

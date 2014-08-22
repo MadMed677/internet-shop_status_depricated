@@ -57,7 +57,8 @@
 			<div class="why-me">
 				<h2>Почему именно мы?</h2>
 				<section class="why-me-content">
-					<div class="why-me-nav">
+				<div id="why-me-map"></div>
+					<!-- <div class="why-me-nav">
 						<p><a data-index="1" href="#" class="why-me-active"><i class="fa fa-star"></i>Где мы находимся?</a></p>
 						<p><a data-index="2" href="#"><i class="fa fa-star"></i>Как получить заказ?</a></p>
 						<p><a data-index="3" href="#"><i class="fa fa-star"></i>Retina ready UI</a></p>
@@ -65,7 +66,6 @@
 					<div class="why-me-loc">
 						<div>
 							<h3>Карта</h3>
-							<p>Тут будет карта и геолокация о нашем местоположении</p>
 						</div>
 						<div>
 							<h3></h3>
@@ -89,7 +89,7 @@
 							<p>All layouts are made of sections, that you can easily combine to fit your specific project.</p>
 							<blockquote>Just copy and paste the block you need to easily build your layout!</blockquote>
 						</div>
-					</div>
+					</div> -->
 				</section>
 			</div>
 		</div>
