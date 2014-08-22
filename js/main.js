@@ -196,15 +196,20 @@ mmInternetShop.initialize();
 				});
 
 				// Блок Error
-				setInterval(function() {
-					if ( container.find('.bg-error').css('box-shadow').indexOf('30px') !== -1 ) {
-						container.find('.bg-error').css({
-							'box-shadow': '0 0 0 rgba(192, 57, 43, .8)'
-						});
+				var errorTimer;
+				errorTimer = setInterval(function() {
+					if ( container.find('.bg-error').length ) {
+						if ( container.find('.bg-error').css('box-shadow').indexOf('30px') !== -1 ) {
+							container.find('.bg-error').css({
+								'box-shadow': '0 0 0 rgba(192, 57, 43, .8)'
+							});
+						} else {
+							container.find('.bg-error').css({
+								'box-shadow': '0 0 30px rgba(192, 57, 43, .8)'
+							});
+						}
 					} else {
-						container.find('.bg-error').css({
-							'box-shadow': '0 0 30px rgba(192, 57, 43, .8)'
-						});
+						clearInterval(errorTimer);
 					}
 				}, 400);
 			}

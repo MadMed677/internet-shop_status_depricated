@@ -10,17 +10,10 @@ var gismap = (function() {
 				'zoom': 17,
 				'dragging': false,
 				'scrollWheelZoom': false,
-				'fullscreenControl': false
+				'fullscreenControl': false,
+				'zoomControl': false,
+				'touchZoom': false
 			});
-
-			DG.popup([59.875694, 29.825896])
-				.setLatLng([59.875694, 29.825896])
-				.setContent('Я открыт')
-				.openOn(map);
-
-			// var myPopup = DG.popup()
-			// 	.setLatLng([59.875694, 29.825896])
-			// 	.stContent('Я открытый');
 
 			DG.marker([59.875694, 29.825896]).addTo(map);
 		});
