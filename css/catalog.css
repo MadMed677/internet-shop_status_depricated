@@ -88,7 +88,7 @@ body {
 /* line 44, ../sass/catalog.scss */
 .catalog-item h4 {
   position: absolute;
-  bottom: 100px;
+  bottom: 50px;
   right: 0;
   color: #22aba6;
 }
