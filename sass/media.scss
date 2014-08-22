@@ -61,6 +61,10 @@
 
 @media screen and (max-width: 650px) {
 
+		body {
+			font-style: .8em;
+		}
+
 		.logo {
 			float: none;
 			display: none;
@@ -109,6 +113,14 @@
 			width: 50%;
 			margin: 0 auto 20px;
 			float: none;
+
+			> div {
+				font-style: .8em;
+			}
+		}
+
+		.reason-text {
+			font-size: .8em;
 		}
 
 
@@ -129,13 +141,28 @@
 			text-align: center;
 		}
 
-		.catalog-item .inner-catalog-item .catalog-item-price {
+		.catalog-item .inner-catalog-fishki,
+		.catalog-item .inner-catalog-specifications {
+			width: 49%;
+			float: left;
+			text-align: center;
+		}
 
+		.catalog-item h4 {
+			position: relative;
+			text-align: center;
 		}
 
 		#main-basket {
 			top: 50px;
 			width: 100%;
+		}
+
+		.catalog-item-price {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			float: none;
 		}
 
 }
@@ -207,6 +234,12 @@
 			}
 		}
 	
+	.bg-error,
+	.bg-success {
+		width: 80%;
+		height: 170px;
+	}
+
 }
 
 

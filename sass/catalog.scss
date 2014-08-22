@@ -232,6 +232,7 @@ body {
 		border-radius: 20px;
 		padding: 2em;
 		font-weight: 300;
+		overflow: auto;
 
 		@include box-sizing;
 		@include box-shadow($color: $color-green);

@@ -63,22 +63,27 @@
 }
 @media screen and (max-width: 650px) {
   /* line 64, ../sass/media.scss */
+  body {
+    font-style: .8em;
+  }
+
+  /* line 68, ../sass/media.scss */
   .logo {
     float: none;
     display: none;
   }
 
-  /* line 71, ../sass/media.scss */
+  /* line 75, ../sass/media.scss */
   .header .menu ul {
     float: none;
     display: table-row;
   }
-  /* line 75, ../sass/media.scss */
+  /* line 79, ../sass/media.scss */
   .header .menu ul li {
     display: table-cell;
     float: none;
   }
-  /* line 79, ../sass/media.scss */
+  /* line 83, ../sass/media.scss */
   .header .menu ul li a {
     float: none;
     display: table-cell;
@@ -86,37 +91,46 @@
     width: 1000px;
   }
 
-  /* line 89, ../sass/media.scss */
+  /* line 93, ../sass/media.scss */
   .main-slider {
     padding: 10px 5%;
   }
 
-  /* line 93, ../sass/media.scss */
+  /* line 97, ../sass/media.scss */
   .slider-image {
     width: 50%;
     margin: 0 auto;
     float: none;
   }
 
-  /* line 99, ../sass/media.scss */
+  /* line 103, ../sass/media.scss */
   .slider-text {
     width: 100%;
     float: none;
   }
 
-  /* line 104, ../sass/media.scss */
+  /* line 108, ../sass/media.scss */
   #why-me-map {
     height: 400px;
   }
 
-  /* line 108, ../sass/media.scss */
+  /* line 112, ../sass/media.scss */
   .our-team-block {
     width: 50%;
     margin: 0 auto 20px;
     float: none;
   }
+  /* line 117, ../sass/media.scss */
+  .our-team-block > div {
+    font-style: .8em;
+  }
 
-  /* line 116, ../sass/media.scss */
+  /* line 122, ../sass/media.scss */
+  .reason-text {
+    font-size: .8em;
+  }
+
+  /* line 128, ../sass/media.scss */
   .catalog-item .inner-catalog-img,
   .catalog-item .inner-catalog-item {
     width: 80%;
@@ -125,94 +139,123 @@
     margin: 0 auto;
   }
 
-  /* line 123, ../sass/media.scss */
+  /* line 135, ../sass/media.scss */
   .catalog-item .inner-catalog-img {
     margin-bottom: 20px;
   }
 
-  /* line 127, ../sass/media.scss */
+  /* line 139, ../sass/media.scss */
   .catalog-item .inner-catalog-item .change-goods {
     display: block;
     text-align: center;
   }
 
-  /* line 136, ../sass/media.scss */
+  /* line 145, ../sass/media.scss */
+  .catalog-item .inner-catalog-fishki,
+  .catalog-item .inner-catalog-specifications {
+    width: 49%;
+    float: left;
+    text-align: center;
+  }
+
+  /* line 151, ../sass/media.scss */
+  .catalog-item h4 {
+    position: relative;
+    text-align: center;
+  }
+
+  /* line 156, ../sass/media.scss */
   #main-basket {
     top: 50px;
     width: 100%;
   }
+
+  /* line 161, ../sass/media.scss */
+  .catalog-item-price {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    float: none;
+  }
 }
 @media screen and (max-width: 550px) {
-  /* line 146, ../sass/media.scss */
+  /* line 173, ../sass/media.scss */
   .slider-image {
     width: 70%;
   }
 
-  /* line 151, ../sass/media.scss */
+  /* line 178, ../sass/media.scss */
   .slider-text h2 {
     font-size: 2em;
   }
-  /* line 155, ../sass/media.scss */
+  /* line 182, ../sass/media.scss */
   .slider-text h3 {
     font-size: 1.4em;
   }
-  /* line 159, ../sass/media.scss */
+  /* line 186, ../sass/media.scss */
   .slider-text p {
     font-size: .9em;
   }
 
-  /* line 164, ../sass/media.scss */
+  /* line 191, ../sass/media.scss */
   .reason-block {
     float: none;
     margin: 0 auto;
     width: 70%;
   }
-  /* line 165, ../sass/media.scss */
+  /* line 192, ../sass/media.scss */
   .reason-block:first-child {
     margin: 0 auto;
   }
 
-  /* line 174, ../sass/media.scss */
+  /* line 201, ../sass/media.scss */
   .reason-active {
     box-shadow: none;
   }
 
-  /* line 178, ../sass/media.scss */
+  /* line 205, ../sass/media.scss */
   #why-me-map {
     height: 300px;
   }
 
-  /* line 182, ../sass/media.scss */
+  /* line 209, ../sass/media.scss */
   .our-team-block {
     width: 70%;
     margin: 0 auto 20px;
     float: none;
   }
 
-  /* line 188, ../sass/media.scss */
+  /* line 215, ../sass/media.scss */
   .footer img {
     max-width: 45%;
   }
 
-  /* line 192, ../sass/media.scss */
+  /* line 219, ../sass/media.scss */
   #main-basket {
     top: 50px;
     width: 100%;
   }
-  /* line 196, ../sass/media.scss */
+  /* line 223, ../sass/media.scss */
   #main-basket .inner-catalog-title {
     width: 39%;
   }
-  /* line 199, ../sass/media.scss */
+  /* line 226, ../sass/media.scss */
   #main-basket .inner-catalog-goods {
     width: 59%;
   }
-  /* line 202, ../sass/media.scss */
+  /* line 229, ../sass/media.scss */
   #main-basket .inner-cat-images {
     display: none;
   }
-  /* line 205, ../sass/media.scss */
+  /* line 232, ../sass/media.scss */
   #main-basket .inner-catalog-firm {
     display: none;
+  }
+
+  /* line 238, ../sass/media.scss */
+  .bg-error,
+  .bg-success {
+    width: 80%;
+    height: 170px;
   }
 }
