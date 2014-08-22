@@ -9,7 +9,12 @@
 			speed = 1000;
 
 		var initialize = function() {
-			mainBasket.fadeIn(speed).animate({'top': '100px'}, speed/2);
+			if ( $(window).outerWidth() < 650 ) {
+				mainBasket.fadeIn(speed).animate({'top': '50px'}, speed/2);
+			} else {
+				mainBasket.fadeIn(speed).animate({'top': '100px'}, speed/2);
+			}
+
 			darkBlock.initialize();
 		};
 

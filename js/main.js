@@ -132,11 +132,13 @@ mmInternetShop.initialize();
 
 	function mmLoadPage(link) {
 		
-		var onCatalog = false;
+		var onCatalog = false,
+			onIndex = false;
 
 		link = link || 'ajax/index.php';
 
 		if ( link.indexOf('catalog') !== -1 ) onCatalog = true;
+		if ( link.indexOf('index') !== -1 ) onIndex = true;
 
 		$.ajax({
 			url: link,
@@ -147,9 +149,10 @@ mmInternetShop.initialize();
 
 				container.ajaxFadeOut(2000, function() {
 					container.html(data).delay(500).ajaxFadeIn(2000);
-					
+
 					$(window).scrollTop(0);
 					mmInternetShop.initialize();
+					gismap.initialize();
 
 					if ( onCatalog ) {
 						mmGoods.initialize();
@@ -170,6 +173,7 @@ mmInternetShop.initialize();
 				});
 
 				if ( !onCatalog ) {
+
 					$('#shopping-cart')
 						.css({
 							'right': '100px'

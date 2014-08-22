@@ -186,9 +186,6 @@ var validateTheForm = (function() {
 							.fadeIn(1000, function() {
 								$(this).delay(2000).fadeOut(1000);
 							});
-
-						console.log( msg );
-
 					}
 				},
 

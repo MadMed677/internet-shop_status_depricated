@@ -227,8 +227,6 @@ var app = app || {};
 		addOne: function( good ) {
 			var goodView = new mmGoodView({ model: good });
 			this.$el.append( goodView.render().el );
-
-			console.log('add one!');
 		},
 
 		changeTotalCount: function() {
@@ -277,7 +275,6 @@ var app = app || {};
 		},
 
 		addOne: function( good ) {
-			console.log('addOne');
 			$('#sendData').hide();
 			$('.basket-total').hide();
 			// this.$el.html('<p class="no-shopping-items">В корзине нет товаров</p>');
@@ -285,7 +282,6 @@ var app = app || {};
 		},
 
 		addAll: function( good ) {
-			console.log('addAll');
 			var self = this,
 				totalPrice = 0,
 				totalCount = 0;
