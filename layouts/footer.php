@@ -14,63 +14,66 @@
 	</div>
 
 	<!-- Корзина с товарами -->
-	<div id="main-basket">
-		<div id="basket-inner">
-			<h3>Ваши товары</h3>
-			<div id="main-basket-goods">
-				<!-- <div class="basket-goods">
+	<div id="dark-block">
+		<div id="main-basket">
+			<div class="close-block"><span class="fa fa-times"></span></div>
+			<div id="basket-inner">
+				<h3>Ваши товары</h3>
+				<div id="main-basket-goods">
+					<!-- <div class="basket-goods">
 
-					Каталог товаров
-					
-				</div> -->
+						Каталог товаров
+						
+					</div> -->
+				</div>
+				<div class="basket-total">
+					<div class="basket-itog">
+						<p>Итого:</p>
+					</div>
+					<div class="basket-total-price">
+						Количество: <span class="totalCount">0</span>
+					</div>
+					<div class="basket-total-price">
+						Цена: <span class="totalPrice">0</span><i class="fa fa-rub"></i>
+					</div>
+				</div>
+				<form id="sendData" method="post">
+					<h3>Ваши данные</h3>
+					<div class="form-col form-name">
+						<div class="form-offset-2 form-col-3">
+							<label for="name">Ваше имя*</label>
+						</div>
+						<div class="form-col-4">
+							<input type="text" placeholder="Иван Иванов" name="name" id="name">
+						</div>
+					</div>
+					<div class="form-col form-telephone">
+						<div class="form-offset-2 form-col-3">
+							<label for="phone">Телефон*</label>
+						</div>
+						<div class="form-col-4">
+							<input type="phone" placeholder="89210001122" name="phone" id="phone">
+						</div>
+					</div>
+					<div class="form-col">
+						<div class="form-offset-2 form-col-3">
+							<label for="email">Email</label>
+						</div>
+						<div class="form-col-4 form-email">
+							<input type="email" placeholder="Email" name="email" id="email">
+						</div>
+					</div>
+					<div class="form-offset-4 form-submit">
+						<button id="buttonSending" class="continue-buy" type="submit" disabled="disabled"><i class="fa fa-envelope-o"></i>Заказать</button>
+						<button class="back-buy"><i class="fa fa-shopping-cart" type="button"></i>Продолжить покупки</button>
+					</div>
+				</form>
 			</div>
-			<div class="basket-total">
-				<div class="basket-itog">
-					<p>Итого:</p>
-				</div>
-				<div class="basket-total-price">
-					Количество: <span class="totalCount">0</span>
-				</div>
-				<div class="basket-total-price">
-					Цена: <span class="totalPrice">0</span><i class="fa fa-rub"></i>
-				</div>
-			</div>
-			<form id="sendData" method="post">
-				<h3>Ваши данные</h3>
-				<div class="form-col form-name">
-					<div class="form-offset-2 form-col-3">
-						<label for="name">Ваше имя*</label>
-					</div>
-					<div class="form-col-4">
-						<input type="text" placeholder="Иван Иванов" name="name" id="name">
-					</div>
-				</div>
-				<div class="form-col form-telephone">
-					<div class="form-offset-2 form-col-3">
-						<label for="phone">Телефон*</label>
-					</div>
-					<div class="form-col-4">
-						<input type="phone" placeholder="89210001122" name="phone" id="phone">
-					</div>
-				</div>
-				<div class="form-col">
-					<div class="form-offset-2 form-col-3">
-						<label for="email">Email</label>
-					</div>
-					<div class="form-col-4 form-email">
-						<input type="email" placeholder="Email" name="email" id="email">
-					</div>
-				</div>
-				<div class="form-offset-4 form-submit">
-					<button id="buttonSending" class="continue-buy" type="submit" disabled="disabled"><i class="fa fa-envelope-o"></i>Заказать</button>
-					<button class="back-buy"><i class="fa fa-shopping-cart" type="button"></i>Продолжить покупки</button>
-				</div>
-			</form>
 		</div>
 	</div>
 
 	<!-- Dark Block -->
-	<div id="dark-block"></div>
+	<!-- <div class="dark-block"></div> -->
 
 	<!-- FOOTER -->
 	<footer id="main-footer">
@@ -98,7 +101,7 @@
 		</div>
 		<div class="inner-catalog-item">
 			<h3><%= title %></h3>
-			<div>
+			<div class="change-description">
 				<p><%= description %></p>
 			</div>
 			<div class="change-goods">
