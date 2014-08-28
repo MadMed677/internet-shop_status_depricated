@@ -57,10 +57,18 @@
 					</div>
 					<div class="form-col">
 						<div class="form-offset-2 form-col-3">
-							<label for="email">Email</label>
+							<label for="email">Email*</label>
 						</div>
 						<div class="form-col-4 form-email">
 							<input type="email" placeholder="Email" name="email" id="email">
+						</div>
+					</div>
+					<div class="form-col">
+						<div class="form-offset-2 form-col-3">
+							<label for="vk">VK</label>
+						</div>
+						<div class="form-col-4 form-email">
+							<input type="text" placeholder="Vk" name="vk" id="vk">
 						</div>
 					</div>
 					<div class="form-offset-4 form-submit">
