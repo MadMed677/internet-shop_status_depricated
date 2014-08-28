@@ -127,7 +127,7 @@
 		function applyCode($input) {
 			check($input) ? success.call($input.get(0)) : failure.call($input.get(0));
 		}
-		
+
 		if (typeof on === "string")
 			$input.bind(on, function() { applyCode($(this)); });
 

@@ -18,7 +18,7 @@ var mmInternetShop = (function( $ ) {
 			descs = $('.why-me-desc').children('div'),
 			thisDesc = descs.eq(index-1),
 			speed = 300;
-			
+
 		links.removeClass('why-me-active');
 		$this.addClass('why-me-active');
 
@@ -69,7 +69,10 @@ mmInternetShop.initialize();
 */
 	$(document.body).ready( function() {
 		
-		setTimeout( function() {
+		var backgroundSoaring,
+			wiggleBox;
+
+		wiggleBox = setTimeout( function() {
 			$('.slider-image')
 				.ClassyWiggle('start', {
 					degrees: ['.5', '1', '.5', '0'],
@@ -81,11 +84,20 @@ mmInternetShop.initialize();
 				});
 			}, 1000);
 
-		setInterval( function() {
+		backgroundSoaring = setInterval( function() {
 			$('.main-slider').css({
 				'background-position-x': '-=1px'
 			});
 		},	20);
+
+		if ( $(window).outerWidth() < 768 ) {
+			setTimeout( function() {
+				if ( wiggleBox !== undefined ) $('.slider-image').ClassyWiggle('stop');
+				if ( backgroundSoaring !== undefined ) clearInterval( backgroundSoaring );
+			}, 1000);
+		} else {
+
+		}
 
 	});
 
@@ -152,7 +164,9 @@ mmInternetShop.initialize();
 
 					$(window).scrollTop(0);
 					mmInternetShop.initialize();
-					gismap.initialize();
+
+					if ( onIndex )
+						gismap.initialize();
 
 					if ( onCatalog ) {
 						mmGoods.initialize();
@@ -173,6 +187,8 @@ mmInternetShop.initialize();
 				});
 
 				if ( !onCatalog ) {
+
+					gismap.initialize();
 
 					$('#shopping-cart')
 						.css({

@@ -4,7 +4,7 @@ $('.wrapper').on('click', '.basket', function() {
 	$('html, body').css('overflow', 'hidden');
 });
 
-$('.wrapper').on('click', '#dark-block, .back-buy', function( event ) {
+$('.wrapper').on('click', '.back-buy, .close-block', function( event ) {
 	event.preventDefault();
 	basketCart.uninitialize();
 	$('html, body').css('overflow', 'auto');
