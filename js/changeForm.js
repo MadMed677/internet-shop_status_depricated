@@ -4,11 +4,12 @@ var validateTheForm = (function() {
 		var nameField = $('.wrapper').find('#name'),
 			phoneField = $('.wrapper').find('#phone'),
 			emailField = $('.wrapper').find('#email'),
+			vkField = $('.wrapper').find('#vk'),
 			buttonSending = $('.wrapper').find('#buttonSending'),
 			form = $('.wrapper').find('#sendData');
 
 		// Поля, нуждающие в обязательном заполнении
-		var fields = [nameField, phoneField];
+		var fields = [nameField, phoneField, emailField];
 
 		function activateButton() {
 			var count = 0;
@@ -29,7 +30,7 @@ var validateTheForm = (function() {
 				$(this)
 					.closest('.form-col')
 					.removeClass('form-success')
-					.addClass('form-warning');
+					.addClass('form-error');
 
 				if ( $(this).closest('div').siblings('i.fa-times').length === 0 ) {
 					$('<i class="fa fa-times"></i>').css('line-height', '31px').insertAfter( $(this).closest('div') );
@@ -43,7 +44,7 @@ var validateTheForm = (function() {
 
 				$(this)
 					.closest('.form-col')
-					.removeClass('form-warning')
+					.removeClass('form-error')
 					.addClass('form-success');
 				if ( $(this).closest('div').siblings('i.fa-check').length === 0 ) {
 					$('<i class="fa fa-check"></i>').css('line-height', '31px').insertAfter( $(this).closest('div') );
@@ -78,6 +79,39 @@ var validateTheForm = (function() {
 				$(this)
 					.closest('.form-col')
 					.removeClass('form-error')
+					.addClass('form-success');
+				if ( $(this).closest('div').siblings('i.fa-check').length === 0 ) {
+					$('<i class="fa fa-check"></i>').css('line-height', '31px').insertAfter( $(this).closest('div') );
+				}
+
+				if ( $(this).closest('div').siblings('i.fa-times').length === 1 ) {
+					$(this).closest('div').siblings('i.fa-times').remove();
+				}
+			}
+			
+			activateButton.call(this);
+		});
+
+		vkField.on('blur keyup', function() {
+			if ( $(this).val() === '' ) {
+				
+				$(this)
+					.closest('.form-col')
+					.removeClass('form-success')
+					.addClass('form-warning');
+
+				if ( $(this).closest('div').siblings('i.fa-times').length === 0 ) {
+					$('<i class="fa fa-times"></i>').css('line-height', '31px').insertAfter( $(this).closest('div') );
+				}
+
+				if ( $(this).closest('div').siblings('i.fa-check').length === 1 ) {
+					$(this).closest('div').siblings('i.fa-check').remove();
+				}
+
+			} else {
+				$(this)
+					.closest('.form-col')
+					.removeClass('form-warning')
 					.addClass('form-success');
 				if ( $(this).closest('div').siblings('i.fa-check').length === 0 ) {
 					$('<i class="fa fa-check"></i>').css('line-height', '31px').insertAfter( $(this).closest('div') );
@@ -193,10 +227,6 @@ var validateTheForm = (function() {
 					console.log('error');
 				}
 			});
-
-			// nameField.val('');
-			// emailField.val('');
-			// phoneField.val('');
 
 			event.preventDefault();
 		});
