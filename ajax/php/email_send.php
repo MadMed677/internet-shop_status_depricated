@@ -30,38 +30,10 @@ if ( $post ) {
 		<html>
 			<head>
 				<title>$subject</title>
-				<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
-				<style>
-					body {						
-						background: url(http://subtlepatterns.com/patterns/sativa.png) top left repeat;
-					}
-
-					.wrapper {
-						max-width: 700px;
-						margin: 0 auto;
-						overflow: hidden;
-						font: 300 1em 'Lato', 'PT Sans', sans-serif;
-					}
-
-					.good {
-						border-bottom: 1px solid #22aba6;
-					}
-
-					.first-column,
-					.second-column {
-						float: left;
-						width: 48%;
-					}
-
-					.itog {
-						color: #22aba6;
-						text-align: center;
-						font-size: 1.5em;
-					}
-				</style>
+				<link href='http://fonts.googleapis.com/css?family=Roboto:300,400' rel='stylesheet' type='text/css'>
 			</head>
-			<body>
-				<div class='wrapper'>";
+			<body style='font: 300 1em Roboto'>
+				<div class='wrapper' style='max-width: 700px; margin: 0 auto;'>";
 
 					$message .= 'Привет <span style="color: #22aba6">' . $name . "</span>.<br>";
 					$message .= 'Информация о твоем заказе представлена ниже. Если ты обнаружил ошибку, то сообщи о ней мне в ближайшее время одним из способов:<br>';
@@ -71,9 +43,9 @@ if ( $post ) {
 					</ul>';
 
 					foreach ( $json as $object ) {
-						$message .= '<div class="good">';
+						$message .= '<div style="padding-bottom: 10px; border-bottom: 1px solid #22aba6;">';
 						foreach ( $object as $key => $value ) {
-							$message .= '<div class="good-row">';
+							$message .= '<div style="margin-bottom: 10px;">';
 							if ( $key === 'title' ) {
 
 								$first_title = 'Название: ';
@@ -101,13 +73,13 @@ if ( $post ) {
 							
 							}
 							
-							$message .= '<div class="first-column">'.$first_title .'</div><div class="second-column">'.$value.'</div>';
+							$message .= '<div style="clear: both; float: left; width: 45%; margin-right: 5%;">'.$first_title .'</div><div style="float: left; width: 50%;">'.$value.'</div>';
 							$message .= '</div>';
 						}
 						$message .= '</div>';
 					}
 
-					$message .= '<div class="itog">Итоговая цена: '. $total_price .' рублей</div>';
+					$message .= '<div style="text-align: center;">Итоговая цена: <span style="color: #22aba6">'. $total_price .'</span> рублей</div>';
 
 $message .= "</div></body></html>";
 
