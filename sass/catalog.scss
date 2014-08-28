@@ -147,7 +147,7 @@ body {
 				text-align: center;
 				font-size: 1em;
 				font-family: 'Roboto';
-				font-weight: 400;
+				font-weight: 300;
 
 				@include transition(.5s);
 				@include box-sizing;
@@ -221,25 +221,42 @@ body {
 */
 	#main-basket {
 		display: none;
-		position: fixed;
 		z-index: 9999;
-		top: -700px;
-		left: 0;
-		right: 0;
-		margin: 0 auto;
+		margin: 30px auto;
 		width: 700px;
 		background: rgba(255,255,255,.9);
 		border-radius: 20px;
 		padding: 2em;
 		font-weight: 300;
 		overflow: auto;
+		position: relative;
 
 		@include box-sizing;
 		@include box-shadow($color: $color-green);
 	}
 
+	.close-block {
+		position: absolute;
+		right: 15px;
+		top: 10px;
+		color: $color-green;
+		cursor: pointer;
+		height: 30px;
+		width: 30px;
+		text-align: center;
+		border-radius: 50%;
+		border: 1px solid $color-green;
+
+		.fa {
+			line-height: 30px;
+			font-size: 1.5em;
+		}
+	}
+
 	#basket-inner {
 		color: $color-gray;
+		overflow-y: auto;
+		height: 500px;
 
 		> h3 {
 			text-align: center;
@@ -503,8 +520,12 @@ body {
 		z-index: 1000;
 		top: 0;
 		left: 0;
+		right: 0;
+		bottom: 0;
 		background: rgba(0,0,0,.5);
 		opacity: 0;
+		overflow: auto;
+		overflow-y: scroll;
 		display: none;
 
 		@include transition(.5s);

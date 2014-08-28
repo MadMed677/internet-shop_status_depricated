@@ -2,9 +2,11 @@
 @import "variables";
 @import "mixin";
 
-@include font-custom(Didact Gothic, Didact Gothic);
-@include font-thin(Roboto, Roboto);
-@include font-normal(Roboto, Roboto);
+// @include font-custom(Didact Gothic, Didact Gothic);
+// @include font-thin(Roboto, Roboto);
+// @include font-normal(Roboto, Roboto);
+
+@import url("http://fonts.googleapis.com/css?family=Roboto:400,300,100&subset=latin,cyrillic");
 
 /*
 |---------------------------------------------------------
@@ -14,7 +16,7 @@
 
 	h1, h2, h3, h4, h5, h6 {
 		margin-bottom: 5px;
-		font-weight: 300;
+		font-weight: 100;
 	}
 
 	h1 {
@@ -42,13 +44,17 @@
 	}
 
 	body {
-		background: #eee;
+		background: #fff;
 		color: $color-white;
 		font: 400 1em 'Roboto', 'Didact Gothic';
 	}
 
 	ul {
 		list-style: none;
+	}
+
+	img[src=""] {
+		opacity: 0;
 	}
 
 	a {
@@ -61,9 +67,18 @@
 		}
 	}
 
+	p {
+		font-weight: 300;
+	}
+
+	.fa {
+		font-family: FontAwesome;
+	}
+
 	input {
 		outline: none;
 		border: none;
+		font-weight: 100;
 
 		&:focus,
 		&:hover {
@@ -164,6 +179,7 @@
 				display: inline-block;
 				padding: 3em 1em;
 				position: relative;
+				font-weight: 300;
 
 				&:hover {
 					color: $color-green;
@@ -470,6 +486,10 @@
 
 				@include box-sizing;
 
+				a {
+					color: #fff;
+				}
+
 				.fa {
 					font-size: 3em;
 					width: 2em;
@@ -664,6 +684,3 @@
 		color: rgba(230, 126, 34, .8)
 	}
 }
-
-
-

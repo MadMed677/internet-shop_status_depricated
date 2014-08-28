@@ -51,6 +51,10 @@
 
 		.shopping-cart-blocks {
 			margin-right: 5%;
+
+			p {
+				font-size: 1em;
+			}
 		}
 
 		#main-basket {
@@ -63,6 +67,10 @@
 
 		body {
 			font-style: .8em;
+		}
+
+		p {
+			font-size: .8em;
 		}
 
 		.logo {
@@ -107,6 +115,16 @@
 
 		#why-me-map {
 			height: 400px;
+		}
+
+		.main-sexy-block {
+			padding: 0;
+		}
+
+		.sexy-block-inner {
+			
+			width: 100%;
+			border-radius: 0;
 		}
 
 		.our-team-block {
@@ -206,10 +224,24 @@
 			height: 300px;
 		}
 
+		.sexy-block-inner {
+			h2 {
+				font-size: 1.5em;
+			}
+		}
+
+		.our-team-header p {
+			font-size: .8em;
+		}
+
 		.our-team-block {
 			width: 70%;
 			margin: 0 auto 20px;
 			float: none;
+
+			p {
+				font-size: .8em;
+			}
 		}
 
 		.footer img {
@@ -219,7 +251,9 @@
 		#main-basket {
 			top: 50px;
 			width: 100%;
-				
+			border-radius: 0;
+			margin: 0 auto;
+
 			.inner-catalog-title {
 				width: 39%
 			}
@@ -233,11 +267,29 @@
 				display: none;
 			}
 		}
+
+		#catalog .change-description {
+			display: none;
+		}
 	
 	.bg-error,
 	.bg-success {
 		width: 80%;
 		height: 170px;
+	}
+
+	#basket-inner {
+		height: 400px;
+	}
+
+	.form-offset-2 {
+		margin-left: 0;
+	}
+	.form-col-3 {
+		width: 35%;
+	}
+	.form-col-4 {
+		width: 50%;
 	}
 
 }
