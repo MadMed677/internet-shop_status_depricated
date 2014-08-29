@@ -4,11 +4,12 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width; initial-scale=1.0">
 	<title></title>
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="dist/style.min.css">
+	<!-- <link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/catalog.css">
 	<link rel="stylesheet" href="css/aboutme.css">
 	<link rel="stylesheet" href="css/media.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css"> -->
 </head>
 <body>
 <div class="wrapper">

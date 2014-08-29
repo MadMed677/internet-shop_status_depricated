@@ -177,10 +177,11 @@
 	</script>
 
 	<!-- JavaScript -->
-	<script src="js/jquery.js"></script>
+	<script src="http://maps.api.2gis.ru/2.0/loader.js?pkg=full" data-id="dgLoader"></script>
+	<script src="dist/scripts.min.js"></script>
+	<!-- <script src="js/jquery.js"></script>
 	<script src="js/jquery.easing.js"></script>
 	<script src="js/jquery.classywiggle.min.js"></script>
-	<script src="http://maps.api.2gis.ru/2.0/loader.js?pkg=full" data-id="dgLoader"></script>
 	<script src="js/2gismap.js"></script>
 	<script src="js/mmPlugins.js"></script>
 	<script src="js/main.js"></script>
@@ -194,6 +195,6 @@
 	<script src="js/view.js"></script>
 	<script src="js/init.js"></script>
 	<script src="js/basketCart.js"></script>
-	<script src="js/changeForm.js"></script>
+	<script src="js/changeForm.js"></script> -->
 </body>
 </html>
