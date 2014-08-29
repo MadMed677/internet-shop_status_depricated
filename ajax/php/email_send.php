@@ -32,6 +32,8 @@ if ( $post ) {
 	$total_price = 0;
 	$total_count = 0;
 
+	$total_price_me = 0;
+
 	$subject = 'Ваш заказ на сайте vPunke';
 	$error = '';
 
@@ -53,7 +55,7 @@ if ( $post ) {
 					</ul>';
 
 					foreach ( $json as $object ) {
-						$message .= '<div style="padding-bottom: 10px; border-bottom: 1px solid #22aba6;">';
+						$message .= '<div style="padding-bottom: 10px;">';
 						foreach ( $object as $key => $value ) {
 							$message .= '<div style="margin-bottom: 10px;">';
 							if ( $key === 'title' ) {
@@ -140,7 +142,6 @@ if ( $post ) {
 							
 							} elseif ( $key === 'totalPrice' ) {
 							
-								$total_price += $value;
 								continue;
 							
 							}
