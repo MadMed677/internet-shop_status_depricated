@@ -102,6 +102,7 @@
 
 					if ( onIndex ) {
 						gismap.initialize();
+						wayp.initialize();
 					}
 
 					if ( onCatalog ) {
