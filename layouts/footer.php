@@ -181,6 +181,7 @@
 	<script src="dist/scripts.min.js"></script>
 	<!-- <script src="js/jquery.js"></script>
 	<script src="js/jquery.easing.js"></script>
+	<script src="js/waypoints.js"></script>
 	<script src="js/jquery.classywiggle.min.js"></script>
 	<script src="js/2gismap.js"></script>
 	<script src="js/mmPlugins.js"></script>

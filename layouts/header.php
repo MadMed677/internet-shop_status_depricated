@@ -9,7 +9,8 @@
 	<link rel="stylesheet" href="css/catalog.css">
 	<link rel="stylesheet" href="css/aboutme.css">
 	<link rel="stylesheet" href="css/media.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css"> -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/animate.css"> -->
 </head>
 <body>
 <div class="wrapper">
