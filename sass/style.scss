@@ -318,6 +318,7 @@
 		text-align: left;
 		text-align: center;
 		padding: 0 2em;
+		opacity: 0;
 
 		&:first-child {
 			margin-left: 2%;
@@ -326,7 +327,7 @@
 		@include box-sizing;
 
 		span {
-			font-size: 3.5em;
+			font-size: 4em;
 			display: inline-block;
 			height: 2em;
 			width: 2em;
@@ -335,10 +336,9 @@
 			margin-bottom: 20px;
 
 			&:before {
-				// background: $color-green;
 				border: 1px solid $color-green;
 				border-radius: 50%;
-				display: block;
+				display: block;	
 			}
 		}
 	}
@@ -542,6 +542,7 @@
 					float: left;
 					text-align: center;
 					margin: 0 .5%;
+					// opacity: 0;
 
 					@include box-sizing;
 
@@ -635,6 +636,11 @@
 .fa-little {
 	font-size: .6em;
 }
+
+.delay-05s { animation-delay: 0.5s; -webkit-animation-delay: 0.5s; }
+.delay-1s { animation-delay: 1s; -webkit-animation-delay: 1s; }
+.delay-15s { animation-delay: 1.5s; -webkit-animation-delay: 1.5s; }
+.delay-2s { animation-delay: 2s; -webkit-animation-delay: 2s; }
 
 /*
 |---------------------------------------------------------
