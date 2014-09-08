@@ -26,6 +26,7 @@ module.exports = function( grunt ) {
 				src: [
 					'js/jquery.min.js',
 					'js/jquery.easing.js',
+					'js/jquery.classywiggle.min.js',
 					'js/2gismap.js',
 					'js/mmPlugins.js',
 					'js/main.js',
