@@ -25,6 +25,7 @@ module.exports = function( grunt ) {
 			dist: {
 				src: [
 					'js/jquery.min.js',
+					'js/waypoints.js',
 					'js/jquery.easing.js',
 					'js/jquery.classywiggle.min.js',
 					'js/2gismap.js',
@@ -38,7 +39,7 @@ module.exports = function( grunt ) {
 					'js/backbone.localStorage-min.js',
 					'js/modelCollection.js',
 					'js/view.js',
-					'js/init.js',
+					'js/waypointanimation.js',
 					'js/init.js',
 					'js/basketCart.js',
 					'js/changeForm.js'
@@ -71,7 +72,8 @@ module.exports = function( grunt ) {
 					'css/catalog.css',
 					'css/aboutme.css',
 					'css/media.css',
-					'css/font-awesome.min.css'
+					'css/font-awesome.min.css',
+					'css/animate.css'
 				],
 				dest: 'dist/style.min.css'
 			}
