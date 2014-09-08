@@ -102,7 +102,6 @@
 
 					if ( onIndex ) {
 						gismap.initialize();
-						console.log('index');
 					}
 
 					if ( onCatalog ) {
