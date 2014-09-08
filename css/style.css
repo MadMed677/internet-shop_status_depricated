@@ -485,15 +485,16 @@ button[disabled="disabled"] {
   text-align: left;
   text-align: center;
   padding: 0 2em;
+  opacity: 0;
   box-sizing: border-box;
 }
-/* line 322, ../sass/style.scss */
+/* line 323, ../sass/style.scss */
 .reason-block:first-child {
   margin-left: 2%;
 }
-/* line 328, ../sass/style.scss */
+/* line 329, ../sass/style.scss */
 .reason-block span {
-  font-size: 3.5em;
+  font-size: 4em;
   display: inline-block;
   height: 2em;
   width: 2em;
@@ -501,7 +502,7 @@ button[disabled="disabled"] {
   color: #23aba7;
   margin-bottom: 20px;
 }
-/* line 337, ../sass/style.scss */
+/* line 338, ../sass/style.scss */
 .reason-block span:before {
   border: 1px solid #23aba7;
   border-radius: 50%;
@@ -735,23 +736,23 @@ a.why-me-active {
   margin: 0 .5%;
   box-sizing: border-box;
 }
-/* line 548, ../sass/style.scss */
+/* line 549, ../sass/style.scss */
 .our-team-block img {
   margin-bottom: -5px;
   max-width: 100%;
 }
-/* line 553, ../sass/style.scss */
+/* line 554, ../sass/style.scss */
 .our-team-block h4 {
   margin-top: 5px;
   color: #22aba6;
 }
-/* line 558, ../sass/style.scss */
+/* line 559, ../sass/style.scss */
 .our-team-block p {
   color: #777;
   margin-bottom: 5px;
   font-size: .9em;
 }
-/* line 564, ../sass/style.scss */
+/* line 565, ../sass/style.scss */
 .our-team-block > div {
   border-bottom: 1px dashed rgba(100, 100, 100, 0.5);
   border-left: 1px dashed rgba(100, 100, 100, 0.5);
@@ -767,7 +768,7 @@ a.why-me-active {
 | Footer
 |---------------------------------------------------------
 */
-/* line 584, ../sass/style.scss */
+/* line 585, ../sass/style.scss */
 #main-footer {
   width: 100%;
   background: #eee;
@@ -776,22 +777,22 @@ a.why-me-active {
   box-shadow: 0 0 40px 20px #eee;
 }
 
-/* line 593, ../sass/style.scss */
+/* line 594, ../sass/style.scss */
 .footer {
   text-align: center;
   max-width: 960px;
   margin: 0 auto;
 }
-/* line 597, ../sass/style.scss */
+/* line 598, ../sass/style.scss */
 .footer .footer-icons {
   margin-bottom: 1em;
 }
-/* line 601, ../sass/style.scss */
+/* line 602, ../sass/style.scss */
 .footer img {
   max-width: 30%;
   margin-bottom: 1em;
 }
-/* line 606, ../sass/style.scss */
+/* line 607, ../sass/style.scss */
 .footer span {
   color: #23aba7;
   font-size: 1.3em;
@@ -803,26 +804,50 @@ a.why-me-active {
   border-radius: 50%;
   margin-right: 5px;
 }
-/* line 617, ../sass/style.scss */
+/* line 618, ../sass/style.scss */
 .footer span:hover {
   color: #fff;
   border-color: #fff;
   background: #23aba7;
 }
-/* line 624, ../sass/style.scss */
+/* line 625, ../sass/style.scss */
 .footer p {
   color: #999;
   font-weight: 400;
   font-weight: bold;
 }
-/* line 629, ../sass/style.scss */
+/* line 630, ../sass/style.scss */
 .footer p a {
   color: #22aba6;
 }
 
-/* line 635, ../sass/style.scss */
+/* line 636, ../sass/style.scss */
 .fa-little {
   font-size: .6em;
+}
+
+/* line 640, ../sass/style.scss */
+.delay-05s {
+  animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
+}
+
+/* line 641, ../sass/style.scss */
+.delay-1s {
+  animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+}
+
+/* line 642, ../sass/style.scss */
+.delay-15s {
+  animation-delay: 1.5s;
+  -webkit-animation-delay: 1.5s;
+}
+
+/* line 643, ../sass/style.scss */
+.delay-2s {
+  animation-delay: 2s;
+  -webkit-animation-delay: 2s;
 }
 
 /*
@@ -830,14 +855,14 @@ a.why-me-active {
 | Error and Success blocks
 |---------------------------------------------------------
 */
-/* line 645, ../sass/style.scss */
+/* line 651, ../sass/style.scss */
 .bg-error {
   transition: all 0.5s;
   box-shadow: 0 0 30px rgba(192, 57, 43, 0.8);
   background: rgba(192, 57, 43, 0.8);
 }
 
-/* line 652, ../sass/style.scss */
+/* line 658, ../sass/style.scss */
 .bg-success {
   transition: all 0.5s;
   box-shadow: 0 0 20px rgba(34, 171, 166, 0.8);
@@ -845,31 +870,31 @@ a.why-me-active {
   display: none;
 }
 
-/* line 661, ../sass/style.scss */
+/* line 667, ../sass/style.scss */
 .form-error {
   color: rgba(192, 57, 43, 0.8);
 }
-/* line 664, ../sass/style.scss */
+/* line 670, ../sass/style.scss */
 .form-error input {
   box-shadow: 0 0 4px rgba(192, 57, 43, 0.8) !important;
   color: rgba(192, 57, 43, 0.8);
 }
 
-/* line 670, ../sass/style.scss */
+/* line 676, ../sass/style.scss */
 .form-success {
   color: rgba(34, 171, 166, 0.8);
 }
-/* line 673, ../sass/style.scss */
+/* line 679, ../sass/style.scss */
 .form-success input {
   box-shadow: 0 0 4px rgba(34, 171, 166, 0.8) !important;
   color: rgba(34, 171, 166, 0.8);
 }
 
-/* line 679, ../sass/style.scss */
+/* line 685, ../sass/style.scss */
 .form-warning {
   color: rgba(230, 126, 34, 0.8);
 }
-/* line 682, ../sass/style.scss */
+/* line 688, ../sass/style.scss */
 .form-warning input {
   box-shadow: 0 0 4px rgba(230, 126, 34, 0.8) !important;
   color: rgba(230, 126, 34, 0.8);
