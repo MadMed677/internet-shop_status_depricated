@@ -7,6 +7,7 @@
 // @include font-normal(Roboto, Roboto);
 
 @import url("http://fonts.googleapis.com/css?family=Roboto:400,300,100&subset=latin,cyrillic");
+@import url("http://fonts.googleapis.com/css?family=Varela+Round");
 
 /*
 |---------------------------------------------------------
@@ -542,7 +543,6 @@
 					float: left;
 					text-align: center;
 					margin: 0 .5%;
-					// opacity: 0;
 
 					@include box-sizing;
 
@@ -575,6 +575,99 @@
 					}
 
 				}
+
+/*
+|---------------------------------------------------------
+| Contacts Details
+|---------------------------------------------------------
+*/
+
+	.box-4 {
+		float: left;
+		width: 33.3333333%;
+		padding: 0 1%;
+
+		@include box-sizing;
+	}
+
+	.contact-details-outer {
+		background: #f3f5f8;
+		padding: $margin-default 0;
+	}
+
+	.contact-details {
+		text-align: center;
+		padding-bottom: $margin-default;
+
+		@include clearfix;
+		@include main-block;
+
+		i {
+			color: rgb(53,53,53);
+			display: block;
+			font-size: .8em;
+			margin-bottom: 15px;
+		}
+
+		span {
+			margin-bottom: 15px;
+			display: block;
+			color: #3dc9b3;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			font-size: 14px;
+
+			&:after {
+				content: " ";
+				border: solid 2px #3dc9b3;
+				display: block;
+				width: 35px;
+				margin: 25px auto;
+			}
+		}
+
+		h3 {
+			font-family: 'Varela Round';
+			color: $color-green;
+		}
+
+		p {
+			color: #8c9398;
+			word-spacing: 1px;
+			line-height: 25px;
+			font-size: 14px;
+		}
+
+		.box-4 {
+			opacity: 0;
+		}
+	}
+
+	.light-box {
+		background: #fff;
+		-webkit-box-shadow: 0px 3px 0px 0px #f0f2f4;
+		-moz-box-shadow: 0px 3px 0px 0px #f0f2f4;
+		box-shadow: 0px 3px 0px 0px #f0f2f4;
+		padding: 20px 0;
+
+		&:hover {
+			-webkit-box-shadow: 0px 3px 0px 0px #3dc9b3;
+			-moz-box-shadow: 0px 3px 0px 0px #3dc9b3;
+			box-shadow: 0px 3px 0px 0px #3dc9b3;
+		}
+	}
+
+	.box-hover {
+		-webkit-transition: all 500ms ease-in-out;
+		-moz-transition: all 500ms ease-in-out;
+		-o-transition: all 500ms ease-in-out;
+		transition: all 500ms ease-in-out;
+
+		&:hover {
+			-webkit-transform: translate(0, -15px);
+			transform: translate(0, -15px);
+		}
+	}
 
 
 /*
