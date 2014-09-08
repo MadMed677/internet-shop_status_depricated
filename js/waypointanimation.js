@@ -2,7 +2,10 @@ var wayp = (function() {
 	
 	function initialize() {
 		$('.reasons-block').waypoint( function() {
-			$(this).find('.reason-block').addClass('animated fadeInLeft');
+			// $(this).find('.reason-block').addClass('animated fadeInLeft');
+			$(this).find('.reason-block').eq(0).addClass('animated fadeInRight');
+			$(this).find('.reason-block').eq(1).addClass('animated fadeInLeft');
+			$(this).find('.reason-block').eq(2).addClass('animated fadeInRight');
 		}, {
 			offset: '80%'
 		});
