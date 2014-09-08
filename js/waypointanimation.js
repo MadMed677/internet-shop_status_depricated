@@ -18,6 +18,12 @@ var wayp = (function() {
 		}, {
 			offset: '40%'
 		});
+
+		$('.contact-details').waypoint( function() {
+			$(this).children('div').addClass('animated fadeInUp');
+		}, {
+			offset: '50%'
+		});
 	}
 
 	return {
