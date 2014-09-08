@@ -105,7 +105,7 @@
 		</div>
 
 		<!-- OUR TEAM -->
-		<div class="main-our-team">
+		<!-- <div class="main-our-team">
 			<div class="our-team">
 				<div class="our-team-header">
 					<h2>Наша команда</h2>
@@ -130,15 +130,39 @@
 						<img src="images/dimon1.jpg" alt="">
 						<div>
 							<h4>Дмитрий Гордеев</h4>
-							<p>Помошник</p>
+							<p>Помощник</p>
 						</div>
 					</div>
 					<div class="our-team-block delay-15s">
 						<img src="images/kirya1.jpg" alt="">
 						<div>
 							<h4>Кирилл Федоренко</h4>
-							<p>Помошник</p>
+							<p>Помощник</p>
 						</div>
+					</div>
+				</div>
+			</div>
+		</div> -->
+
+		<!-- Contacts -->
+		<div class="contact-details-outer">
+			<div class="contact-details">
+				<div class="box-4">
+					<div class="light-box box-hover">
+						<h3><i class="fa fa-map-marker"></i><span>Адрес</span></h3>
+						<p>Level 6, 23 Pitt St, Sydney</p>
+					</div>
+				</div>
+				<div class="box-4 delay-05s">
+					<div class="light-box box-hover">
+						<h3><i class="fa fa-mobile"></i><span>Phone</span></h3>
+						<p>+61 9 211 3747</p>
+					</div>
+				</div>
+				<div class="box-4 delay-1s">
+					<div class="light-box box-hover">
+						<h3><i class="fa fa-envelope"></i><span>Email</span></h3>
+						<p><a href="#">hey@halcyondays.com</a></p>
 					</div>
 				</div>
 			</div>
