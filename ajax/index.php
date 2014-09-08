@@ -8,9 +8,9 @@
 					<img src="images/slider1.png" alt="">
 				</div>
 				<div class="slider-text">
-					<h2>Первый интернет магазин в ПУНКе</h2>
-					<h3>Мы сделаем вашу жизнь проще</h3>
-					<p>Это совершенно обычный текст на русском языке, чтобы протестировать, как это все выглядит. Да и вообще, как все это смотрится.</p>
+					<h2 class="animated fadeInLeft delay-05s">Первый интернет магазин в ПУНКе</h2>
+					<h3 class="animated fadeInUp delay-1s">Мы сделаем вашу жизнь проще</h3>
+					<p class="animated fadeInUp delay-1s">Это совершенно обычный текст на русском языке, чтобы протестировать, как это все выглядит. Да и вообще, как все это смотрится.</p>
 				</div>
 			</div>
 		</div>
@@ -30,7 +30,7 @@
 							<p>Elegant layouts that help you organize your content in the best way</p>
 						</div>
 					</div>
-					<div class="reason-block reason-active">
+					<div class="reason-block reason-active delay-05s">
 						<div class="reason-icon">
 							<span class="fa fa-spinner"></span>
 						</div>
@@ -39,7 +39,7 @@
 							<p>Elegant layouts that help you organize your content in the best way</p>
 						</div>
 					</div>
-					<div class="reason-block">
+					<div class="reason-block delay-1s">
 						<div class="reason-icon">
 							<span class="fa fa-github"></span>
 						</div>
@@ -119,21 +119,21 @@
 							<p>Основатель интернет магазина</p>
 						</div>
 					</div>
-					<div class="our-team-block">
+					<div class="our-team-block delay-05s">
 						<img src="images/popugai1.jpg" alt="">
 						<div>
 							<h4>Попугай</h4>
 							<p>Сооснователь интернет магазина</p>
 						</div>
 					</div>
-					<div class="our-team-block">
+					<div class="our-team-block delay-1s">
 						<img src="images/dimon1.jpg" alt="">
 						<div>
 							<h4>Дмитрий Гордеев</h4>
 							<p>Помошник</p>
 						</div>
 					</div>
-					<div class="our-team-block">
+					<div class="our-team-block delay-15s">
 						<img src="images/kirya1.jpg" alt="">
 						<div>
 							<h4>Кирилл Федоренко</h4>
