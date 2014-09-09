@@ -331,3 +331,22 @@
     width: 50%;
   }
 }
+@media screen and (max-height: 650px) {
+  /* line 308, ../sass/media.scss */
+  #basket-inner {
+    height: 500px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-height: 530px) {
+  /* line 317, ../sass/media.scss */
+  #basket-inner {
+    height: 400px;
+  }
+}
+@media screen and (max-height: 430px) {
+  /* line 325, ../sass/media.scss */
+  #basket-inner {
+    height: 300px;
+  }
+}
