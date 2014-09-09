@@ -1230,7 +1230,7 @@ allLinks.on('click', 'a', function() {
 
 		var initialize = function() {
 			if ( $(window).outerWidth() < 650 ) {
-				mainBasket.fadeIn(speed).animate({'top': '0px'}, speed/2);
+				mainBasket.fadeIn(speed).css('margin', '0 auto').animate({'top': '0px'}, speed/2);
 			} else {
 				mainBasket.fadeIn(speed).animate({'top': '100px'}, speed/2);
 			}
