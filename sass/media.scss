@@ -303,5 +303,30 @@
 
 }
 
+@media screen and (max-height: 650px) {
+	
+	#basket-inner {
+		height: 500px;
+		margin: 0 auto;
+	}
+
+}
+
+@media screen and (max-height: 530px) {
+	
+	#basket-inner {
+		height: 400px;
+	}
+
+}
+
+@media screen and (max-height: 430px) {
+
+	#basket-inner {
+		height: 300px;
+	}
+
+}
+
 
 
