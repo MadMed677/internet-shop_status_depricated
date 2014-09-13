@@ -28,6 +28,7 @@ module.exports = function( grunt ) {
 					'js/waypoints.js',
 					'js/jquery.easing.js',
 					'js/jquery.classywiggle.min.js',
+					'js/offline.min.js',
 					'js/2gismap.js',
 					'js/mmPlugins.js',
 					'js/main.js',
@@ -73,7 +74,9 @@ module.exports = function( grunt ) {
 					'css/aboutme.css',
 					'css/media.css',
 					'css/font-awesome.min.css',
-					'css/animate.css'
+					'css/animate.css',
+					'css/offline-language-russian.css',
+					'css/offline-theme-default.css'
 				],
 				dest: 'dist/style.min.css'
 			}
