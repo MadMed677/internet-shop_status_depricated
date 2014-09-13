@@ -163,6 +163,10 @@
 						clearInterval(errorTimer);
 					}
 				}, 400);
+			},
+
+			complete: function() {
+
 			}
 		});
 	}
