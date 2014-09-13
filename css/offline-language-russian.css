@@ -40,62 +40,62 @@
 }
 /* line 42, ../sass/_content.sass */
 .offline-ui.offline-ui-down.offline-ui-waiting .offline-ui-content[data-retry-in-unit="second"]:before {
-  content: "Связь потеряна. Переподключение через " attr(data-retry-in-value) " секунд...";
+  content: "Связь потеряна. Подключение через " attr(data-retry-in-value) " секунд...";
 }
 @media (max-width: 568px) {
   /* line 42, ../sass/_content.sass */
   .offline-ui.offline-ui-down.offline-ui-waiting .offline-ui-content[data-retry-in-unit="second"]:before {
-    content: "Переподключение через " attr(data-retry-in-value) "с...";
+    content: "Подключение через " attr(data-retry-in-value) "с...";
   }
 }
 /* line 50, ../sass/_content.sass */
 .offline-ui.offline-ui-down.offline-ui-waiting .offline-ui-content[data-retry-in-unit="second"][data-retry-in-value="1"]:before {
-  content: "Связь потеряна. Переподключение через " attr(data-retry-in-value) " секунд...";
+  content: "Связь потеряна. Подключение через " attr(data-retry-in-value) " секунд...";
 }
 @media (max-width: 568px) {
   /* line 50, ../sass/_content.sass */
   .offline-ui.offline-ui-down.offline-ui-waiting .offline-ui-content[data-retry-in-unit="second"][data-retry-in-value="1"]:before {
-    content: "Переподключение через " attr(data-retry-in-value) "с...";
+    content: "Подключение через " attr(data-retry-in-value) "с...";
   }
 }
 /* line 58, ../sass/_content.sass */
 .offline-ui.offline-ui-down.offline-ui-waiting .offline-ui-content[data-retry-in-unit="minute"]:before {
-  content: "Связь потеряна. Переподключение через " attr(data-retry-in-value) " минут...";
+  content: "Связь потеряна. Подключение через " attr(data-retry-in-value) " минут...";
 }
 @media (max-width: 568px) {
   /* line 58, ../sass/_content.sass */
   .offline-ui.offline-ui-down.offline-ui-waiting .offline-ui-content[data-retry-in-unit="minute"]:before {
-    content: "Переподключение через " attr(data-retry-in-value) "м...";
+    content: "Подключение через " attr(data-retry-in-value) "м...";
   }
 }
 /* line 66, ../sass/_content.sass */
 .offline-ui.offline-ui-down.offline-ui-waiting .offline-ui-content[data-retry-in-unit="minute"][data-retry-in-value="1"]:before {
-  content: "Связь потеряна. Переподключение через " attr(data-retry-in-value) " минут...";
+  content: "Связь потеряна. Подключение через " attr(data-retry-in-value) " минут...";
 }
 @media (max-width: 568px) {
   /* line 66, ../sass/_content.sass */
   .offline-ui.offline-ui-down.offline-ui-waiting .offline-ui-content[data-retry-in-unit="minute"][data-retry-in-value="1"]:before {
-    content: "Переподключение через " attr(data-retry-in-value) "м...";
+    content: "Подключение через " attr(data-retry-in-value) "м...";
   }
 }
 /* line 74, ../sass/_content.sass */
 .offline-ui.offline-ui-down.offline-ui-waiting .offline-ui-content[data-retry-in-unit="hour"]:before {
-  content: "Связь потеряна. Переподключение через " attr(data-retry-in-value) " часов...";
+  content: "Связь потеряна. Подключение через " attr(data-retry-in-value) " часов...";
 }
 @media (max-width: 568px) {
   /* line 74, ../sass/_content.sass */
   .offline-ui.offline-ui-down.offline-ui-waiting .offline-ui-content[data-retry-in-unit="hour"]:before {
-    content: "Переподключение через " attr(data-retry-in-value) "ч...";
+    content: "Подключение через " attr(data-retry-in-value) "ч...";
   }
 }
 /* line 82, ../sass/_content.sass */
 .offline-ui.offline-ui-down.offline-ui-waiting .offline-ui-content[data-retry-in-unit="hour"][data-retry-in-value="1"]:before {
-  content: "Связь потеряна. Переподключение через " attr(data-retry-in-value) " часов...";
+  content: "Связь потеряна. Подключение через " attr(data-retry-in-value) " часов...";
 }
 @media (max-width: 568px) {
   /* line 82, ../sass/_content.sass */
   .offline-ui.offline-ui-down.offline-ui-waiting .offline-ui-content[data-retry-in-unit="hour"][data-retry-in-value="1"]:before {
-    content: "Переподключение через " attr(data-retry-in-value) "ч...";
+    content: "Подключение через " attr(data-retry-in-value) "ч...";
   }
 }
 /* line 90, ../sass/_content.sass */
