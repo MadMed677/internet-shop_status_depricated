@@ -183,6 +183,7 @@
 	<script src="js/jquery.easing.js"></script>
 	<script src="js/waypoints.js"></script>
 	<script src="js/jquery.classywiggle.min.js"></script>
+	<script src="js/offline.min.js"></script>
 	<script src="js/2gismap.js"></script>
 	<script src="js/mmPlugins.js"></script>
 	<script src="js/main.js"></script>
@@ -194,6 +195,7 @@
 	<script src="js/backbone.localStorage-min.js"></script>
 	<script src="js/modelCollection.js"></script>
 	<script src="js/view.js"></script>
+	<script src="js/waypointanimation.js"></script>
 	<script src="js/init.js"></script>
 	<script src="js/basketCart.js"></script>
 	<script src="js/changeForm.js"></script> -->
