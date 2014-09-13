@@ -53,29 +53,35 @@ if ( $post ) {
 					$message .= 'Информация о твоем заказе представлена ниже. Если ты обнаружил ошибку, то сообщи о ней мне в ближайшее время одним из способов:<br>';
 					$message .= '<ul>
 						<li> Email: '. $siteEmail .'</li>
-						<li> Vk: '. $authorVk .'</li>
+						<li> Vk: <a href="$authorVk">'. $authorVk .'</a></li>
 						<li> Телефон: '. $authorPhone .'</li>
 					</ul>';
 
-					$message .= '<div style="padding-bottom: 20px; text-align: center;">';
-						$message .= '<div style="float: left; width: 24%; margin-right: 1%; font-weight: bold;">Название</div>';
-						$message .= '<div style="float: left; width: 24%; margin-right: 1%; font-weight: bold;">Количество</div>';
-						$message .= '<div style="float: left; width: 24%; margin-right: 1%; font-weight: bold;">Цена</div>';
-						$message .= '<div style="float: left; width: 25%; font-weight: bold;">Стоимость</div>';
-					$message .= '</div>';
+					$message .= '
+						<h2>Заказ</h2>
+						<table>
+							<thead>
+								<tr>
+									<th>Название товара</th>
+									<th>Количество</th>
+									<th>Цена</th>
+									<th>Стоимость по товару</th>
+								</tr>
+							</thead>
+						</table>
+					';
 
-					$message .= '<div style="clear: both;"></div>';
+					$tr = '';
 
 					foreach ( $json as $object ) {
-						$message .= '<div style="padding-bottom: 10px; clear: both;">';
-						foreach ( $object as $key => $value ) {
-							$message .= '<div style="margin-bottom: 10px; float: left; width: 24%; margin-right: 1%; text-align: center;">';
-								$message .= $value;
-							$message .= '</div>';
+						$message .= '<tr>';
+							$message .= '<td>'. 'title' .'</td>';
+							$message .= '<td>'. 'count' .'</td>';
+							$message .= '<td>'. 'price' .'</td>';
+							$message .= '<td>'. 'totalPrice' .'</td>';
+						$message .= '</tr>';
 
-							if ( $key === 'totalPrice' ) $total_price += (int)$value;
-						}
-						$message .= '</div>';
+						// $total_price += (int)$object['totalPrice'];
 					}
 
 					$message .= '<div style="text-align: center;">Итоговая цена: <span style="color: #22aba6">'. $total_price .'</span> рублей</div>';
@@ -96,8 +102,6 @@ if ( $post ) {
 										$name
 								.'</span> с телефоном <span style="color: #22aba6">'.
 										$phone
-										.'</span> с email <span style="color: #22aba6">'.
-										$email
 								.'</span>';
 								
 					if ( strlen($vk) !== 0 )
@@ -105,26 +109,43 @@ if ( $post ) {
 
 					$message2 .= '. Оформил заказ.<br>';
 
-					$message2 .= '<div style="padding: 20px 0; text-align: center;">';
-						$message2 .= '<div style="float: left; width: 24%; margin-right: 1%; font-weight: bold;">Название</div>';
-						$message2 .= '<div style="float: left; width: 24%; margin-right: 1%; font-weight: bold;">Количество</div>';
-						$message2 .= '<div style="float: left; width: 24%; margin-right: 1%; font-weight: bold;">Цена</div>';
-						$message2 .= '<div style="float: left; width: 25%; font-weight: bold;">Стоимость</div>';
-					$message2 .= '</div>';
-
-					$message2 .= '<div style="clear: both;"></div>';
-
 					foreach ( $json as $object ) {
-						$message2 .= '<div style="padding-bottom: 10px; clear: both;">';
+						$message2 .= '<div style="padding-bottom: 10px; border-bottom: 1px solid #22aba6;">';
 						foreach ( $object as $key => $value ) {
-							$message2 .= '<div style="margin-bottom: 10px; float: left; width: 24%; margin-right: 1%; text-align: center;">';
-								$message2 .= $value;
+							$message2 .= '<div style="margin-bottom: 10px;">';
+							if ( $key === 'title' ) {
+
+								$first_title = 'Название: ';
+
+							} elseif ( $key === 'img' ) {
+								
+								continue;
+
+							} elseif ( $key === 'firm' ) {
+								
+								$first_title = 'Производитель: ';
+
+							} elseif ( $key === 'count' ) {
+								
+								$first_title = 'Количество: ';
+							
+							} elseif ( $key === 'price' ) {
+							
+								$first_title = 'Цена: ';
+							
+							} elseif ( $key === 'totalPrice' ) {
+							
+								continue;
+							
+							}
+							
+							$message2 .= '<div style="clear: both; float: left; width: 45%; margin-right: 5%;">'.$first_title .'</div><div style="float: left; width: 50%;">'.$value.'</div>';
 							$message2 .= '</div>';
 						}
 						$message2 .= '</div>';
 					}
 
-					$message2 .= '<div style="text-align: center;">Итоговая цена: <span style="color: #22aba6">'. $total_price .'</span> рублей</div>';
+					$message2 .= '<div style="text-align: center;">Итоговая цена: <span style="color: #22aba6; margin-bottom: 20px;">'. $total_price .'</span> рублей</div>';
 
 		$message2 .= "</div></body></html>";
 
@@ -142,7 +163,7 @@ if ( $post ) {
 				."X-Mailer: PHP/" . phpversion()
 		);
 
-		$mail2 = mail( $siteEmail, 'Покупка товара на vPunke', $message2,
+		$mail2 = mail( $siteEmail, $subject, $message2,
 				"From: ".$name." <".$email.">\r\n"
 				."Reply-To: ".$email."\r\n"
 				."Content-type: text/html; charset=utf-8 \r\n"
