@@ -173,8 +173,8 @@ var validateTheForm = (function() {
 				if ( item.get('count') > 0 ) {
 					items.push({
 						title: item.get('title'),
-						img: item.get('img'),
-						firm: item.get('firm'),
+						// img: item.get('img'),
+						// firm: item.get('firm'),
 						count: item.get('count'),
 						price: item.get('price'),
 						totalPrice: item.get('totalPrice')
