@@ -1,6 +1,6 @@
 /* line 6, ../sass/_content.sass */
 .offline-ui .offline-ui-retry:before {
-  content: "Переподключение";
+  content: "Повторить";
 }
 /* line 11, ../sass/_content.sass */
 .offline-ui.offline-ui-up .offline-ui-content:before {
