@@ -1,7 +1,7 @@
 
 </div>
 	<!-- Вывеска корзины с товарами -->
-	<div id="shopping-cart">
+	<div id="shopping-cart" class="animated">
 		<div class="shopping-cart-inner">
 			<div class="shopping-cart-blocks">
 				<a href="#" class="basket"><h3>Shopping Cart</h3></a>
