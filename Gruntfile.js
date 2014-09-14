@@ -109,7 +109,7 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-remove-logging');
 
-	grunt.registerTask('default', ['concat', 'uglify', 'cssmin', 'removelogging']);
+	grunt.registerTask('default', ['concat', 'uglify', 'cssmin']);
 	grunt.registerTask('test', ['jshint']);
 	grunt.registerTask('watch', ['watch']);
 };
