@@ -1046,30 +1046,13 @@ var gismap = (function() {
 						app.goodViewCollectionCart.addAll();
 						
 						$('#shopping-cart')
-							// .css({
-							// 	'display': 'block',
-							// 	'right': '-100px',
-							// 	'opacity': 0
-							// })
-							// .animate({
-							// 	'right': '0',
-							// 	'opacity': 1
-							// }, 400 );
 							.removeClass('fadeOutLeft')
 							.addClass('fadeInLeft');
 					}
 				});
 
 				if ( !onCatalog ) {
-
 					$('#shopping-cart')
-						// .css({
-						// 	'right': '100px'
-						// })
-						// .animate({
-						// 	'right': '100px',
-						// 	'opacity': 0
-						// }, 400);
 						.removeClass('fadeInLeft')
 						.addClass('fadeOutLeft');
 				}
