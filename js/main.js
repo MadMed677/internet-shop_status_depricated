@@ -117,9 +117,10 @@
 				});
 
 				if ( !onCatalog ) {
-					$('#shopping-cart')
-						.removeClass('fadeInLeft')
-						.addClass('fadeOutLeft');
+
+					if ( $('#shopping-cart').hasClass('fadeInLeft') ) {
+						$('#shopping-cart').removeClass('fadeInLeft').addClass('fadeOutLeft');
+					}
 				}
 			},
 
