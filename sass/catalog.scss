@@ -169,8 +169,9 @@ body {
 		background: rgba(240, 240, 240, .9);
 		color: $color-gray;
 		top: 115px;
+		opacity: 0;
 
-		display: none;
+		// display: none;
 
 		@include transition(1s);
 	}
