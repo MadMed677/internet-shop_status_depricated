@@ -136,4 +136,35 @@
 
 	};
 
+	$.fn.slideSide = function(options) {
+
+		var speed = options.speed || 500;
+
+		if ( this.css('display') === 'none' ) {
+			this
+				.css({
+					'transition': 'all 0',
+					'transform': 'translateX(100px)',
+					'opacity': 0,
+					'display': 'block'
+				})
+				.css({
+					'transition': 'all ' + speed,
+					'transform': 'translateX(0)',
+					'opacity': 1
+				});
+		} else {
+			this
+				.css({
+					'transition': 'all 0'
+				})
+				.css({
+					'transition': 'all ' + speed,
+					'transform': 'translateX(0)',
+					'opacity': 1
+				});
+		}
+
+	};
+
 })( jQuery );
