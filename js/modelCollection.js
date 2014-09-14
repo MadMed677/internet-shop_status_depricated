@@ -9,7 +9,8 @@ var mmGoodModel = Backbone.Model.extend({
 		specifications: [],
 		count: 0,
 		price: 150,
-		totalPrice: 0
+		totalPrice: 0,
+		size: 'M'
 	},
 
 	validate: function( attributes ) {

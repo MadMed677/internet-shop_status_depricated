@@ -18,12 +18,14 @@ var mmGoods = (function() {
 				{
 					title: 'Название товара 2',
 					icons: ['strawberry'],
-					price: 170
+					price: 170,
+					size: 'S'
 				},
 				{
 					title: 'Название товара 3',
 					firm: 'Bye bye',
-					price: 340
+					price: 340,
+					size: 'XL'
 				}
 			]);
 

@@ -1046,6 +1046,7 @@ var gismap = (function() {
 						app.goodViewCollectionCart.addAll();
 						
 						$('#shopping-cart')
+							.css('visibility', 'visible')
 							.removeClass('fadeOutLeft')
 							.addClass('fadeInLeft');
 					}
@@ -1054,7 +1055,18 @@ var gismap = (function() {
 				if ( !onCatalog ) {
 
 					if ( $('#shopping-cart').hasClass('fadeInLeft') ) {
-						$('#shopping-cart').removeClass('fadeInLeft').addClass('fadeOutLeft');
+						$('#shopping-cart')
+							.css('visibility', 'visible')
+							.removeClass('fadeInLeft')
+							.addClass('fadeOutLeft');
+
+					} else if ( !$('#shopping-cart').hasClass('hided') ) {
+						$('#shopping-cart')
+							.addClass('hided')
+							.css({
+								'transition': 'none',
+								'visibility': 'hidden'
+							});
 					}
 				}
 			},
@@ -4296,7 +4308,8 @@ var mmGoodModel = Backbone.Model.extend({
 		specifications: [],
 		count: 0,
 		price: 150,
-		totalPrice: 0
+		totalPrice: 0,
+		size: 'M'
 	},
 
 	validate: function( attributes ) {
@@ -4707,12 +4720,14 @@ var mmGoods = (function() {
 				{
 					title: 'Название товара 2',
 					icons: ['strawberry'],
-					price: 170
+					price: 170,
+					size: 'S'
 				},
 				{
 					title: 'Название товара 3',
 					firm: 'Bye bye',
-					price: 340
+					price: 340,
+					size: 'XL'
 				}
 			]);
 

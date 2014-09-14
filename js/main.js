@@ -111,6 +111,7 @@
 						app.goodViewCollectionCart.addAll();
 						
 						$('#shopping-cart')
+							.css('visibility', 'visible')
 							.removeClass('fadeOutLeft')
 							.addClass('fadeInLeft');
 					}
@@ -119,7 +120,18 @@
 				if ( !onCatalog ) {
 
 					if ( $('#shopping-cart').hasClass('fadeInLeft') ) {
-						$('#shopping-cart').removeClass('fadeInLeft').addClass('fadeOutLeft');
+						$('#shopping-cart')
+							.css('visibility', 'visible')
+							.removeClass('fadeInLeft')
+							.addClass('fadeOutLeft');
+
+					} else if ( !$('#shopping-cart').hasClass('hided') ) {
+						$('#shopping-cart')
+							.addClass('hided')
+							.css({
+								'transition': 'none',
+								'visibility': 'hidden'
+							});
 					}
 				}
 			},
