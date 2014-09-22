@@ -11,11 +11,11 @@ var gismap = (function() {
 				'dragging': false,
 				'scrollWheelZoom': false,
 				'fullscreenControl': false,
-				'zoomControl': false,
+				// 'zoomControl': false,
 				'touchZoom': false
 			});
 
-			DG.marker([59.875694, 29.825896]).addTo(map);
+			DG.marker([59.875694, 29.825896]).addTo(map).bindPopup('Мы находимся тут');
 		});
 	}
 
