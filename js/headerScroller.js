@@ -14,7 +14,7 @@
 		imgWrapper = logo.closest('div'),
 
 		//Shopping Cart
-		shoppingCart = $('#shopping-cart'),
+		shoppingCart = $('#shopping-cart').css('transition', 'all .4s'),
 
 		// Href
 		menuHref = $('.menu').find('a'),
