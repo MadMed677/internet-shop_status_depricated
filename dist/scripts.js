@@ -1141,7 +1141,10 @@ var gismap = (function() {
 		imgWrapper = logo.closest('div'),
 
 		//Shopping Cart
-		shoppingCart = $('#shopping-cart').css('transition', 'all .4s'),
+		shoppingCart = $('#shopping-cart').css({
+			'-webkit-transition': 'all .4s',
+			'transition': 'all .4s'
+		}),
 
 		// Href
 		menuHref = $('.menu').find('a'),
