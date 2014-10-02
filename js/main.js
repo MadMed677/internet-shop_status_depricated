@@ -1,191 +1,53 @@
-/*
-|---------------------------------------------------------
-| Flying Background Slider
-|---------------------------------------------------------
-*/
-	$(document.body).ready( function() {
-		
-		var backgroundSoaring,
-			wiggleBox;
+require.config({
 
-		wiggleBox = setTimeout( function() {
-			$('.slider-image')
-				.ClassyWiggle('start', {
-					degrees: ['.5', '1', '.5', '0'],
-					delay: 70
+    paths: {
+        'jquery': 'libs/jquery.min',
+        'underscore': 'libs/underscore',
+        'backbone': 'libs/backbone',
+        'bootstrap': 'libs/bootstrap',
+        'backbone.localStorage': 'libs/backbone-localstorage',
+        'waypoint': 'libs/waypoints',
+        'bxSlider': 'libs/jquery.bxSlider.min'
+    },
 
-				})
-				.on('mouseenter', function() {
-					$(this).ClassyWiggle('stop');
-				});
-			}, 1000);
+    shim: {
+        'jquery': {
+            exports: '$'
+        },
 
-		backgroundSoaring = setInterval( function() {
-			$('.main-slider').css({
-				'background-position-x': '-=1px'
-			});
-		},	20);
+        'underscore': {
+            exports: '_'
+        },
 
-		if ( $(window).outerWidth() < 768 ) {
-			setTimeout( function() {
-				if ( wiggleBox !== undefined ) $('.slider-image').ClassyWiggle('stop');
-				if ( backgroundSoaring !== undefined ) clearInterval( backgroundSoaring );
-			}, 1000);
-		} else {
+        'backbone': {
+            exports: 'Backbone',
+            deps: ['jquery', 'underscore']
+        },
 
-		}
+        'bootstrap': {
+            deps: ['jquery']
+        },
 
-	});
+        'waypoint': {
+            deps: ['jquery']
+        },
 
-	$(window).resize( function() {
-		darkBlock.initialize();
-	});
+        'bxSlider': {
+            deps: ['jquery']
+        }
+    }
 
-/*
-|---------------------------------------------------------
-| Redirect by 'Hash' location
-|---------------------------------------------------------
-*/
+});
 
-	function mmFindHash() {
+require([
 
-		// Variables
-		var header = $('#main-header'),
-			links = header.find('a');
-			
-		// Проверка текущего hash'а
-		hash = window.location.hash;
-		href = window.location.href;
+    'backbone',
+    'app/app'
 
-		var link = '';
-		links.removeClass('menu-active');
+], function(Backbone, App) {
 
-		// Если у нас домашняя страница
-		if ( hash === '' || hash === '#' )
-			hash = 'index';
-		else
-			hash = hash.slice(1);
+    'use strict';
 
+    App.initialize();
 
-		$.each( links, function(index, link) {
-			if ( $(this).attr('href').indexOf(hash) !== -1 ) {
-				$(this).addClass('menu-active');
-			}
-		});
-
-		link = 'ajax/' + hash + '.php';
-
-		mmLoadPage.call(this, link);
-	}
-
-	function mmLoadPage(link) {
-		
-		var onCatalog = false,
-			onIndex = false;
-
-		link = link || 'ajax/index.php';
-
-		if ( link.indexOf('catalog') !== -1 ) onCatalog = true;
-		if ( link.indexOf('index') !== -1 ) onIndex = true;
-
-		$.ajax({
-			url: link,
-
-			dataType: 'html',
-
-			success: function(data) {
-
-				container.ajaxFadeOut(2000, function() {
-					container.html(data).delay(500).ajaxFadeIn(2000);
-
-					$(window).scrollTop(0);
-
-					if ( onIndex ) {
-						gismap.initialize();
-						wayp.initialize();
-					}
-
-					if ( onCatalog ) {
-						mmGoods.initialize();
-						app.goodViewCollection.changeTotalCount();
-						app.goodViewCollectionCart.addAll();
-						
-						$('#shopping-cart')
-							.css('visibility', 'visible')
-							.removeClass('fadeOutLeft')
-							.addClass('fadeInLeft');
-					}
-				});
-
-				if ( !onCatalog ) {
-
-					if ( $('#shopping-cart').hasClass('fadeInLeft') ) {
-						$('#shopping-cart')
-							.css('visibility', 'visible')
-							.removeClass('fadeInLeft')
-							.addClass('fadeOutLeft');
-
-					} else if ( !$('#shopping-cart').hasClass('hided') ) {
-						$('#shopping-cart')
-							.addClass('hided')
-							.css({
-								'transition': 'none',
-								'visibility': 'hidden'
-							});
-					}
-				}
-			},
-
-			error: function() {
-
-				var data = ['<div class="bg-error">',
-							'<p>Произошла ошибка, перезагрузите страницу',
-							' или <a href="#index">перейдите</a> на главную страницу</p></div>'].join('');
-
-				container.ajaxFadeOut(2000, function() {
-					container.html(data).delay(500).ajaxFadeIn(2000);
-				});
-
-				// Блок Error
-				var errorTimer;
-				errorTimer = setInterval(function() {
-					if ( container.find('.bg-error').length ) {
-						if ( container.find('.bg-error').css('box-shadow').indexOf('30px') !== -1 ) {
-							container.find('.bg-error').css({
-								'box-shadow': '0 0 0 rgba(192, 57, 43, .8)'
-							});
-						} else {
-							container.find('.bg-error').css({
-								'box-shadow': '0 0 30px rgba(192, 57, 43, .8)'
-							});
-						}
-					} else {
-						clearInterval(errorTimer);
-					}
-				}, 400);
-			},
-
-			complete: function() {
-
-			}
-		});
-	}
-
-
-	mmFindHash();
-	mmLoadPage.count = 0;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+});

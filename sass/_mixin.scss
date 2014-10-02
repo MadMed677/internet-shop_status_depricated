@@ -1,121 +1,16 @@
-/*
-|---------------------------------------------------------
-| Clear Fix
-|---------------------------------------------------------
-*/
-	@mixin clearfix {
-		&:after,
-		&:before {
-			content: ' ';
-			display: table;
-		}
-
-		&:before {
-			clear: both;
-		}
-	}
-
-/*
-|---------------------------------------------------------
-| Transition
-|---------------------------------------------------------
-*/
-	@mixin transition($speed: .2s) {
-		transition: all $speed;
-	}
-
-	@mixin rotate($angle: 360) {
-		transform: rotate($angle+deg);
-	}
-
-/*
-|---------------------------------------------------------
-| Font Style
-|---------------------------------------------------------
-*/
-	@mixin font-custom($fontName, $fontFile) {
-		@font-face {
-			font-family: "#{$fontName}";
-			src:
-				url("../fonts/#{$fontFile}/#{$fontName}.eot") format("embedded-opentype"),
-				url("../fonts/#{$fontFile}/#{$fontName}.woff") format("woff"),
-				url("../fonts/#{$fontFile}/#{$fontName}.ttf") format("truetype"),
-				url("../fonts/#{$fontFile}/#{$fontName}.svg##{$fontFile}") format("svg");
-			font-stretch: normal;
-			font-style:   normal;
-			font-weight:  normal;
-		}
-	}
-
-	@mixin font-normal($fontName, $fontFile) {
-		@font-face {
-			font-family: "#{$fontName}";
-			src:
-				url("../fonts/#{$fontFile}/#{$fontName}-Light.ttf");
-			font-weight: 400;
-		}
-	}
-
-	@mixin font-thin($fontName, $fontFile) {
-		@font-face {
-			font-family: "#{$fontName}";
-			src:
-				url(../fonts/#{$fontFile}/#{$fontName}-Thin.ttf);
-			font-weight: 300;
-		}
-	}
-
-/*
-|---------------------------------------------------------
-| Other
-|---------------------------------------------------------
-*/
-
-	@mixin main-block {
-		max-width: $content-width;
-		margin: 0 auto;
-	}
-
-	@mixin responsive-image {
-		max-width: 100%;
-	}
-
-	@mixin box-sizing {
-		box-sizing: border-box;
-	}
-
-	@mixin box-shadow($range: 20px, $color: rgba(255,255,255,.7)) {
-		box-shadow: 0 0 $range $color;
-	}
-
-%blocks {
-	z-index: 99999;
-	position: fixed;
-	width: 500px;
-	height: 150px;
-	line-height: 30px;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	margin: auto;
-	color: #fff;
-	font: 300 1.5em;
-	padding: 3em;
-	border-radius: 10px;
-	text-align: center;
-
-	a {
-		color: #fff;
-		text-decoration: underline;
-
-		&:hover {
-			color: inherit;
-		}
-	}
-
-	@include box-sizing;
-	@include transition;
+.delay-05s {
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+.delay-1s {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+.delay-15s {
+    -webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s;
 }
 
-
+.shadow {
+    text-shadow: rgb(55, 181, 161) 1px 1px, rgb(55, 181, 161) 2px 2px, rgb(55, 181, 161) 3px 3px, rgb(55, 181, 161) 4px 4px, rgb(55, 181, 161) 5px 5px, rgb(55, 181, 161) 6px 6px, rgb(55, 181, 161) 7px 7px, rgb(55, 181, 161) 8px 8px, rgb(55, 181, 161) 9px 9px, rgb(55, 181, 161) 10px 10px, rgb(55, 181, 161) 11px 11px, rgb(55, 181, 161) 12px 12px, rgb(55, 182, 162) 13px 13px, rgb(55, 183, 163) 14px 14px, rgb(56, 184, 164) 15px 15px, rgb(56, 185, 165) 16px 16px, rgb(56, 186, 166) 17px 17px, rgb(57, 187, 167) 18px 18px, rgb(57, 188, 168) 19px 19px, rgb(57, 189, 169) 20px 20px, rgb(58, 191, 170) 21px 21px, rgb(58, 192, 171) 22px 22px, rgb(58, 193, 172) 23px 23px, rgb(59, 194, 173) 24px 24px, rgb(59, 195, 174) 25px 25px, rgb(59, 196, 175) 26px 26px, rgb(60, 197, 176) 27px 27px, rgb(60, 198, 177) 28px 28px, rgb(60, 199, 178) 29px 29px, rgb(61, 201, 179) 30px 30px;
+}

@@ -2,784 +2,212 @@
 @import "variables";
 @import "mixin";
 
-// @include font-custom(Didact Gothic, Didact Gothic);
-// @include font-thin(Roboto, Roboto);
-// @include font-normal(Roboto, Roboto);
-
 @import url("http://fonts.googleapis.com/css?family=Roboto:400,300,100&subset=latin,cyrillic");
-@import url("http://fonts.googleapis.com/css?family=Varela+Round");
 
-/*
-|---------------------------------------------------------
-| The Main Style
-|---------------------------------------------------------
-*/
-
-	h1, h2, h3, h4, h5, h6 {
-		margin-bottom: 5px;
-		font-weight: 100;
-	}
-
-	h1 {
-		font-size: 3em;
-	}
-
-	h2 {
-		font-size: 2.2em;
-
-		a {
-			color: #fff;
-
-			&:hover {
-				color: inherit;
-			}
-		}
-	}
-
-	h3 {
-		font-size: 1.8em;
-	}
-
-	h4 {
-		font-size: 1.5em;
-	}
-
-	body {
-		background: #fff;
-		color: $color-white;
-		font: 400 1em 'Roboto', 'Didact Gothic';
-	}
-
-	ul {
-		list-style: none;
-	}
-
-	img[src=""] {
-		opacity: 0;
-	}
-
-	a {
-		color: $color-gray;
-		transition: all .3s;
-		text-decoration: none;
-
-		&:hover {
-			color: $color-green;
-		}
-	}
-
-	p {
-		font-weight: 300;
-	}
-
-	.fa {
-		font-family: FontAwesome;
-	}
-
-	input {
-		outline: none;
-		border: none;
-		font-weight: 100;
-
-		&:focus,
-		&:hover {
-			outline: none;
-		}
-	}
-
-	button {
-		background: none;
-		border: none;
-		border-radius: 0;
-		outline: none;
-		cursor: pointer;
-
-		&:hover,
-		&:focus {
-			outline: none;
-		}
-	}
-
-	button[disabled="disabled"] {
-		opacity: .6;
-	}
-
-	.wrapper {
-		background: url(../images/loading/loader1.gif) center no-repeat;
-		background-attachment: fixed;
-		margin-top: -19px;
-	}
-
-	.container {
-		min-height: 800px;
-	}
-
-/*
-|---------------------------------------------------------
-| Header
-|---------------------------------------------------------
-*/
-	#main-header {
-		position: fixed;
-		width: 100%;
-		z-index: 999;
-		background: rgba(255,255,255,.9);
-		box-shadow: 0 0 20px rgba(255,255,255,1);
-		@include transition;
-	}
-
-	.header {
-		max-width: $content-width;
-		margin: 0 auto;
-		overflow: hidden;
-
-		@include clearfix;
-		@include transition;
-
-		.logo {
-			float: left;
-
-			@include clearfix;
-
-			> div {
-				width: 157px;
-				float: left;
-			}
-
-			img {
-				float: left;
-				@include responsive-image;
-				@include transition(.4s);
-			}
-
-			h1 {
-				margin-left: 20px;
-				line-height: 109px;
-				float: left;
-				@include transition;
-			}
-		}
-
-		.menu {
-
-			ul {
-				float: right;
-				font-weight: 300;
-			}
-
-			li {
-				float: left;
-			}
-
-			i.fa {
-				margin-right: 5px;
-			}
-
-			a {
-				color: $color-gray;
-				display: inline-block;
-				padding: 3em 1em;
-				position: relative;
-				font-weight: 300;
-
-				&:hover {
-					color: $color-green;
-
-					&:after {
-						top: 0;
-					}
-				}
-
-				&:after {
-					@include transition;
-
-					position: absolute;
-					top: -5px;
-					left: 0;
-					content: '';
-					display: block;
-					width: 100%;
-					height: 5px;
-					background: $color-green;
-				}
-			}
-
-			.menu-active {
-				color: $color-green;
-				opacity: .5;
-				&:after {
-					top: 0;
-				}
-			}
-		}
-	}
-
-/*
-|---------------------------------------------------------
-| Slider
-|---------------------------------------------------------
-*/
-	#main-section {
-		padding-top: 7.2em;
-
-		@include transition;
-	}
-
-	.main-slider {
-		// height: 565px;
-		background: url(../images/background.jpg) repeat-x;
-		padding: 100px 0;
-		position: relative;
-		box-shadow: 0 0 20px $color-green;
-
-		@include box-sizing;
-	}
-
-	.slider {
-		overflow: hidden;
-		max-width: $content-width;
-		margin: 0 auto;
-		@include clearfix;
-	}
-
-	.slider-image {
-		float: left;
-		width: 37%;
-		margin-right: 3%;
-
-		img {
-			max-width: 100%;
-		}
-	}
-
-	.slider-text {
-		margin-top: 2em;
-		float: left;
-		width: 60%;
-
-		h2 {
-			font-weight: 300;
-			font-size: 2.8em;
-			margin-bottom: .2em;
-		}
-
-		h3 {
-			margin-bottom: .5em;
-		}
-	}
-
-
-/*
-|---------------------------------------------------------
-| 3 MOST REASON
-|---------------------------------------------------------
-*/
-	.main-reason {
-		width: 100%;
-		background: #fff;
-		color: $color-gray;
-	}
-
-	.reason {
-		max-width: $content-width;
-		margin: 0 auto;
-		text-align: center;
-		padding: $margin-default 0;
-		border-bottom: 1px solid lighten($color-gray, 20%);
-		position: relative;
-
-		h2 {
-			color: #555;
-		}
-
-		p {
-			color: #999;
-			margin-bottom: $margin-default;
-		}
-
-		&:before {
-			content: '=';
-			display: inline-block;
-			position: absolute;
-			bottom: -10px;
-			left: 49.5%;
-		}
-	}
-
-	.reasons-block {
-		overflow: hidden;
-		text-align: center;
-
-		@include clearfix;
-	}
-
-	.reason-block {
-		width: 32%;
-		float: left;
-		text-align: left;
-		text-align: center;
-		padding: 0 2em;
-		opacity: 0;
-
-		&:first-child {
-			margin-left: 2%;
-		}
-
-		@include box-sizing;
-
-		span {
-			font-size: 4em;
-			display: inline-block;
-			height: 2em;
-			width: 2em;
-			line-height: 2em;
-			color: $color-green;
-			margin-bottom: 20px;
-
-			&:before {
-				border: 1px solid $color-green;
-				border-radius: 50%;
-				display: block;	
-			}
-		}
-	}
-
-	.reason-active {
-		box-shadow: 0 0 25px rgba(0,0,0,.15);
-	}
-
-		.reason-icon {
-			text-align: center;
-		}
-
-		.reason-text {
-			h4 {
-				font-size: 1.2em;
-				margin-bottom: 10px;
-			}
-
-			p {
-				font-size: .9em;
-			}
-		}
-
-
-/*
-|---------------------------------------------------------
-| Why Me?
-|---------------------------------------------------------
-*/
-	.main-why-me {
-		width: 100%;
-		background: #fff;
-		padding: $margin-default 0;
-	}
-
-	.why-me {
-		max-width: $content-width;
-		color: $color-gray;
-		text-align: center;
-		margin: 0 auto;
-		text-align: left;
-		overflow: hidden;
-
-		@include clearfix;
-
-		h2 {
-			text-align: center;
-			margin-bottom: 1em;
-		}
-	}
-
-	.why-me-nav {
-		width: 22%;
-		float: left;
-		margin-right: 3%;
-
-		@include box-sizing;
-
-		a {
-			display: block;
-			color: $color-green;
-			background: transparent;
-			border-radius: 3px;
-			padding: 10px 10px;
-			margin-bottom: .5em;
-
-			.fa {
-				margin-right: 5px;
-			}
-
-			&:hover {
-				padding-left: 15px;
-				background: $color-green;
-				color: #fff;
-			}
-		}
-	}
-
-	a.why-me-active {
-		background: $color-green;
-		color: #fff;
-		padding-left: 15px;
-	}
-
-	.why-me-loc {
-		width: 35%;
-		float: left;
-
-		p {
-			font-size: .9em;
-		}
-	}
-
-	#why-me-map {
-		width: 100%;
-		height: 500px;
-	}
-
-	.why-me-desc {
-		width: 30%;
-		float: left;
-		font-size: .9em;
-		
-		h3 {
-			font-size: 1.5em;
-			text-align: left;
-			margin-bottom: .4em;
-			padding-bottom: .4em;
-			border-bottom: 1px solid;
-		}
-
-		p {
-			margin-bottom: .5em;
-		}
-	}
-
-
-/*
-|---------------------------------------------------------
-| Sexy Block
-|---------------------------------------------------------
-*/
-	.main-sexy-block {
-		width: 100%;
-		background: #898989;
-		box-shadow: 0 0 20px #898989;
-		padding: $margin-default*1.5 0;
-		position: relative;
-	}
-
-		.sexy-block {
-			max-width: $content-width;
-			margin: 0 auto;
-		}
-
-			.sexy-block-inner {
-				text-align: center;
-				margin: auto;
-				font-weight: 300;
-				background: #959595;
-				padding: 2em 0;
-				border-radius: 20px;
-
-				box-shadow: 0 0 5px rgba(255,255,255,.7);
-
-				@include box-sizing;
-
-				a {
-					color: #fff;
-				}
-
-				.fa {
-					font-size: 3em;
-					width: 2em;
-					height: 2em;
-					line-height: 2em;
-					border: 1px solid #fff;
-					border-radius: 50%;
-					margin-bottom: .5em;
-				}
-			}
-
-/*
-|---------------------------------------------------------
-| Our Team
-|---------------------------------------------------------
-*/
-	.main-our-team {
-		width: 100%;
-		background: #fff;
-	}
-
-		.our-team {
-			color: $color-gray;
-			padding: $margin-default 0;
-
-			@include main-block;
-		}
-
-			.our-team-header {
-				text-align: center;
-				margin-bottom: 2em;
-
-				h2 {
-					font-weight: 300;
-					margin-bottom: .5em;
-				}
-
-				p {
-					font-size: .9em;
-				}
-			}
-
-			.our-team-blocks {
-				@include clearfix;
-				overflow: hidden;
-			}
-
-				.our-team-block {
-					width: 24%;
-					float: left;
-					text-align: center;
-					margin: 0 .5%;
-
-					@include box-sizing;
-
-					img {
-						margin-bottom: -5px;
-						@include responsive-image;
-					}
-
-					h4 {
-						margin-top: 5px;
-						color: $color-green-lighten;
-					}
-
-					p {
-						color: #777;
-						margin-bottom: 5px;
-						font-size: .9em;
-					}
-
-					> div {
-						border-bottom: 1px dashed rgba(100,100,100,.5);
-						border-left: 1px dashed rgba(100,100,100,.5);
-						border-right: 1px dashed rgba(100,100,100,.5);
-						border-bottom-left-radius: 10px;
-						border-bottom-right-radius: 10px;
-
-						padding: 0 12px;
-
-						@include box-sizing;
-					}
-
-				}
-
-/*
-|---------------------------------------------------------
-| Contacts Details
-|---------------------------------------------------------
-*/
-
-	.box-4 {
-		float: left;
-		width: 33.3333333%;
-		padding: 0 1%;
-
-		@include box-sizing;
-	}
-
-	.contact-details-outer {
-		background: #f3f5f8;
-		padding: $margin-default 0;
-	}
-
-	.contact-details {
-		text-align: center;
-		padding-bottom: $margin-default;
-
-		@include clearfix;
-		@include main-block;
-
-		i {
-			color: rgb(53,53,53);
-			display: block;
-			font-size: .8em;
-			margin-bottom: 15px;
-		}
-
-		span {
-			margin-bottom: 15px;
-			display: block;
-			color: #3dc9b3;
-			text-transform: uppercase;
-			letter-spacing: 1px;
-			font-size: 14px;
-
-			&:after {
-				content: " ";
-				border: solid 2px #3dc9b3;
-				display: block;
-				width: 35px;
-				margin: 25px auto;
-			}
-		}
-
-		h3 {
-			font-family: 'Varela Round';
-			color: $color-green;
-		}
-
-		p {
-			color: #8c9398;
-			word-spacing: 1px;
-			line-height: 25px;
-			font-size: 14px;
-		}
-
-		.box-4 {
-			opacity: 0;
-		}
-	}
-
-	.light-box {
-		background: #fff;
-		-webkit-box-shadow: 0px 3px 0px 0px #f0f2f4;
-		-moz-box-shadow: 0px 3px 0px 0px #f0f2f4;
-		box-shadow: 0px 3px 0px 0px #f0f2f4;
-		padding: 20px 0;
-
-		&:hover {
-			-webkit-box-shadow: 0px 3px 0px 0px #3dc9b3;
-			-moz-box-shadow: 0px 3px 0px 0px #3dc9b3;
-			box-shadow: 0px 3px 0px 0px #3dc9b3;
-		}
-	}
-
-	.box-hover {
-		-webkit-transition: all 500ms ease-in-out;
-		-moz-transition: all 500ms ease-in-out;
-		-o-transition: all 500ms ease-in-out;
-		transition: all 500ms ease-in-out;
-
-		&:hover {
-			-webkit-transform: translate(0, -15px);
-			transform: translate(0, -15px);
-		}
-	}
-
-
-/*
-|---------------------------------------------------------
-| Footer
-|---------------------------------------------------------
-*/
-	#main-footer {
-		width: 100%;
-		background: #eee;
-		padding: $margin-default 0;
-		position: relative;
-
-		box-shadow: 0 0 40px 20px #eee;
-	}
-
-	.footer {
-		text-align: center;
-		@include main-block;
-
-		.footer-icons {
-			margin-bottom: 1em;
-		}
-
-		img {
-			max-width: 30%;
-			margin-bottom: 1em;
-		}
-
-		span {
-			color: $color-green;
-			font-size: 1.3em;
-			width: 2em;
-			height: 2em;
-			line-height: 2em;
-			text-align: center;
-			border: 1px solid $color-green;
-			border-radius: 50%;
-			margin-right: 5px;
-
-			&:hover {
-				color: #fff;
-				border-color: #fff;
-				background: $color-green;
-			}
-		}
-
-		p {
-			color: #999;
-			font-weight: 400;
-			font-weight: bold;
-
-			a {
-				color: $color-green-lighten;
-			}
-		}
-	}
-
-.fa-little {
-	font-size: .6em;
+body {
+    font-family: Roboto;
+    font-weight: 300;
 }
 
-.delay-05s { animation-delay: 0.5s; -webkit-animation-delay: 0.5s; }
-.delay-1s { animation-delay: 1s; -webkit-animation-delay: 1s; }
-.delay-15s { animation-delay: 1.5s; -webkit-animation-delay: 1.5s; }
-.delay-2s { animation-delay: 2s; -webkit-animation-delay: 2s; }
+img { max-width: 100%; }
 
-/*
-|---------------------------------------------------------
-| Error and Success blocks
-|---------------------------------------------------------
-*/
-
-.bg-error {
-	@extend %blocks;
-	@include transition(.5s);
-	@include box-shadow($range: 30px, $color: rgba(192, 57, 43, .8));
-	background: rgba(192, 57, 43, .8);
+.glyphicon {
+    font-family: 'FontAwesome';
 }
 
-.bg-success {
-	@extend %blocks;
-	@include transition(.5s);
-	@include box-shadow($color: rgba(34, 171, 166, .8));
-	background: rgba(34, 171, 166, .8);
+h3 {
+    font-size: 1em;
+    color: $color-gray;
+    text-transform: uppercase;
+    font-weight: bold;
 
-	display: none;
+    &::after {
+        content: " ";
+        border: solid 2px #3dc9b3;
+        display: block;
+        width: 35px;
+        margin: 25px auto;
+    }
 }
 
-.form-error {
-	color: rgba(192, 57, 43, .8);
-
-	input {
-		box-shadow: 0 0 4px rgba(192, 57, 43, .8)!important;	
-		color: rgba(192, 57, 43, .8);
-	}
+a {
+    transition: all .3s;
+    text-decoration: none;
+    color: $color-gray;
+}
+a:hover,
+a:focus {
+    color: darken( $color-default, 5% );
+    text-decoration: none;
 }
 
-.form-success {
-	color: rgba(34, 171, 166, .8);
-
-	input {
-		box-shadow: 0 0 4px rgba(34, 171, 166, .8)!important;
-		color: rgba(34, 171, 166, .8);
-	}
+p {
+    color: #8c9398;
+    word-spacing: 1px;
+    line-height: 25px;
+    font-size: 14px;
 }
 
-.form-warning {
-	color: rgba(230, 126, 34, .8);
 
-	input {
-		box-shadow: 0 0 4px rgba(230, 126, 34, .8)!important;
-		color: rgba(230, 126, 34, .8)
-	}
-}
+// --------------------------------
+// ------------ Logo --------------
+// --------------------------------
+    #logo {
+        height: 100%;
+    }
+
+    .navbar-toggle {
+        background: transparent;
+        margin-top: 35px;
+
+        .icon-bar {
+            background: $color-gray;
+        }
+    }
+
+    .navbar-mm {
+        background: $bg-transition;
+    }
+
+    .navbar-brand {
+        padding: 0;
+        height: 100px;
+        line-height: 100px;
+        margin-right: 30px;
+        font-size: 3em;
+        color: $color-light-gray;
+    }
+
+    .navbar {
+        min-height: 100px;
+        margin-bottom: 0;
+        border: 0;
+
+        li {
+            min-height: 100px;
+
+            a {
+                line-height: 80px;
+                min-height: 100px;
+                color: #aaa;
+            }
+        }
+    }
+
+    .nav>li>a:hover,
+    .nav>li>a:focus {
+        color: $color-default;
+        background: rgba(61, 201, 179, .05);
+    }
+    li.active {
+        a {
+            color: $color-light-gray;
+            background: rgba(61, 201, 179, .05);
+        }
+    }
+
+
+// --------------------------------
+// ----------- Section ------------
+// --------------------------------
+
+    #content {
+        background: #eee url(../images/background4.jpg);
+        background-size: cover;
+        padding: 65px 0 300px 0;
+        height: auto;
+
+        h1 {
+            font-size: 4em;
+            color: $color-gray;
+            line-height: 70px;
+            margin: 10px 0 30px 0;
+
+            span { color: $color-light-gray; }
+        }
+
+        p {
+            color: #8c9398;
+            letter-spacing: 2px;
+            font-size: 15px;
+
+            span { color: $color-default; }
+        }
+    }
+
+    .catalog-btn {
+        background: $color-default;
+        padding: 20px 40px;
+        border-radius: 4px;
+        margin-top: 60px;
+        display: inline-block;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 500;
+        box-shadow: 0px 3px 3px darken( $color-default, 10% );
+
+        &:hover {
+            color: #fff;
+            box-shadow: 0px 3px 10px darken( $color-default, 10% );
+        }
+    }
+
+    .inner {
+        padding-top: 200px;
+    }
+
+
+// --------------------------------
+// ------------ Intro -------------
+// --------------------------------
+
+    .intro {
+        background: #f3f5f8;
+
+        p {
+            margin: 50px 0 0;
+        }
+    }
+
+    .section-padding {
+        padding: 90px 0 100px;
+    }
+
+    h2.arrow {
+        font-size: 1.1em;
+        text-transform: uppercase;
+        color: $color-gray;
+        letter-spacing: 1px;
+        background: url('../images/h2-bg.png') no-repeat center bottom;
+        padding-bottom: 30px;
+        font-weight: bold;
+    }
+
+
+// --------------------------------
+// ----------- Features -----------
+// --------------------------------
+
+    .features-wrapper {
+        margin: 70px 0 0;
+    }
+
+    .icon {
+        height: 175px;
+        width: 175px;
+        line-height: 175px;
+        max-width: 100%;
+        background: #3dc9b3;
+        border-radius: 50%;
+        -o-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        display: block;
+        color: #fff;
+        font-size: 55px;
+        text-align: center;
+        vertical-align: middle;
+        position: relative;
+        margin: 0 auto 50px;
+    }
