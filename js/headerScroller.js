@@ -15,8 +15,8 @@
 
 		//Shopping Cart
 		shoppingCart = $('#shopping-cart').css({
-			'-webkit-transition': 'all .4s',
-			'transition': 'all .4s'
+			'-webkit-transition': 'all .4s !important',
+			'transition': 'all .4s !important'
 		}),
 
 		// Href
