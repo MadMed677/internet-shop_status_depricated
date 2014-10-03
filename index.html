@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>vPunke</title>
 
@@ -11,6 +12,12 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+    WARNING: Respond.js doesn't work if you view the page via file://
+    [if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif] -->
 </head>
 <body>
 
@@ -119,37 +126,31 @@
 
     <!-- Responsive -->
     <section class="text-center" id="responsive">
-        <div class="container-fluid nopadding responsive-services">
-            <div class="wrapper">
-                <div class="iphone">
-                    <div class="wp3 animated"></div>
-                </div>
-                <div class="fluid-white"></div>
-            </div>
-            <div class="container designs">
-                <div class="row">
-                    <div class="col-md-5 col-md-offset-7">
-                        <div id="servicesSlider">
-                            <div class="bx-viewport">
-                                <ul class="slides">
-                                    <li>
-                                        <h3 class="arrow">Title 1</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid adipisci obcaecati atque illo, dignissimos nostrum doloremque sint, placeat eos accusantium maxime dolor fugit illum impedit. Ab odio magnam alias quas omnis deserunt error aut tenetur ad, animi quibusdam amet laborum!</p>
-                                    </li>
-                                    <li>
-                                        <h3 class="arrow">Title 2</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid adipisci obcaecati atque illo, dignissimos nostrum doloremque sint, placeat eos accusantium maxime dolor fugit illum impedit. Ab odio magnam alias quas omnis deserunt error aut tenetur ad, animi quibusdam amet laborum!</p>
-                                    </li>
-                                    <li>
-                                        <h3 class="arrow">Title </h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid adipisci obcaecati atque illo, dignissimos nostrum doloremque sint, placeat eos accusantium maxime dolor fugit illum impedit. Ab odio magnam alias quas omnis deserunt error aut tenetur ad, animi quibusdam amet laborum!</p>
-                                    </li>
-                                </ul>
-                            </div>
+        <div class="container nopadding responsive-services">
+            <ul class="slides">
+                <li>
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="wp3 animated"></div>
+                        </div>
+                        <div class="col-md-5 padding-top animated wp7 delay-1s">
+                            <h3 class="arrow">Мобильная версия</h3>
+                            <p>Вы можете купить презервативы через ваш сотовый телефон, это так же просто, как и на компьютере!</p>
                         </div>
                     </div>
-                </div>
-            </div>
+                </li>
+                <li>
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="wp3m animated"></div>
+                        </div>
+                        <div class="col-md-5 padding-top">
+                            <h3 class="arrow">Десктопная версия</h3>
+                            <p>Заказывайте презервативы через нас, это просто, удобно, а так же очень быстро и бешевле, чем в других магазинах!</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
     </section>
 
@@ -159,103 +160,9 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <h2>
-                        Зачем переплачивать?
+                        Зачем платить больше?
                         <span>если можно заказать презервативы на нашем сайте и получить их с доставкой?</span>
                     </h2>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio -->
-    <section class="portfolio text-center section-padding" id="portfolio">
-        <div class="container">
-            <div class="row">
-                <div id="portfolioSlider">
-                    <ul class="slides">
-                        <li>
-                            <div class="col-md-4">
-                                <div class="overlay-effect effects clearfix">
-                                    <div class="img">
-                                        <img src="images/portfolio-01.jpg" alt="Portfolio Item">
-                                        <div class="overlay">
-                                            <a href="#" class="expand"><i class="fa fa-search"></i><br>View More</a>
-                                            <a class="close-overlay hidden">x</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h3>Creative Minds</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="overlay-effect effects clearfix">
-                                    <div class="img">
-                                        <img src="images/portfolio-02.jpg" alt="Portfolio Item">
-                                        <div class="overlay">
-                                            <a href="#" class="expand"><i class="fa fa-search"></i><br>View More</a>
-                                            <a class="close-overlay hidden">x</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h3>Creative Minds</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="overlay-effect effects clearfix">
-                                    <div class="img">
-                                        <img src="images/portfolio-03.jpg" alt="Portfolio Item">
-                                        <div class="overlay">
-                                            <a href="#" class="expand"><i class="fa fa-search"></i><br>View More</a>
-                                            <a class="close-overlay hidden">x</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h3>Creative Minds</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="col-md-4 wp4">
-                                <div class="overlay-effect effects clearfix">
-                                    <div class="img">
-                                        <img src="images/portfolio-01.jpg" alt="Portfolio Item">
-                                        <div class="overlay">
-                                            <a href="#" class="expand"><i class="fa fa-search"></i><br>View More</a>
-                                            <a class="close-overlay hidden">x</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h3>Creative Minds</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
-                            </div>
-                            <div class="col-md-4 wp4 delay-05s">
-                                <div class="overlay-effect effects clearfix">
-                                    <div class="img">
-                                        <img src="images/portfolio-02.jpg" alt="Portfolio Item">
-                                        <div class="overlay">
-                                            <a href="#" class="expand"><i class="fa fa-search"></i><br>View More</a>
-                                            <a class="close-overlay hidden">x</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h3>Creative Minds</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
-                            </div>
-                            <div class="col-md-4 wp4 delay-1s">
-                                <div class="overlay-effect effects clearfix">
-                                    <div class="img">
-                                        <img src="images/portfolio-03.jpg" alt="Portfolio Item">
-                                        <div class="overlay">
-                                            <a href="#" class="expand"><i class="fa fa-search"></i><br>View More</a>
-                                            <a class="close-overlay hidden">x</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h3>Creative Minds</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero.</p>
-                            </div>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>
@@ -278,14 +185,13 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <h2>
-                        Заказывайте товары на сайте
+                        Закажи товары на сайте
                         <span>а забирайте и оплачивайте в живую</span>
                     </h2>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Information -->
     <section class="information text-center section-padding section-less">
         <div class="container">
@@ -326,25 +232,26 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                    <h2>
-                        vPunke.ru
-                    </h2>
-                </div>
-                <div class="col-sm-6 text-right">
-                    <p>
-                        Сверстал <a href="vk.com/madmed677">MadMed677</a> | 2014
-                    </p>
-                </div>
+Footer
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2>
+                    vPunke.ru
+                </h2>
+            </div>
+            <div class="col-sm-6 text-right">
+                <p>
+                    Сверстал <a href="vk.com/madmed677">MadMed677</a> | 2014
+                </p>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
-    <!-- JavaScript -->
-    <script data-main="js/main.js" src="js/libs/require.js"></script>
+JavaScript
+<script data-main="js/main.js" src="js/libs/require.js"></script>
+<script src="js/libs/modernizr.js"></script>
 </body>
 </html>

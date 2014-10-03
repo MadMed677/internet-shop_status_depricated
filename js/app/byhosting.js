@@ -1,15 +1,17 @@
 define([
 
-    'waypoints',
-    'waypointsSticky'
+    'backbone',
+    'jquery',
+    // 'app/plugins/bxSlider',
+    'app/plugins/waypoint',
+    'blurjs',
+    'bootstrap'
 
-], function(waypoint) {
+], function(Backbone, $, waypoint, blurjs) {
+
+    'use strict';
 
     var initialize = function() {
-
-        // ---------------------------------
-        // Waypoint on INDEX page
-        // ---------------------------------
 
         $('.wp1').waypoint( function() {
             $('.wp1').addClass('fadeInLeft');
@@ -49,17 +51,8 @@ define([
             offset: '75%'
         });
 
-
-        // ---------------------------------
-        // Navigation fixed and minimalizend
-        // ---------------------------------
-
-        $(window).on( 'scroll', function() {
-            if ( $(this).scrollTop() >= 300 ) {
-                $('.navbar-mm').addClass('minimaze');
-            } else {
-                $('.navbar-mm').removeClass('minimaze');
-            }
+        $('.slides').bxSlider({
+            controls: false
         });
 
     };

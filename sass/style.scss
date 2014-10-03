@@ -57,6 +57,7 @@ p {
     .navbar-toggle {
         background: transparent;
         margin-top: 35px;
+        @include transition;
 
         .icon-bar {
             background: $color-gray;
@@ -109,6 +110,10 @@ p {
     .navbar.minimaze {
 
         min-height: 50px;
+
+        .navbar-toggle {
+            margin-top: 15px;
+        }
 
         .navbar-brand {
             height: 50px;
@@ -267,6 +272,19 @@ p {
                 background: url(../images/iphone.png) no-repeat center;
                 background-position: -250px -90px;
                 height: 100%;
+                min-height: 550px;
+            }
+            .wp3m {
+                background: url(../images/macbook.png) no-repeat center;
+                background-position: -290px -90px;
+                height: 100%;
+                min-height: 550px;
+            }
+            .wp3i {
+                background: url(../images/imac.png) no-repeat center;
+                background-position: -290px -90px;
+                height: 100%;
+                min-height: 550px;
             }
 
         .fluid-white {
@@ -287,7 +305,18 @@ p {
         right: 0;
         margin-left: auto;
         margin-right: auto;
-        top: 100px;
+        top: 0;
+        min-height: 550px;
+    }
+
+    .padding-top {
+        padding-top: 150px;
+    }
+
+    .bx-pager {
+        position: absolute;
+        top: 70%;
+        right: 16%;
     }
 
     // Slider
@@ -491,4 +520,64 @@ p {
 
 .bounceInLeft, .bounceInRight, .fadeInUp, .fadeInUpDelay, .fadeInDown, .fadeInUpD, .fadeInLeft, .fadeInRight {
     visibility: visible;
+}
+
+
+// Media
+
+@media screen and (max-width: 991px) {
+
+    h1 {
+        font-size: 2em;
+    }
+
+    #content h1 {
+        line-height: 70px;
+    }
+
+    .bx-pager {
+        position: static;
+        padding-bottom: 20px;
+    }
+
+    .padding-top {
+        padding-top: 50px;
+    }
+
+    .swag {
+        background-attachment: scroll;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-brand {
+        font-size: 2.5em;
+    }
+    #content h1 {
+        font-size: 3em;
+    }
+}
+
+@media screen and (max-width: 440px) {
+
+    #responsive {
+        /* display: none; */
+    }
+
+    .navbar-brand {
+        margin-right: 0;
+    }
+
+    #content h1 {
+        font-size: 1.5em;
+    }
+
+    #content {
+        padding: 65px 0 100px 0;
+    }
+
+    .inner {
+        padding-top: 100px;
+    }
+
 }
