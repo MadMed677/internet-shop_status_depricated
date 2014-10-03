@@ -6,7 +6,8 @@ require.config({
         'backbone': 'libs/backbone',
         'bootstrap': 'libs/bootstrap',
         'backbone.localStorage': 'libs/backbone-localstorage',
-        'waypoint': 'libs/waypoints',
+        'waypoints': 'libs/waypoints.min',
+        'waypointsSticky': 'libs/waypoints-sticky',
         'bxSlider': 'libs/jquery.bxSlider.min'
     },
 
@@ -28,7 +29,7 @@ require.config({
             deps: ['jquery']
         },
 
-        'waypoint': {
+        'waypoints': {
             deps: ['jquery']
         },
 
