@@ -65,6 +65,7 @@ p {
 
     .navbar-mm {
         @include transition;
+        box-shadow: 0 5px 10px rgba(255,255,255,.4);
         background: $bg-transition;
     }
 

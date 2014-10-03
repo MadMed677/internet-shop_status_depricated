@@ -8,7 +8,8 @@ require.config({
         'backbone.localStorage': 'libs/backbone-localstorage',
         'waypoints': 'libs/waypoints.min',
         'waypointsSticky': 'libs/waypoints-sticky',
-        'bxSlider': 'libs/jquery.bxSlider.min'
+        'bxSlider': 'libs/jquery.bxSlider.min',
+        'blurjs': 'libs/blur'
     },
 
     shim: {

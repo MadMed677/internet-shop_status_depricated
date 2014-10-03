@@ -4,9 +4,10 @@ define([
     'jquery',
     'app/plugins/bxSlider',
     'app/plugins/waypoint',
+    'blurjs',
     'bootstrap'
 
-], function(Backbone, $, bxSlider, waypoint) {
+], function(Backbone, $, bxSlider, waypoint, blurjs) {
 
     'use strict';
 
@@ -14,6 +15,8 @@ define([
 
         bxSlider.initialize();
         waypoint.initialize();
+
+        
 
     };
 
