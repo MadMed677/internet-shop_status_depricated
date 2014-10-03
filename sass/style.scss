@@ -1,19 +1,17 @@
 @import "compass/reset";
 @import "variables";
 @import "mixin";
+@import "query";
 
 @import url("http://fonts.googleapis.com/css?family=Roboto:400,300,100&subset=latin,cyrillic");
 
 body {
     font-family: Roboto;
     font-weight: 300;
+    background: #eee;
 }
 
 img { max-width: 100%; }
-
-.glyphicon {
-    font-family: 'FontAwesome';
-}
 
 h3 {
     font-size: 1em;
@@ -66,17 +64,18 @@ p {
     }
 
     .navbar-mm {
+        @include transition;
         background: $bg-transition;
     }
 
-    .navbar-brand {
-        padding: 0;
-        height: 100px;
-        line-height: 100px;
-        margin-right: 30px;
-        font-size: 3em;
-        color: $color-light-gray;
-    }
+        .navbar-brand {
+            padding: 0;
+            height: 100px;
+            line-height: 100px;
+            margin-right: 30px;
+            font-size: 3em;
+            color: $color-light-gray;
+        }
 
     .navbar {
         min-height: 100px;
@@ -89,7 +88,7 @@ p {
             a {
                 line-height: 80px;
                 min-height: 100px;
-                color: #aaa;
+                color: $color-gray;
             }
         }
     }
@@ -101,9 +100,31 @@ p {
     }
     li.active {
         a {
-            color: $color-light-gray;
+            color: $color-default;
             background: rgba(61, 201, 179, .05);
         }
+    }
+
+    .navbar.minimaze {
+
+        min-height: 50px;
+
+        .navbar-brand {
+            height: 50px;
+            line-height: 50px;
+            margin-top: 10px;
+            font-size: 2em;
+        }
+
+        li {
+            min-height: 50px;
+
+            a {
+                line-height: 40px;
+                min-height: 50px;
+            }
+        }
+
     }
 
 
@@ -211,3 +232,262 @@ p {
         position: relative;
         margin: 0 auto 50px;
     }
+
+
+// --------------------------------
+// ---------- Responsive ----------
+// --------------------------------
+
+    .responsive-services {
+        position: relative;
+    }
+
+    .nopadding {
+        padding: 0;
+    }
+
+    .wrapper {
+        height: 650px;
+    }
+
+        .iphone {
+            width: 50%;
+            background: #f3f5f8;
+            float: left;
+            height: 100%;
+            box-shadow: inset -15px -11px 40px -6px rgba(0, 0, 0, 0.1);
+            -moz-box-shadow: inset -15px -11px 40px -6px rgba(0, 0, 0, 0.1);
+            -webkit-box-shadow: inset -15px -11px 40px -6px rgba(0, 0, 0, 0.1);
+
+            z-index: 1;
+        }
+
+            .wp3 {
+                background: url(../images/iphone.png) no-repeat center;
+                background-position: -250px -90px;
+                height: 100%;
+            }
+
+        .fluid-white {
+            width: 50%;
+            background: #fff;
+            float: right;
+            height: 100%;
+            z-index: 2;
+        }
+
+            #servicesSlider {
+                margin: 70px 0 0;
+            }
+
+    .designs {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        top: 100px;
+    }
+
+    // Slider
+
+        .bx-pager {
+            margin-top: 30px;
+        }
+
+        .bx-pager-item {
+            display: inline-block;
+
+            &:hover {
+                a { border: 1px solid $color-default; }
+            }
+        }
+
+        .bx-pager-link {
+            display: inline-block;
+            padding: 3px 6px;
+            margin-right: 10px;
+            border-radius: 50%;
+            border: 1px solid $color-light-gray;
+            color: $color-light-gray;
+        }
+
+        .bx-pager-link.active {
+            color: $color-default;
+            border: 1px solid $color-default;
+        }
+
+// --------------------------------
+// ------------- Swag -------------
+// --------------------------------
+
+    .swag {
+        background: url('../images/plants-bg.jpg') no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-attachment: fixed;
+        padding: 50px 0;
+
+        h2 {
+            color: #fff;
+            font-size: 3em;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+
+        span {
+            display: block;
+            font-size: .3em;
+            margin-top: 20px;
+            line-height: 25px;
+        }
+    }
+
+
+// --------------------------------
+// ----------- Portfolio ----------
+// --------------------------------
+
+
+
+
+// --------------------------------
+// ----------- Buy Invite ---------
+// --------------------------------
+
+    .buy-invite {
+        padding: 70px 0;
+        background: #242830;
+    }
+
+    .buy-btn {
+        display: inline-block;
+        padding: 25px 40px;
+        color: #fff;
+        border: 1px solid #fff;
+        text-transform: uppercase;
+        font-weight: 100;
+        letter-spacing: 1px;
+
+        &:hover {
+            color: $color-default;
+            border: 1px solid $color-default;
+        }
+    }
+
+// --------------------------------
+// ------------- Pluses -----------
+// --------------------------------
+
+    .pluses {
+        background: url('../images/keyboard-bg.jpg') no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-attachment: fixed;
+        padding: 120px 0 140px;
+
+        h2 {
+            color: #fff;
+            font-size: 3em;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+
+        span {
+            display: block;
+            font-size: .3em;
+            margin-top: 20px;
+            line-height: 25px;
+        }
+    }
+
+    .section-less {
+        padding: 90px 0 50px;
+    }
+
+
+// --------------------------------
+// ------------ Contacts ----------
+// --------------------------------
+
+    .contact-details {
+        margin: 70px 0;
+
+        i {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        span {
+            color: $color-default;
+        }
+    }
+
+    .box-hover {
+        transition: all 500ms ease-in-out;
+        -webkit-transition: all 500ms ease-in-out;
+        -moz-transition: all 500ms ease-in-out;
+        -o-transition: all 500ms ease-in-out;
+
+        &:hover {
+            transform: translate(0, -15px);
+            -webkit-transform: translate(0, -15px);
+            -ms-transform: translate(0, -15px);
+        }
+
+        margin-bottom: 20px;
+    }
+
+    .light-box {
+        background-color: #fff;
+        -webkit-box-shadow: 0px 3px 0px 0px #f0f2f4;
+        -moz-box-shadow: 0px 3px 0px 0px #f0f2f4;
+        box-shadow: 0px 3px 0px 0px #f0f2f4;
+        padding: 40px 0;
+        border-radius: 5px;
+
+        &:hover {
+            -webkit-box-shadow: 0px 3px 0px 0px $color-default;
+            -moz-box-shadow: 0px 3px 0px 0px $color-default;
+            box-shadow: 0px 3px 0px 0px $color-default;
+        }
+    }
+
+// --------------------------------
+// ------------ Footer ------------
+// --------------------------------
+
+    footer {
+        background-color: #242830;
+        padding: 40px 0 30px;
+
+        h2 {
+            font-size: 2em;
+            font-weight: 100;
+            color: #fff;
+        }
+
+        a {
+            color: darken( $color-default, 20% );
+        }
+    }
+
+
+.visible {
+    visibility: visible !important;
+}
+
+.wp1, .wp2, .wp3,
+.wp4, .wp5, .wp6 {
+    visibility: hidden;
+}
+
+
+.bounceInLeft, .bounceInRight, .fadeInUp, .fadeInUpDelay, .fadeInDown, .fadeInUpD, .fadeInLeft, .fadeInRight {
+    visibility: visible;
+}
