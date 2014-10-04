@@ -3,7 +3,8 @@ define([
     'jquery',
     'backbone',
     'app/routes/router',
-    'app/views/app'
+    'app/views/app',
+    'bootstrap'
 
 ], function($, Backbone, Router, AppView) {
 

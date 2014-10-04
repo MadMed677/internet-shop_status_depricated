@@ -10,7 +10,8 @@ require.config({
         'waypointsSticky': 'libs/waypoints-sticky',
         'bxSlider': 'libs/jquery.bxSlider.min',
         'blurjs': 'libs/blur',
-        'mmPlugins': 'libs/mmPlugins'
+        'mmPlugins': 'libs/mmPlugins',
+        'async': 'libs/async'
     },
 
     shim: {

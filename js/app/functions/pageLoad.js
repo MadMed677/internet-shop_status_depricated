@@ -3,9 +3,10 @@ define([
     'jquery',
     'app/plugins/bxSlider',
     'app/plugins/waypoint',
-    'mmPlugins'
+    'mmPlugins',
+    'app/functions/map'
 
-], function($, bxSlider, waypoint, mmPlugins) {
+], function($, bxSlider, waypoint, mmPlugins, map) {
 
     function pageLoad(page) {
 
@@ -36,6 +37,7 @@ define([
                     if ( page.indexOf('index') !== 0 ) {
                         bxSlider.initialize();
                         waypoint.initialize();
+                        map();
                     }
 
                 }
@@ -45,6 +47,7 @@ define([
                         if ( page.indexOf('index') !== 0 ) {
                             bxSlider.initialize();
                             waypoint.initialize();
+                            map();
                         }
                     });
                 }
