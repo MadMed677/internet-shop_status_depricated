@@ -2,11 +2,9 @@ define([
 
     'jquery',
     'backbone',
-    'app/plugins/bxSlider',
-    'app/plugins/waypoint',
     'app/functions/pageLoad'
 
-], function($, Backbone, bxSlider, waypoint, pageLoad) {
+], function($, Backbone, pageLoad) {
 
     var AppView = Backbone.View.extend({
 
@@ -18,9 +16,6 @@ define([
 
         initialize: function() {
             this.$wrap = $('#wrap');
-
-            bxSlider.initialize();
-            waypoint.initialize();
         },
 
         linkClick: function(event) {

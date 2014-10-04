@@ -1,8 +1,10 @@
 define([
 
-    'jquery'
+    'jquery',
+    'app/plugins/bxSlider',
+    'app/plugins/waypoint',
 
-], function($) {
+], function($, bxSlider, waypoint) {
 
     function pageLoad(page) {
 
@@ -25,6 +27,9 @@ define([
                     .html(data)
                     .removeClass('fadeInUp')
                     .addClass('fadeInUp');
+
+                bxSlider.initialize();
+                waypoint.initialize();
             },
             error: function() {
                 html = '';
