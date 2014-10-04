@@ -1,22 +1,21 @@
 define([
 
-    'backbone',
     'jquery',
-    'app/plugins/bxSlider',
-    'app/plugins/waypoint',
-    'blurjs',
-    'bootstrap'
+    'backbone',
+    'app/routes/router',
+    'app/views/app'
 
-], function(Backbone, $, bxSlider, waypoint, blurjs) {
+], function($, Backbone, Router, AppView) {
 
     'use strict';
 
     var initialize = function() {
 
-        bxSlider.initialize();
-        waypoint.initialize();
+        var appView = new AppView();
 
-        
+
+        var router = new Router(appView); // передать вид главной модели
+        Backbone.history.start();
 
     };
 
