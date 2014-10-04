@@ -38,15 +38,15 @@
             </div>
             <div class="collapse navbar-collapse navbar-right" id="mm-nav">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">
+                    <li id="nav-index"><a href="#">
                         <span class="fa fa-home"></span>
                         Главная
                     </a></li>
-                    <li><a href="#">
+                    <li id="nav-catalog"><a href="#catalog">
                         <span class="fa fa-shopping-cart"></span>
                         Каталог
                     </a></li>
-                    <li><a href="#">
+                    <li id="nav-about"><a href="#about">
                         <span class="fa fa-list-alt"></span>
                         Обо мне
                     </a></li>
@@ -54,3 +54,5 @@
             </div>
         </div>
     </nav>
+
+<div id="wrap" class="animated delay-1s">

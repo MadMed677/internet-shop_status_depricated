@@ -1,3 +1,6 @@
+</div>
+<!-- End of #wrap -->
+
 <!-- Footer -->
 <footer>
     <div class="container">
