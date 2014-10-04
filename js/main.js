@@ -9,7 +9,8 @@ require.config({
         'waypoints': 'libs/waypoints.min',
         'waypointsSticky': 'libs/waypoints-sticky',
         'bxSlider': 'libs/jquery.bxSlider.min',
-        'blurjs': 'libs/blur'
+        'blurjs': 'libs/blur',
+        'mmPlugins': 'libs/mmPlugins'
     },
 
     shim: {
@@ -35,6 +36,10 @@ require.config({
         },
 
         'bxSlider': {
+            deps: ['jquery']
+        },
+
+        'mmPlugins': {
             deps: ['jquery']
         }
     }
