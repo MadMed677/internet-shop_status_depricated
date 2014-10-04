@@ -10,15 +10,14 @@
             .removeClass('fadeInUp')
             .animate({
                 'opacity': 0,
-                'marginTop': '50px'
+                'paddingTop': '50px'
             }, speed, function() {
                 that
                     .html(data)
                     .animate({
                         'opacity': 1,
-                        'marginTop': '0'
+                        'paddingTop': '0'
                     }, speed, function() {
-                        console.log('complete');
                         if (callback) callback.apply(this, arguments);
                     });
             });

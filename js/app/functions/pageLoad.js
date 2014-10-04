@@ -41,7 +41,7 @@ define([
                 }
                 // Если был переход по странице
                 else {
-                    $wrap.mmSlider(1000, data, function() {
+                    $wrap.mmSlider(700, data, function() {
                         if ( page.indexOf('index') !== 0 ) {
                             bxSlider.initialize();
                             waypoint.initialize();
