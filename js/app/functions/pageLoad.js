@@ -32,15 +32,21 @@ define([
                     $wrap
                         .addClass('fadeInUp')
                         .html(data);
+
+                    if ( page.indexOf('index') !== 0 ) {
+                        bxSlider.initialize();
+                        waypoint.initialize();
+                    }
+
                 }
                 // Если был переход по странице
                 else {
-                    $wrap.mmSlider(1000, data);
-                }
-
-                if ( page.indexOf('catalog') !== 0 ) {
-                    bxSlider.initialize();
-                    waypoint.initialize();
+                    $wrap.mmSlider(1000, data, function() {
+                        if ( page.indexOf('index') !== 0 ) {
+                            bxSlider.initialize();
+                            waypoint.initialize();
+                        }
+                    });
                 }
             },
             error: function() {

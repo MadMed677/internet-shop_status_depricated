@@ -17,7 +17,10 @@
                     .animate({
                         'opacity': 1,
                         'marginTop': '0'
-                    }, speed);
+                    }, speed, function() {
+                        console.log('complete');
+                        if (callback) callback.apply(this, arguments);
+                    });
             });
 
         return this;
