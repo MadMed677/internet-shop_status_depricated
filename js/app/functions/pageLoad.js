@@ -34,7 +34,7 @@ define([
                         .addClass('fadeInUp')
                         .html(data);
 
-                    if ( page.indexOf('index') !== 0 ) {
+                    if ( page.indexOf('index') !== -1 ) {
                         bxSlider.initialize();
                         waypoint.initialize();
                         map();
@@ -44,7 +44,7 @@ define([
                 // Если был переход по странице
                 else {
                     $wrap.mmSlider(700, data, function() {
-                        if ( page.indexOf('index') !== 0 ) {
+                        if ( page.indexOf('index') !== -1 ) {
                             bxSlider.initialize();
                             waypoint.initialize();
                             map();

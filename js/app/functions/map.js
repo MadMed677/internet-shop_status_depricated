@@ -22,6 +22,7 @@ define([
             position: latlng,
             map: vpunke
         });
+
     }
 
     return map;
