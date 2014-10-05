@@ -8,7 +8,7 @@ define([
 
         defaults: {
             title       : 'Нет названия',
-            img         : 'images/noimage.jpg',
+            img         : 'noimage.png',
             description : 'Нет описания',
             firm        : 'Нет фирмы',
 
