@@ -3,10 +3,11 @@ define([
     'jquery',
     'app/plugins/bxSlider',
     'app/plugins/waypoint',
+    'app/plugins/headerScroll',
     'mmPlugins',
     'app/functions/map'
 
-], function($, bxSlider, waypoint, mmPlugins, map) {
+], function($, bxSlider, waypoint, headerScroll, mmPlugins, map) {
 
     function pageLoad(page, view) {
 
@@ -34,6 +35,8 @@ define([
                         .addClass('fadeInUp')
                         .html(data);
 
+                    headerScroll.initialize();
+
                     if ( page.indexOf('index') !== -1 ) {
                         bxSlider.initialize();
                         waypoint.initialize();
@@ -51,7 +54,7 @@ define([
                             waypoint.initialize();
                             map();
                         } else if ( page.indexOf('catalog') !== -1 ) {
-                            view['catalog'].render();
+                            $wrap.html( view['catalog'].render().el );
                         }
                     });
                 }
