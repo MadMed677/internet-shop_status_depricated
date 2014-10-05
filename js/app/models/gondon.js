@@ -14,7 +14,7 @@ define([
 
             flavor      : [],
             specific    : [],
-            size        : [],
+            size        : ['M','L'],
 
             count       : 0,
             price       : 0
