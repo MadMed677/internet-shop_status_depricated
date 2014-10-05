@@ -1,3 +1,44 @@
+@import "variables";
+@import "mixin";
+
 .margin-top {
     margin-top: 130px;
+}
+
+.condom-icon {
+    margin-bottom: 5px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    span {
+        cursor: pointer;
+        border: 1px solid $color-light-gray;
+        color: $color-light-gray;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        display: inline-block;
+
+        @include transition;
+
+        &:hover {
+            border: 1px solid $color-default;
+            color: $color-default;
+        }
+    }
+}
+
+#all-condoms {
+    p {
+        line-height: 15px;
+        margin-top: 5px;
+    }
+}
+
+.condom-firm {
+    color: $color-default;
+    font-weight: bold;
 }
