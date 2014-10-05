@@ -8,7 +8,7 @@ define([
 
 ], function($, bxSlider, waypoint, mmPlugins, map) {
 
-    function pageLoad(page) {
+    function pageLoad(page, view) {
 
         var html = '',
             $wrap = $('#wrap');
@@ -38,6 +38,8 @@ define([
                         bxSlider.initialize();
                         waypoint.initialize();
                         map();
+                    } else if ( page.indexOf('catalog') !== -1 ) {
+                        $wrap.html( view['catalog'].render().el );
                     }
 
                 }
@@ -48,6 +50,8 @@ define([
                             bxSlider.initialize();
                             waypoint.initialize();
                             map();
+                        } else if ( page.indexOf('catalog') !== -1 ) {
+                            view['catalog'].render();
                         }
                     });
                 }
