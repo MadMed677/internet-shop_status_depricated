@@ -100,6 +100,10 @@ p {
         }
     }
 
+    .navbar-brand {
+        margin-top: 4px;
+    }
+
     .nav>li>a:hover,
     .nav>li>a:focus {
         color: $color-default;
@@ -562,6 +566,9 @@ p {
     #content h1 {
         font-size: 3em;
     }
+    .navbar.minimaze .navbar-brand {
+        margin-top: 4px;
+    }
 }
 
 @media screen and (max-width: 440px) {
@@ -571,7 +578,7 @@ p {
     }
 
     .navbar-brand {
-        margin-right: 0;
+        margin-right: 10px;
         font-size: 2em;
     }
 
