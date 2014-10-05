@@ -32,7 +32,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a href="/" class="navbar-brand">
-                    <img id="logo" src="images/logotype1.png" alt="">
+                    <img id="logo" src="images/gondon.png" alt="">
                 </a>
                 <a href="#" class="navbar-brand">vPunke</a>
             </div>
