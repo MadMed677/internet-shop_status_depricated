@@ -8,6 +8,7 @@ define([
 
         routes: {
             ''       : 'goToIndex',
+            'index'  : 'goToIndex',
             'catalog': 'goToCatalog',
             'about'  : 'goToAbout'
         },
