@@ -5,7 +5,7 @@ require.config({
         'underscore': 'libs/underscore',
         'backbone': 'libs/backbone',
         'bootstrap': 'libs/bootstrap',
-        'backbone.localStorage': 'libs/backbone-localstorage',
+        'backbone.localStorage': 'libs/backbone.localStorage',
         'waypoints': 'libs/waypoints.min',
         'waypointsSticky': 'libs/waypoints-sticky',
         'bxSlider': 'libs/jquery.bxSlider.min',
