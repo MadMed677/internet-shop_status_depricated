@@ -32,13 +32,13 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a href="/" class="navbar-brand">
-                    <img id="logo" src="images/gondon.png" alt="">
+                    <img id="logo" src="images/gondon2.png" alt="">
                 </a>
-                <a href="#" class="navbar-brand">vPunke</a>
+                <a href="#index" class="navbar-brand">vPunke</a>
             </div>
             <div class="collapse navbar-collapse navbar-right" id="mm-nav">
                 <ul class="nav navbar-nav">
-                    <li id="nav-index"><a href="#">
+                    <li id="nav-index"><a href="#index">
                         <span class="fa fa-home"></span>
                         Главная
                     </a></li>
