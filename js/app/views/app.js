@@ -2,9 +2,10 @@ define([
 
     'jquery',
     'backbone',
-    'app/functions/pageLoad'
+    'app/functions/pageLoad',
+    'app/views/catalog'
 
-], function($, Backbone, pageLoad) {
+], function($, Backbone, pageLoad, CatalogView) {
 
     var AppView = Backbone.View.extend({
 
@@ -14,8 +15,15 @@ define([
             'click a': 'linkClick'
         },
 
+        views: {},
+
         initialize: function() {
             this.$wrap = $('#wrap');
+
+            this.views['catalog'] = new CatalogView({
+                id: 'page-catalog',
+                className: 'page-view'
+            });
         },
 
         linkClick: function(event) {
@@ -26,7 +34,7 @@ define([
         setPage: function(page) {
             this.$('.nav li').removeClass('active');
             this.$('#nav-'+page).addClass('active');
-            pageLoad(page);
+            pageLoad(page, this.views);
         }
 
     });
