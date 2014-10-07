@@ -5,6 +5,30 @@
     margin-top: 130px;
 }
 
+.margin-bottom {
+    margin-bottom: 15px;
+}
+
+// Condom View
+
+#all-condoms {
+    p {
+        line-height: 15px;
+        margin-top: 5px;
+    }
+
+    input {
+        outline: none;
+        border: none;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        border-radius: 50%;
+        margin: 0 5px;
+    }
+}
+
 .condom-icon {
     margin-bottom: 5px;
 
@@ -31,14 +55,35 @@
     }
 }
 
-#all-condoms {
-    p {
-        line-height: 15px;
-        margin-top: 5px;
-    }
-}
-
 .condom-firm {
     color: $color-default;
     font-weight: bold;
+}
+
+.changeCount {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    font-size: 14px;
+    font-weight: 100;
+
+    border: 1px solid $color-light-gray;
+    color: $color-light-gray;
+
+    &:hover {
+        border: 1px solid $color-default;
+        color: $color-default;
+    }
+}
+
+.condom-price {
+    line-height: 50px;
+    margin-right: 20px;
+
+    i {
+        font-size: 11px;
+    }
 }

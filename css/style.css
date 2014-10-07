@@ -93,14 +93,36 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 /* line 8, ../sass/_catalog.scss */
+.margin-bottom {
+  margin-bottom: 15px;
+}
+
+/* line 15, ../sass/_catalog.scss */
+#all-condoms p {
+  line-height: 15px;
+  margin-top: 5px;
+}
+/* line 20, ../sass/_catalog.scss */
+#all-condoms input {
+  outline: none;
+  border: none;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+/* line 32, ../sass/_catalog.scss */
 .condom-icon {
   margin-bottom: 5px;
 }
-/* line 11, ../sass/_catalog.scss */
+/* line 35, ../sass/_catalog.scss */
 .condom-icon:last-child {
   margin-bottom: 0;
 }
-/* line 15, ../sass/_catalog.scss */
+/* line 39, ../sass/_catalog.scss */
 .condom-icon span {
   cursor: pointer;
   border: 1px solid #a1a9b0;
@@ -114,22 +136,45 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -moz-transition: all 0.3s;
   transition: all 0.3s;
 }
-/* line 27, ../sass/_catalog.scss */
+/* line 51, ../sass/_catalog.scss */
 .condom-icon span:hover {
   border: 1px solid #3dc9b3;
   color: #3dc9b3;
 }
 
-/* line 35, ../sass/_catalog.scss */
-#all-condoms p {
-  line-height: 15px;
-  margin-top: 5px;
-}
-
-/* line 41, ../sass/_catalog.scss */
+/* line 58, ../sass/_catalog.scss */
 .condom-firm {
   color: #3dc9b3;
   font-weight: bold;
+}
+
+/* line 63, ../sass/_catalog.scss */
+.changeCount {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 24px;
+  font-size: 14px;
+  font-weight: 100;
+  border: 1px solid #a1a9b0;
+  color: #a1a9b0;
+}
+/* line 76, ../sass/_catalog.scss */
+.changeCount:hover {
+  border: 1px solid #3dc9b3;
+  color: #3dc9b3;
+}
+
+/* line 82, ../sass/_catalog.scss */
+.condom-price {
+  line-height: 50px;
+  margin-right: 20px;
+}
+/* line 86, ../sass/_catalog.scss */
+.condom-price i {
+  font-size: 11px;
 }
 
 /* line 1, ../sass/_mixin.scss */
