@@ -12,9 +12,25 @@
 // Condom View
 
 #all-condoms {
+
+}
+
+.condom-view {
+    margin: 10px 0;
+
+    h4 {
+        font-weight: 500;
+    }
+
     p {
-        line-height: 15px;
+        line-height: 18px;
         margin-top: 5px;
+        margin-bottom: 10px;
+    }
+
+    > p {
+        border-left: 1px solid $color-light-gray;
+        padding-left: 10px;
     }
 
     input {
@@ -26,6 +42,11 @@
         text-align: center;
         border-radius: 50%;
         margin: 0 5px;
+    }
+
+    img {
+        padding: 20px;
+        border-radius: 20%;
     }
 }
 
@@ -53,6 +74,14 @@
             color: $color-default;
         }
     }
+
+    &.active {
+        span {
+            border: 1px solid $color-default;
+            color: $color-default;
+        }
+    }
+
 }
 
 .condom-firm {

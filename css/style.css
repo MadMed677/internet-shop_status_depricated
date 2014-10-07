@@ -97,13 +97,27 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   margin-bottom: 15px;
 }
 
-/* line 15, ../sass/_catalog.scss */
-#all-condoms p {
-  line-height: 15px;
-  margin-top: 5px;
+/* line 18, ../sass/_catalog.scss */
+.condom-view {
+  margin: 10px 0;
 }
-/* line 20, ../sass/_catalog.scss */
-#all-condoms input {
+/* line 21, ../sass/_catalog.scss */
+.condom-view h4 {
+  font-weight: 500;
+}
+/* line 25, ../sass/_catalog.scss */
+.condom-view p {
+  line-height: 18px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+/* line 31, ../sass/_catalog.scss */
+.condom-view > p {
+  border-left: 1px solid #a1a9b0;
+  padding-left: 10px;
+}
+/* line 36, ../sass/_catalog.scss */
+.condom-view input {
   outline: none;
   border: none;
   width: 50px;
@@ -113,16 +127,21 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   border-radius: 50%;
   margin: 0 5px;
 }
+/* line 47, ../sass/_catalog.scss */
+.condom-view img {
+  padding: 20px;
+  border-radius: 20%;
+}
 
-/* line 32, ../sass/_catalog.scss */
+/* line 53, ../sass/_catalog.scss */
 .condom-icon {
   margin-bottom: 5px;
 }
-/* line 35, ../sass/_catalog.scss */
+/* line 56, ../sass/_catalog.scss */
 .condom-icon:last-child {
   margin-bottom: 0;
 }
-/* line 39, ../sass/_catalog.scss */
+/* line 60, ../sass/_catalog.scss */
 .condom-icon span {
   cursor: pointer;
   border: 1px solid #a1a9b0;
@@ -136,19 +155,24 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -moz-transition: all 0.3s;
   transition: all 0.3s;
 }
-/* line 51, ../sass/_catalog.scss */
+/* line 72, ../sass/_catalog.scss */
 .condom-icon span:hover {
   border: 1px solid #3dc9b3;
   color: #3dc9b3;
 }
+/* line 79, ../sass/_catalog.scss */
+.condom-icon.active span {
+  border: 1px solid #3dc9b3;
+  color: #3dc9b3;
+}
 
-/* line 58, ../sass/_catalog.scss */
+/* line 87, ../sass/_catalog.scss */
 .condom-firm {
   color: #3dc9b3;
   font-weight: bold;
 }
 
-/* line 63, ../sass/_catalog.scss */
+/* line 92, ../sass/_catalog.scss */
 .changeCount {
   width: 25px;
   height: 25px;
@@ -161,18 +185,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   border: 1px solid #a1a9b0;
   color: #a1a9b0;
 }
-/* line 76, ../sass/_catalog.scss */
+/* line 105, ../sass/_catalog.scss */
 .changeCount:hover {
   border: 1px solid #3dc9b3;
   color: #3dc9b3;
 }
 
-/* line 82, ../sass/_catalog.scss */
+/* line 111, ../sass/_catalog.scss */
 .condom-price {
   line-height: 50px;
   margin-right: 20px;
 }
-/* line 86, ../sass/_catalog.scss */
+/* line 115, ../sass/_catalog.scss */
 .condom-price i {
   font-size: 11px;
 }
@@ -200,6 +224,29 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   text-shadow: #37b5a1 1px 1px, #37b5a1 2px 2px, #37b5a1 3px 3px, #37b5a1 4px 4px, #37b5a1 5px 5px, #37b5a1 6px 6px, #37b5a1 7px 7px, #37b5a1 8px 8px, #37b5a1 9px 9px, #37b5a1 10px 10px, #37b5a1 11px 11px, #37b5a1 12px 12px, #37b6a2 13px 13px, #37b7a3 14px 14px, #38b8a4 15px 15px, #38b9a5 16px 16px, #38baa6 17px 17px, #39bba7 18px 18px, #39bca8 19px 19px, #39bda9 20px 20px, #3abfaa 21px 21px, #3ac0ab 22px 22px, #3ac1ac 23px 23px, #3bc2ad 24px 24px, #3bc3ae 25px 25px, #3bc4af 26px 26px, #3cc5b0 27px 27px, #3cc6b1 28px 28px, #3cc7b2 29px 29px, #3dc9b3 30px 30px;
 }
 
+@media (max-width: 991px) {
+  /* line 4, ../sass/_query.scss */
+  .one-condom:nth-child(2n+1) {
+    clear: both;
+  }
+}
+@media (min-width: 992px) {
+  /* line 13, ../sass/_query.scss */
+  .one-condom:nth-child(3n+1) {
+    clear: both;
+  }
+}
+@media (max-width: 767px) {
+  /* line 22, ../sass/_query.scss */
+  .one-condom {
+    border-bottom: 1px solid #a1a9b0;
+    margin-bottom: 20px;
+  }
+  /* line 26, ../sass/_query.scss */
+  .one-condom:last-child {
+    border-bottom: none;
+  }
+}
 /* line 9, ../sass/style.scss */
 body {
   font-family: Roboto;
