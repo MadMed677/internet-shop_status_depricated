@@ -8,10 +8,13 @@ define([
 
     var CondomView = Backbone.View.extend({
 
+        className: 'one-condom',
+
         template: Templates['gondon'],
 
         events: {
             'click .changeCount': 'changeCount',
+            'click .condom-icon': 'changeSize',
             'keyup input': 'validateInput'
         },
 
@@ -27,6 +30,11 @@ define([
 			}, { validate: true });
 
 			event.preventDefault();
+        },
+
+        changeSize: function(event) {
+            $(event.target).closest('.condom-size-box').find('.condom-icon').removeClass('active');
+            $(event.target).closest('.condom-icon').addClass('active');
         },
 
         validateInput: function() {
