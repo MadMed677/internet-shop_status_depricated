@@ -7,7 +7,7 @@ define([
     var Templates = [];
 
     Templates['gondon'] = [
-        '<div class="col-md-4 col-sm-6">',
+        '<div class="col-md-4 col-sm-6 condom-view">',
             '<h4 class="text-center"><%= title %></h4>',
             '<img src="images/catalog/<%= img %>" class="img-responsive">',
             '<h4 class="condom-firm"><%= firm %></h4>',
@@ -29,7 +29,7 @@ define([
                         '<p>Простой презерватив</p>',
                     '<% } %>',
                 '</div>',
-                '<div class="col-xs-4 text-center">',
+                '<div class="col-xs-4 text-center condom-size-box">',
                     '<% _.each( size, function(si) { %>',
                         '<div class="condom-icon">',
                             '<span><%= si %></span>',
