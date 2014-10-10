@@ -10,14 +10,21 @@ define([
 
     var BasketsView = ModalView.extend({
 
-        // el: '',
+        html: [
+            '<div class="clearfix"></div>',
+            '<div class="modal-footer">',
+                '<button type="button" class="btn btn-default" data-dismiss="modal" id="continue-buy">Продолжить покупки</button>',
+                '<button type="button" class="btn btn-default" id="apply-order">Заказать</button>',
+            '</div>'
+        ].join(''),
 
         options: {
             title: 'Корзина товаров'
         },
 
         events: {
-            'click .apply-order': 'applyOrder'
+            'click #apply-order': 'applyOrder',
+            'click #continue-buy': 'continueBuy'
         },
 
         // Функции по работе с коллекцией
@@ -29,6 +36,10 @@ define([
             // и посмотреть вы его можете на почте
 
             this.$modalEl.modal('hide');
+        },
+
+        continueBuy: function() {
+            console.log('buy');
         },
 
         // Функции
@@ -57,7 +68,7 @@ define([
             // Установка "прослушек"
             this.collection.on('add', this.addOne, this);
 
-            // this.collection.on('change', this.changeTotalCount, this);
+            this.$bodyEl.after(this.html);
         },
 
         render: function() {
