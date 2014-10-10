@@ -2,11 +2,25 @@
 @import "mixin";
 
 .margin-top {
-    margin-top: 130px;
+    margin-top: 250px;
 }
 
 .margin-bottom {
     margin-bottom: 15px;
+}
+
+.fa-little {
+    font-size: 9px;
+}
+
+.isHidded {
+    visibility: hidden;
+}
+
+.fadeInUp,
+.fadeInRight,
+.fadeOutLeft {
+    visibility: visible;
 }
 
 // Condom View
@@ -115,4 +129,35 @@
     i {
         font-size: 11px;
     }
+}
+
+// --------------------------------------
+// ----------- Catalog View -------------
+// --------------------------------------
+
+.to-span {
+    display: inline-block;
+}
+
+    .navbar-icon {
+        margin-right: 10px;
+        font-size: 3em;
+    }
+
+    .navbar-cont {
+        line-height: 20px;
+    }
+
+.nav-basket-view.minimaze {
+    top: 70px;
+    min-height: 60px;
+    line-height: 70px;
+}
+
+.nav-basket-view {
+    top: 110px;
+    line-height: 110px;
+    min-height: 100px;
+    background: darken( $bg-transition, 10% );
+    @include transition;
 }

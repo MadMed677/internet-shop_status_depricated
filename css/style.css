@@ -89,7 +89,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* line 4, ../sass/_catalog.scss */
 .margin-top {
-  margin-top: 130px;
+  margin-top: 250px;
 }
 
 /* line 8, ../sass/_catalog.scss */
@@ -97,26 +97,43 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   margin-bottom: 15px;
 }
 
-/* line 18, ../sass/_catalog.scss */
+/* line 12, ../sass/_catalog.scss */
+.fa-little {
+  font-size: 9px;
+}
+
+/* line 16, ../sass/_catalog.scss */
+.isHidded {
+  visibility: hidden;
+}
+
+/* line 22, ../sass/_catalog.scss */
+.fadeInUp,
+.fadeInRight,
+.fadeOutLeft {
+  visibility: visible;
+}
+
+/* line 32, ../sass/_catalog.scss */
 .condom-view {
   margin: 10px 0;
 }
-/* line 21, ../sass/_catalog.scss */
+/* line 35, ../sass/_catalog.scss */
 .condom-view h4 {
   font-weight: 500;
 }
-/* line 25, ../sass/_catalog.scss */
+/* line 39, ../sass/_catalog.scss */
 .condom-view p {
   line-height: 18px;
   margin-top: 5px;
   margin-bottom: 10px;
 }
-/* line 31, ../sass/_catalog.scss */
+/* line 45, ../sass/_catalog.scss */
 .condom-view > p {
   border-left: 1px solid #a1a9b0;
   padding-left: 10px;
 }
-/* line 36, ../sass/_catalog.scss */
+/* line 50, ../sass/_catalog.scss */
 .condom-view input {
   outline: none;
   border: none;
@@ -127,21 +144,21 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   border-radius: 50%;
   margin: 0 5px;
 }
-/* line 47, ../sass/_catalog.scss */
+/* line 61, ../sass/_catalog.scss */
 .condom-view img {
   padding: 20px;
   border-radius: 20%;
 }
 
-/* line 53, ../sass/_catalog.scss */
+/* line 67, ../sass/_catalog.scss */
 .condom-icon {
   margin-bottom: 5px;
 }
-/* line 56, ../sass/_catalog.scss */
+/* line 70, ../sass/_catalog.scss */
 .condom-icon:last-child {
   margin-bottom: 0;
 }
-/* line 60, ../sass/_catalog.scss */
+/* line 74, ../sass/_catalog.scss */
 .condom-icon span {
   cursor: pointer;
   border: 1px solid #a1a9b0;
@@ -155,24 +172,24 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -moz-transition: all 0.3s;
   transition: all 0.3s;
 }
-/* line 72, ../sass/_catalog.scss */
+/* line 86, ../sass/_catalog.scss */
 .condom-icon span:hover {
   border: 1px solid #3dc9b3;
   color: #3dc9b3;
 }
-/* line 79, ../sass/_catalog.scss */
+/* line 93, ../sass/_catalog.scss */
 .condom-icon.active span {
   border: 1px solid #3dc9b3;
   color: #3dc9b3;
 }
 
-/* line 87, ../sass/_catalog.scss */
+/* line 101, ../sass/_catalog.scss */
 .condom-firm {
   color: #3dc9b3;
   font-weight: bold;
 }
 
-/* line 92, ../sass/_catalog.scss */
+/* line 106, ../sass/_catalog.scss */
 .changeCount {
   width: 25px;
   height: 25px;
@@ -185,20 +202,54 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   border: 1px solid #a1a9b0;
   color: #a1a9b0;
 }
-/* line 105, ../sass/_catalog.scss */
+/* line 119, ../sass/_catalog.scss */
 .changeCount:hover {
   border: 1px solid #3dc9b3;
   color: #3dc9b3;
 }
 
-/* line 111, ../sass/_catalog.scss */
+/* line 125, ../sass/_catalog.scss */
 .condom-price {
   line-height: 50px;
   margin-right: 20px;
 }
-/* line 115, ../sass/_catalog.scss */
+/* line 129, ../sass/_catalog.scss */
 .condom-price i {
   font-size: 11px;
+}
+
+/* line 138, ../sass/_catalog.scss */
+.to-span {
+  display: inline-block;
+}
+
+/* line 142, ../sass/_catalog.scss */
+.navbar-icon {
+  margin-right: 10px;
+  font-size: 3em;
+}
+
+/* line 147, ../sass/_catalog.scss */
+.navbar-cont {
+  line-height: 20px;
+}
+
+/* line 151, ../sass/_catalog.scss */
+.nav-basket-view.minimaze {
+  top: 70px;
+  min-height: 60px;
+  line-height: 70px;
+}
+
+/* line 157, ../sass/_catalog.scss */
+.nav-basket-view {
+  top: 110px;
+  line-height: 110px;
+  min-height: 100px;
+  background: rgba(230, 230, 230, 0.6);
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 /* line 1, ../sass/_mixin.scss */
