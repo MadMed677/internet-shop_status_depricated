@@ -5,9 +5,10 @@ define([
     'app/plugins/waypoint',
     'app/plugins/headerScroll',
     'mmPlugins',
-    'app/functions/map'
+    'app/functions/map',
+    'app/functions/basketCart'
 
-], function($, bxSlider, waypoint, headerScroll, mmPlugins, map) {
+], function($, bxSlider, waypoint, headerScroll, mmPlugins, map, BasketCart) {
 
     function pageLoad(page, view) {
 
@@ -27,6 +28,7 @@ define([
             dataType: 'html',
             success: function(data) {
                 html = data;
+                // var basketCart = new BasketCart();
 
                 // Если страницы была загружена
                 if ( $wrap.html().trim() === '' ) {
@@ -43,11 +45,16 @@ define([
                         map();
                     } else if ( page.indexOf('catalog') !== -1 ) {
                         $wrap.html( view['catalog'].render().el );
+
+                        // basketCart.render();
                     }
 
                 }
                 // Если был переход по странице
                 else {
+
+                    window.app.basketCart.uninitialize();
+
                     $wrap.mmSlider(700, data, function() {
                         if ( page.indexOf('index') !== -1 ) {
                             bxSlider.initialize();
@@ -55,6 +62,8 @@ define([
                             map();
                         } else if ( page.indexOf('catalog') !== -1 ) {
                             $wrap.html( view['catalog'].render().el );
+
+                            // basketCart.render();
                         }
                     });
                 }
