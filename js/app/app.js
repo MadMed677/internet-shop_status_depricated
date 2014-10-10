@@ -12,6 +12,8 @@ define([
 
     var initialize = function() {
 
+        window.app = {};
+
         var appView = new AppView();
 
         var router = new Router(appView); // передать вид главной модели
