@@ -28,7 +28,6 @@ define([
 
         linkClick: function(event) {
             // event.preventDefault();
-            console.log( $(event.target).attr('href') );
         },
 
         setPage: function(page) {
