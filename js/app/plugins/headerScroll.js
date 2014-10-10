@@ -10,9 +10,9 @@ define([
 
         $(window).on( 'scroll', function() {
             if ( $(this).scrollTop() >= 300 ) {
-                $('.navbar-mm').addClass('minimaze');
+                $('.navbar-mm, .nav-basket-view').addClass('minimaze');
             } else {
-                $('.navbar-mm').removeClass('minimaze');
+                $('.navbar-mm, .nav-basket-view').removeClass('minimaze');
             }
         });
 
