@@ -5,20 +5,16 @@ define([
     'app/collections/gondons',
     'app/templates',
     'app/views/condoms',
-    'app/views/baskets'
+    'app/views/baskets',
+    'app/functions/basketCart'
 
-], function($, Backbone, GondonsCollection, Templates, GondonsView, BasketsView) {
+], function($, Backbone, GondonsCollection, Templates, GondonsView, BasketsView, BasketCart) {
 
     var CatalogView = Backbone.View.extend({
 
         id: 'condoms-wrapper',
 
         html: [
-            '<nav class="navbar navbar-default navbar-fixed-top">',
-                '<div class="container">',
-                    '<div class="navbar-header" id="basket-view">Hello</div>',
-                '</div>',
-            '</nav>',
             '<div class="margin-top" id="catalog-page">',
                 '<div class="container">',
                     '<h3 class="text-center">Каталог товаров</h3>',
@@ -32,19 +28,16 @@ define([
         },
 
         basketView: function(event) {
-            console.log('click on basketView');
-            var modal = new BasketsView({
-                title: 'Корзина товаров 2',
-                id: 'modal-basket-view',
-                collection: this.collection
-            });
-            modal.show();
-
+            // var modal = new BasketsView({
+            //     collection: this.collection
+            // });
+            // modal.show();
         },
 
         template: Templates['gondon'],
 
         initialize: function() {
+
             // Рендерим наш вид
             this.$el.html( this.html );
 
@@ -62,15 +55,19 @@ define([
             // Создаем вид коллекции
             this.$gondonsView = new GondonsView({ collection: this.collection });
 
-            window.debug = {
-                condoms: this.collection
-            };
+            // Создаем вид корзины
+            window.app.basketCart = new BasketCart({ collection: this.collection });
+
         },
 
         render: function() {
 
+            window.app.basketCart.render();
+
             // Рендер вида коллекции и вставлка в $('#all-condoms')
             this.$condoms.html( this.$gondonsView.render().el );
+
+            this.$basketView = $('#basket-view');
 
             return this;
         }
