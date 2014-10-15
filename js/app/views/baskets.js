@@ -35,7 +35,7 @@ define([
             // то скрывать окно и выводить alert'ом, что заказ успешно оформлен
             // и посмотреть вы его можете на почте
 
-            this.$modalEl.modal('hide');
+            // this.$modalEl.modal('hide');
         },
 
         continueBuy: function() {
@@ -47,6 +47,9 @@ define([
             if ( condom.get('count') > 0 ) {
                 // Создание модели и добавление ее в вид коллекции append'ом
                 var basketView = new BasketView({ model: condom });
+
+                // this.$bodyEl.append( basketView.render().el );
+
                 this.$bodyEl.append( basketView.render().el );
             } else {
                 ++this.noOnBasket;
@@ -68,12 +71,12 @@ define([
             // Установка "прослушек"
             this.collection.on('add', this.addOne, this);
 
-            this.$bodyEl.after(this.html);
+            this.$bodyEl.after(this.el);
         },
 
         render: function() {
             // Очищаем наш вид, перед добавлением моделей append'ом
-            this.$el.html('');
+            this.$el.html( this.html );
 
             // Перебираем циклом наши модели и делаем их вид
             this.collection.each( this.addOne, this );
