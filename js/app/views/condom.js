@@ -22,14 +22,19 @@ define([
         // -------------- Events --------------
         // ------------------------------------
         changeCount: function(event) {
-            var diff = $(event.target).closest('a').data('diff');
-			var count = this.model.get('count');
+            var diff = $(event.target).closest('a').data('diff'),
+                count = this.model.get('count'),
+                totalSumm = 0,
+                price = this.model.get('price');
 
-			this.model.save({
-				'count': count + diff
-			}, { validate: true });
+            this.model.save({
+                'count': count + diff,
+                'total': (count + diff)*price
+            }, { validate: true });
 
-			event.preventDefault();
+            window.app.basketCart.changeValues();
+
+            event.preventDefault();
         },
 
         changeSize: function(event) {
