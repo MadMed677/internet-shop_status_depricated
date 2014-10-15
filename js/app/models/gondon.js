@@ -17,7 +17,8 @@ define([
             size        : ['M','L'],
 
             count       : 0,
-            price       : 0
+            price       : 0,
+            total       : 0
         },
 
         validate: function( attributes ) {
