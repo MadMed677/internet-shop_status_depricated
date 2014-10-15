@@ -17,7 +17,7 @@ define([
                         '</div>',
                         '<div class="to-span navbar-cont">',
                             '<span>Корзина товаров</span>',
-                            '<p>Товаров <span data="total-size">0</span>. Итого: <span data="total-price">0</span><i class="fa fa-rub fa-little"></i></p>',
+                            '<p>Товаров <span data="total-count">0</span>. Итого: <span data="total-price">0</span><i class="fa fa-rub fa-little"></i></p>',
                         '</div>',
                     '</div>',
                 '</div>',
@@ -41,11 +41,38 @@ define([
         },
 
         render: function() {
+            // Вставляем наш шаблон
             this.$el.html( this.html );
             this.$navbar.after( this.el );
             this.$navBasket = $('.nav-basket-view').removeClass('fadeOutLeft').addClass('fadeInRight');
 
+            // Кешируем переменные
+            this.$count = this.$('span[data="total-count"]');
+            this.$price = this.$('span[data="total-price"]');
+            this.$navbarCont = this.$('.navbar-cont > p');
+
+            this.changeValues();
+
             return this;
+        },
+
+        changeValues: function() {
+            var totalPrice = 0,
+                totalCount = 0;
+
+            this.collection.each( function( condom ) {
+                totalCount += condom.get('count');
+                totalPrice += condom.get('price') * condom.get('count');
+            });
+
+
+            if ( totalCount === 0 ) {
+                this.$('#basket-view').css('opacity', 0.5);
+                this.$navbarCont.html('<h4>Товаров нет</h4>');
+            } else {
+                this.$('#basket-view').css('opacity', 1);
+                this.$navbarCont.html('<p>Товаров <span data="total-count">'+ totalCount +'</span>. Итого: <span data="total-price">'+ totalPrice +'</span><i class="fa fa-rub fa-little"></i></p>');
+            }
         },
 
         uninitialize: function() {
