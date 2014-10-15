@@ -29,6 +29,15 @@
 
 }
 
+#basket-view {
+    cursor: pointer;
+    transition: opacity .3s;
+
+    i:first-child {
+        color: $color-default;
+    }
+}
+
 .condom-view {
     margin: 10px 0;
 
@@ -62,6 +71,46 @@
         padding: 20px;
         border-radius: 20%;
     }
+}
+
+.condom-view-basket {
+    i.fa-rub {
+        font-size: .6em;
+    }
+
+    .changeCount {
+        width: 20px;
+        height: 20px;
+        line-height: 17px;
+
+        i {
+            font-size: .7em;
+            margin-left: 1px;
+        }
+    }
+
+    input {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        border: 1px solid $color-default;        
+    }
+
+    .times-icon {
+        margin: 0 8px;
+    }
+
+    .price-basket {
+        color: $color-gray;
+    }
+
+    .total-count-basket {
+        margin: 0 0 0 5px;
+    }
+}
+
+.line-height-basket {
+    line-height: 37px;
 }
 
 .condom-icon {
@@ -149,15 +198,18 @@
     }
 
 .nav-basket-view.minimaze {
-    top: 70px;
+    top: 58px;
     min-height: 60px;
     line-height: 70px;
+    padding-right: 30px;
 }
 
 .nav-basket-view {
-    top: 110px;
+    top: 105px;
     line-height: 110px;
     min-height: 100px;
     background: darken( $bg-transition, 10% );
+    padding-right: 10px;
+    box-sizing: border-box;
     @include transition;
 }
