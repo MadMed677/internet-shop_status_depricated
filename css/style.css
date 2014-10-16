@@ -305,6 +305,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   transition: all 0.3s;
 }
 
+/* line 222, ../sass/_catalog.scss */
+.modal-header {
+  font-size: 2em;
+}
+
 /* line 1, ../sass/_mixin.scss */
 .delay-05s {
   -webkit-animation-delay: 0.5s;
