@@ -2,13 +2,13 @@ define([
 
     'jquery',
     'backbone',
-    'app/collections/gondons',
+    'app/collections/condoms',
     'app/templates',
     'app/views/condoms',
     'app/views/baskets',
     'app/functions/basketCart'
 
-], function($, Backbone, GondonsCollection, Templates, GondonsView, BasketsView, BasketCart) {
+], function($, Backbone, CondomsCollection, Templates, CondomView, BasketsView, BasketCart) {
 
     var CatalogView = Backbone.View.extend({
 
@@ -34,7 +34,7 @@ define([
             // modal.show();
         },
 
-        template: Templates['gondon'],
+        template: Templates['condom'],
 
         initialize: function() {
 
@@ -45,7 +45,7 @@ define([
             this.$condoms = this.$('#all-condoms');
 
             // Создаем новый экземпляр коллекции
-            this.collection = new GondonsCollection();
+            this.collection = new CondomsCollection();
 
             // this.collection.create({ title: 'Презерватив 1' });
 
@@ -53,7 +53,7 @@ define([
             this.collection.fetch();
 
             // Создаем вид коллекции
-            this.$gondonsView = new GondonsView({ collection: this.collection });
+            this.$gondonsView = new CondomView({ collection: this.collection });
 
             // Создаем вид корзины
             window.app.basketCart = new BasketCart({ collection: this.collection });

@@ -6,7 +6,7 @@ define([
 
 	var Templates = [];
 
-	Templates['gondon'] = [
+	Templates['condom'] = [
 		'<div class="col-md-4 col-sm-6 condom-view">',
 			'<h4 class="text-center"><%= title %></h4>',
 			'<img src="images/catalog/<%= img %>" class="img-responsive">',

@@ -10,7 +10,7 @@ define([
 
         className: 'one-condom',
 
-        template: Templates['gondon'],
+        template: Templates['condom'],
 
         events: {
             'click .changeCount': 'changeCount',
